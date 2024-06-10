@@ -9,9 +9,10 @@ type FavoritesProps = {
 const Favorites = ({ count = 0 }: FavoritesProps) => (
   <div className="my-favorites">
     <FilledHeartIcon />
-    <span className="my-favorites--count" aria-label="My favorites">
+    <span className="my-favorites--count" aria-hidden="true">
       {count}
     </span>
+    <span className="sr-only">My favorites {count}</span>
   </div>
 );
 
