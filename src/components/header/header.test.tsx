@@ -12,9 +12,6 @@ describe("Header", () => {
   test("renders header with favorites count", () => {
     render(<Header favoritesCount={5} />);
 
-    const myFavorites = screen.getByLabelText("My favorites");
-
-    expect(myFavorites).toBeInTheDocument();
-    expect(myFavorites).toHaveTextContent("5");
+    expect(screen.getByText("My favorites 5")).toBeInTheDocument();
   });
 });
