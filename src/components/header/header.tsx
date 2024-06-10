@@ -5,12 +5,19 @@ import "./header.css";
 
 type Props = {
   favoritesCount: number;
+  onLogoClick: () => void;
+  onFavoritesClick: () => void;
 };
 
-const Header = ({ favoritesCount }: Props) => (
+const Header = ({ favoritesCount, onLogoClick, onFavoritesClick }: Props) => (
   <header className="marvelous-header">
-    <img className="marvelous-logo" src={Logo} alt="Marvel logo" />
-    <Favorites count={favoritesCount} />
+    <img
+      className="marvelous-logo"
+      src={Logo}
+      alt="Marvel logo"
+      onClick={onLogoClick}
+    />
+    <Favorites count={favoritesCount} onClick={onFavoritesClick} />
   </header>
 );
 

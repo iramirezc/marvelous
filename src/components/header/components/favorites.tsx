@@ -4,10 +4,11 @@ import "./favorites.css";
 
 type FavoritesProps = {
   count: number;
+  onClick: () => void;
 };
 
-const Favorites = ({ count = 0 }: FavoritesProps) => (
-  <div className="my-favorites">
+const Favorites = ({ count = 0, onClick }: FavoritesProps) => (
+  <div className="my-favorites" onClick={onClick}>
     <FilledHeartIcon />
     <span className="my-favorites--count" aria-hidden="true">
       {count}
