@@ -6,7 +6,7 @@ describe("Header", () => {
   test("renders header with logo and favorites", () => {
     render(<Header favoritesCount={0} />);
 
-    expect(screen.getByAltText("Marvelous logo")).toBeInTheDocument();
+    expect(screen.getByAltText("Marvel logo")).toBeInTheDocument();
   });
 
   test("renders header with favorites count", () => {

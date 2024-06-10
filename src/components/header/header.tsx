@@ -9,7 +9,7 @@ type Props = {
 
 const Header = ({ favoritesCount }: Props) => (
   <header className="marvelous-header">
-    <img className="marvelous-logo" src={Logo} alt="Marvelous logo" />
+    <img className="marvelous-logo" src={Logo} alt="Marvel logo" />
     <Favorites count={favoritesCount} />
   </header>
 );
