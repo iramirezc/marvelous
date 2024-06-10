@@ -17,7 +17,7 @@ describe("Time Utils", () => {
     test("returns a different timestamp on each call", async () => {
       const timestamp1 = getTimestamp();
 
-      await new Promise((resolve) => setTimeout(resolve, 1));
+      await new Promise((resolve) => setTimeout(resolve, 50));
 
       const timestamp2 = getTimestamp();
 
