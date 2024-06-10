@@ -6,6 +6,8 @@ A simple React app that fetches and displays Marvel characters using the Marvel 
 
 ## Installation
 
+> Recommended Node.js version >= 18.18.0
+
 Run `npm install`.
 
 ## Available Scripts
