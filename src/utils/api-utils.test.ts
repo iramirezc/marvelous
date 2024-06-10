@@ -1,10 +1,18 @@
-import { getApiParams, getApiEndpoint } from "./api-utils";
+import { getPublicApiEndpoint, getApiParams } from "./api-utils";
 
 jest.mock("./time-utils", () => ({
   getTimestamp: () => "1"
 }));
 
 describe("API Utils", () => {
+  describe("getPublicApiEndpoint()", () => {
+    test("returns the correct API endpoint", () => {
+      const endpoint = getPublicApiEndpoint("characters");
+
+      expect(endpoint).toBe("https://api.example.com/v1/public/characters");
+    });
+  });
+
   describe("getApiParams()", () => {
     test("returns an object with default parameters", () => {
       const params = getApiParams();
@@ -27,14 +35,6 @@ describe("API Utils", () => {
         hash: expect.any(String),
         limit: 50
       });
-    });
-  });
-
-  describe("getApiEndpoint()", () => {
-    test("returns the correct API endpoint", () => {
-      const endpoint = getApiEndpoint("/characters");
-
-      expect(endpoint).toBe("https://api.example.com/v1/characters");
     });
   });
 });

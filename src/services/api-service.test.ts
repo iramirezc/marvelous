@@ -1,5 +1,5 @@
-import { fetchCharacters } from "./api-service";
 import fetchMock from "fetch-mock";
+import { fetchCharacters } from "./api-service";
 import milesMorales from "../mocks/miles-morales.json";
 
 jest.mock("../utils/time-utils", () => ({
