@@ -22,6 +22,7 @@ const FilledHeartIcon = ({
     height={height}
     viewBox="0 0 13 12"
   >
+    <title>Filled heart</title>
     <path
       fill={color}
       clipRule="evenodd"
