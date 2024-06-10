@@ -1,3 +1,4 @@
+import React from "react";
 import FilledHeartIcon from "../../icons/filled-heart-icon";
 import "./favorites.css";
 
