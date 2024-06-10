@@ -2,7 +2,7 @@
   width: 100%;
   height: 6px;
   background: linear-gradient(var(--red) 0 0) 0/0% no-repeat var(--white);
-  animation: loading 2s infinite linear;
+  animation: loading 1s infinite linear;
 }
 
 @keyframes loading {
