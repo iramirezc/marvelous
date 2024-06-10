@@ -5,3 +5,9 @@
   align-items: center;
   padding: 1rem;
 }
+
+.marvelous-logo {
+  flex-basis: auto;
+  margin-right: auto;
+  width: 130px;
+}

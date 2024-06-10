@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "./components/logo";
 import Favorites from "./components/favorites";
+import Logo from "./components/logo.svg";
 import "./header.css";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 
 const Header = ({ favoritesCount }: Props) => (
   <header className="marvelous-header">
-    <Logo />
+    <img className="marvelous-logo" src={Logo} alt="Marvelous logo" />
     <Favorites count={favoritesCount} />
   </header>
 );
