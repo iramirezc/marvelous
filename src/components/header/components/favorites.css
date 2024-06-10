@@ -1,0 +1,10 @@
+.my-favorites {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.my-favorites--count {
+  color: var(--white);
+  margin-left: 0.5rem;
+}

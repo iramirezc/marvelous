@@ -1,4 +1,5 @@
 import React from "react";
+import "./logo.css";
 
 const defaultWidth = 130;
 const defaultHeight = 52;
@@ -12,6 +13,7 @@ const Logo = ({ width = defaultWidth, height = defaultHeight }: LogoProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
+    className="marvelous-logo"
     width={width}
     height={height}
     viewBox="0 0 130 52"
