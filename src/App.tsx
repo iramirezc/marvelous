@@ -5,7 +5,11 @@ import Loader from "./components/loader/loader";
 
 const App = () => (
   <>
-    <Header favoritesCount={0} />
+    <Header
+      favoritesCount={0}
+      onLogoClick={() => console.log("Logo clicked")}
+      onFavoritesClick={() => console.log("Favorites clicked")}
+    />
     <Loader isLoading={true} />
   </>
 );
