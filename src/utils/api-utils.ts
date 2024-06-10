@@ -14,7 +14,7 @@ export const getApiParams = (extraParams = {}) => {
     ts,
     apikey: publicKey,
     hash,
-    ...extraParams,
+    ...extraParams
   };
 };
 

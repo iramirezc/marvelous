@@ -1,7 +1,7 @@
 import { getApiParams, getApiEndpoint } from "./api-utils";
 
 jest.mock("./time-utils", () => ({
-  getTimestamp: () => "1",
+  getTimestamp: () => "1"
 }));
 
 describe("API Utils", () => {
@@ -12,7 +12,7 @@ describe("API Utils", () => {
       expect(params).toEqual({
         ts: "1",
         apikey: "1234",
-        hash: "ffd275c5130566a2916217b101f26150",
+        hash: "ffd275c5130566a2916217b101f26150"
       });
     });
 
@@ -25,7 +25,7 @@ describe("API Utils", () => {
         ts: expect.any(String),
         apikey: expect.any(String),
         hash: expect.any(String),
-        limit: 50,
+        limit: 50
       });
     });
   });

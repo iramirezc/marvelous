@@ -7,10 +7,10 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 export default [
   {
     languageOptions: { globals: globals.browser },
-    settings: { react: { version: "detect" } },
+    settings: { react: { version: "detect" } }
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReactConfig,
-  eslintPluginPrettierRecommended,
+  eslintPluginPrettierRecommended
 ];

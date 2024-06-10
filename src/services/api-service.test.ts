@@ -3,20 +3,20 @@ import fetchMock from "fetch-mock";
 import milesMorales from "../mocks/miles-morales.json";
 
 jest.mock("../utils/time-utils", () => ({
-  getTimestamp: () => "1",
+  getTimestamp: () => "1"
 }));
 
 const apiEndpoints = {
   getCharacters:
-    "https://api.example.com/v1/public/characters?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150&limit=50",
+    "https://api.example.com/v1/public/characters?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150&limit=50"
 };
 
 describe("API Service", () => {
   beforeEach(() => {
     fetchMock.get(apiEndpoints.getCharacters, {
       data: {
-        results: [milesMorales],
-      },
+        results: [milesMorales]
+      }
     });
   });
 
