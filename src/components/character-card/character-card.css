@@ -55,6 +55,10 @@
   text-overflow: ellipsis;
 }
 
+.character-card__info .like-button {
+  margin-left: 1rem;
+}
+
 .character-card__corner {
   border-color: transparent transparent var(--white) transparent;
   border-style: solid;

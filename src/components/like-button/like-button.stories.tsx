@@ -39,7 +39,7 @@ export const Default: Story = {
 };
 
 const ControlledLikeButton = (props: Story["args"]) => {
-  const [liked, setLiked] = useState(props?.liked || false);
+  const [liked, setLiked] = useState(true);
 
   return (
     <LikeButton
