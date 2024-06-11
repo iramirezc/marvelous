@@ -1,11 +1,5 @@
 [
   {
-    "id": "1010727",
-    "name": "Spider-dok",
-    "image": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-    "liked": false
-  },
-  {
     "id": "1009157",
     "name": "Spider-Girl (Anya Corazon)",
     "image": "http://i.annihil.us/u/prod/marvel/i/mg/a/10/528d369de3e4f.jpg",
@@ -21,12 +15,6 @@
     "id": "1017603",
     "name": "Spider-Gwen (Gwen Stacy)",
     "image": "http://i.annihil.us/u/prod/marvel/i/mg/c/90/54edf8eb8f102.jpg",
-    "liked": false
-  },
-  {
-    "id": "1011347",
-    "name": "Spider-Ham (Larval Earth)",
-    "image": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
     "liked": false
   },
   {
