@@ -1,0 +1,62 @@
+.character-card {
+  --card-width: 172.5px;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  max-width: var(--card-width);
+  min-width: var(--card-width);
+}
+
+.character-card img {
+  --image-height: 190px;
+  height: var(--image-height);
+  object-fit: cover;
+}
+
+.character-card__info {
+  --info-height: 56px;
+  align-items: center;
+  background: linear-gradient(var(--red) 0 0) top/100% 0% no-repeat transparent;
+  border-top: 0.33rem solid var(--red);
+  display: flex;
+  max-height: var(--info-height);
+  min-height: var(--info-height);
+  overflow: auto;
+  padding: 1rem;
+  position: relative;
+  transition: background-size 0.25s linear;
+}
+
+.character-card__info:hover {
+  background-size: 100% 100%;
+}
+
+.character-card__info svg path {
+  transition: fill 0.25s linear;
+}
+
+.character-card__info:hover svg path {
+  fill: var(--white);
+}
+
+.character-card__info h2 {
+  color: var(--white);
+  flex-basis: auto;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-right: auto;
+  margin: 0;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.character-card__corner {
+  border-color: transparent transparent var(--white) transparent;
+  border-style: solid;
+  border-width: 0 0px 12.5px 12.5px;
+  bottom: 0;
+  height: 0px;
+  position: absolute;
+  right: 0;
+  width: 0px;
+}
