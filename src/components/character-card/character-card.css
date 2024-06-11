@@ -16,6 +16,9 @@
 .character-card__info {
   --info-height: 56px;
   align-items: center;
+  /* TODO: Fix "element's background color could not be determined due to a background gradient" */
+  /* NOTE: Even not using a gradient, the color white on red is reporting bad contrast ratio */
+  /* More info here: https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI */
   background: linear-gradient(var(--red) 0 0) top/100% 0% no-repeat transparent;
   border-top: 0.33rem solid var(--red);
   display: flex;
