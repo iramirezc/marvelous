@@ -1,5 +1,5 @@
 import React from "react";
-import FilledHeartIcon from "../../icons/filled-heart-icon";
+import { FilledHeartIcon } from "../../icons";
 import "./favorites.css";
 
 type Props = {
