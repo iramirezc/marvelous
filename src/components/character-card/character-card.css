@@ -5,6 +5,7 @@
   flex-direction: column;
   max-width: var(--card-width);
   min-width: var(--card-width);
+  position: relative;
 }
 
 .character-card img {
@@ -26,7 +27,6 @@
   min-height: var(--info-height);
   overflow: auto;
   padding: 1rem;
-  position: relative;
   transition: background-size 0.25s linear;
 }
 
@@ -47,8 +47,7 @@
   flex-basis: auto;
   font-size: 0.8rem;
   font-weight: 400;
-  margin-right: auto;
-  margin: 0;
+  margin: 0 auto 0 0;
   overflow: auto;
   text-overflow: ellipsis;
 }

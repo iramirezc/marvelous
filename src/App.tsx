@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import { Header, Loader, SearchBar } from "./components";
+import { Header, Loader, SearchBar, CharactersList } from "./components";
+import characters from "./components/characters-list/mocks/characters.json";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,11 @@ const App = () => {
       />
       <Loader isLoading={isLoading} />
       <SearchBar value={searchValue} results={0} onChange={setSearchValue} />
+      <CharactersList
+        characters={characters}
+        onCharacterClick={(id) => console.log("Character", id)}
+        onCharacterLike={(id) => console.log("Character like", id)}
+      />
     </>
   );
 };
