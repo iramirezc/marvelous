@@ -1,5 +1,5 @@
 import React from "react";
-import { FilledHeartIcon, EmptyHeartIcon } from "../../icons";
+import { FilledHeartIcon, EmptyHeartIcon } from "../icons";
 import "./like-button.css";
 
 type Props = {
@@ -8,10 +8,11 @@ type Props = {
   onClick: () => void;
 };
 
-export const LikeButton = ({ liked, size = 12, onClick }: Props) => (
-  <div className="character-card__like-button">
+const LikeButton = ({ liked, size = 12, onClick }: Props) => (
+  <div className="like-button">
     <span className="sr-only">{liked ? "Liked" : "Not liked"}</span>
     <button
+      className="like-button__btn"
       onClick={(event) => {
         event.stopPropagation();
         onClick();
@@ -26,3 +27,5 @@ export const LikeButton = ({ liked, size = 12, onClick }: Props) => (
     </button>
   </div>
 );
+
+export default LikeButton;
