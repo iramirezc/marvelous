@@ -30,7 +30,7 @@ export const WithValue: Story = {
 
 export const WithResults: Story = {
   args: {
-    value: "Miles Morales",
+    value: "Peter Parker",
     results: 3
   }
 };

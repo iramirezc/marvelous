@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Header from "./components/header";
-import Loader from "./components/loader/loader";
-import SearchBar from "./components/search-bar/search-bar";
+import { Header, Loader, SearchBar } from "./components";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
