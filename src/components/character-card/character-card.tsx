@@ -17,8 +17,8 @@ const CharacterCard = ({ id, name, image, liked, onClick, onLike }: Props) => (
     <div className="character-card__info">
       <h2>{name}</h2>
       <LikeButton liked={liked} onClick={() => onLike(id)} />
-      <span className="character-card__corner" />
     </div>
+    <span className="character-card__corner" />
   </article>
 );
 
