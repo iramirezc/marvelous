@@ -1,7 +1,6 @@
 import { useCharacters } from "./use-characters";
 import { useLoading } from "./use-loading";
-
-import mockCharacters from "../components/characters-list/mocks/characters.json";
+import mockCharacters from "../mocks/characters.json";
 
 export const useFetchCharacters = () => {
   const { setLoading } = useLoading();

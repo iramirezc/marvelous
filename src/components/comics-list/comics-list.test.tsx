@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import ComicsList from "./comics-list";
-import comics from "./mocks/comics.json";
+import comics from "../../mocks/comics.json";
 
 describe("<ComicsList />", () => {
   test("renders empty", () => {
