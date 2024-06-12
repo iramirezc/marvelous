@@ -1,5 +1,6 @@
 import React from "react";
-import { LikeButton } from "./components/like-button";
+
+import LikeButton from "../like-button";
 import "./character-card.css";
 
 type Props = {
