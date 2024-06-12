@@ -19,3 +19,8 @@ export const setOnlyFavoritesFilter = (onlyFavorites: boolean) => ({
   type: "SET_ONLY_FAVORITES_FILTER",
   payload: onlyFavorites
 });
+
+export const toggleLikeCharacter = (id: string) => ({
+  type: "TOGGLE_LIKE_CHARACTER",
+  payload: id
+});

@@ -34,6 +34,23 @@ export const reducer = (state: AppState, action: Action) => {
         }
       };
 
+    case "TOGGLE_LIKE_CHARACTER":
+      return {
+        ...state,
+        characters: {
+          list: state.characters.list.map((character) => {
+            if (character.id === action.payload) {
+              return {
+                ...character,
+                liked: !character.liked
+              };
+            }
+
+            return character;
+          })
+        }
+      };
+
     default:
       return state;
   }
