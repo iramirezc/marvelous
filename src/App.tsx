@@ -1,24 +1,23 @@
 import React, { useEffect } from "react";
 
 import { Header, Loader, SearchBar, CharactersList } from "./components";
-import { useCharacters, useFavorites, useLoading, useSearch } from "./hooks";
-import mockCharacters from "./components/characters-list/mocks/characters.json";
+import {
+  useCharacters,
+  useFavorites,
+  useFetchCharacters,
+  useLoading,
+  useSearch
+} from "./hooks";
 
 const App = () => {
-  const { loading, setLoading } = useLoading();
-  const { characters, setCharacters } = useCharacters();
+  const { loading } = useLoading();
+  const { characters } = useCharacters();
   const { searchCriteria, setSearchCriteria } = useSearch();
   const { favorites } = useFavorites();
+  const { fetchCharacters } = useFetchCharacters();
 
   useEffect(() => {
-    setLoading(true);
-
-    setTimeout(() => {
-      setLoading(false);
-      setCharacters(
-        mockCharacters.map((character) => ({ ...character, comics: [] }))
-      );
-    }, 1000);
+    fetchCharacters();
   }, []);
 
   const filteredCharacters = characters.list.filter(({ name }) =>
