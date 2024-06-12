@@ -20,7 +20,17 @@ export const reducer = (state: AppState, action: Action) => {
       return {
         ...state,
         filters: {
+          ...state.filters,
           searchCriteria: action.payload
+        }
+      };
+
+    case "SET_ONLY_FAVORITES_FILTER":
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          onlyFavorites: action.payload
         }
       };
 

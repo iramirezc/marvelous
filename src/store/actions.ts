@@ -14,3 +14,8 @@ export const setSearchCriteria = (searchCriteria: string) => ({
   type: "SET_SEARCH_CRITERIA",
   payload: searchCriteria
 });
+
+export const setOnlyFavoritesFilter = (onlyFavorites: boolean) => ({
+  type: "SET_ONLY_FAVORITES_FILTER",
+  payload: onlyFavorites
+});

@@ -6,6 +6,7 @@ export const initialState: AppState = {
     list: []
   },
   filters: {
-    searchCriteria: ""
+    searchCriteria: "",
+    onlyFavorites: false
   }
 };

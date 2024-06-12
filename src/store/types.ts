@@ -20,6 +20,7 @@ export type AppState = {
   };
   filters: {
     searchCriteria: string;
+    onlyFavorites: boolean;
   };
 };
 

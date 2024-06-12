@@ -5,6 +5,7 @@ import {
   useCharacters,
   useFavorites,
   useFetchCharacters,
+  useFilters,
   useLoading,
   useSearch
 } from "./hooks";
@@ -15,21 +16,23 @@ const App = () => {
   const { searchCriteria, setSearchCriteria } = useSearch();
   const { favorites } = useFavorites();
   const { fetchCharacters } = useFetchCharacters();
+  const { filters, filterCharacters, showOnlyFavorites } = useFilters();
 
   useEffect(() => {
     fetchCharacters();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const filteredCharacters = characters.list.filter(({ name }) =>
-    name.toLowerCase().includes(searchCriteria.toLowerCase())
-  );
+  const filteredCharacters = filters.onlyFavorites
+    ? filterCharacters(favorites, searchCriteria)
+    : filterCharacters(characters.list, searchCriteria);
 
   return (
     <>
       <Header
         favoritesCount={favorites.length}
-        onLogoClick={() => console.log("Logo clicked")}
-        onFavoritesClick={() => console.log("Favorites clicked")}
+        onLogoClick={() => showOnlyFavorites(false)}
+        onFavoritesClick={() => showOnlyFavorites(true)}
       />
       <Loader isLoading={loading} />
       <SearchBar
