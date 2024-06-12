@@ -1,0 +1,23 @@
+.comics-list {
+  padding: 1rem;
+}
+
+.comics-list h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+.comics-list ul {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+}
+
+.comics-list ul li {
+  list-style: none;
+}
