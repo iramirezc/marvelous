@@ -59,3 +59,28 @@
   right: 0;
   width: 0px;
 }
+
+@media (min-width: 768px) {
+  .character-detail-card {
+    flex-direction: row;
+  }
+
+  .character-detail-card img {
+    --image-width: 278px;
+    height: auto;
+    width: var(--image-width);
+  }
+
+  .character-detail-card__info {
+    padding: 5rem 3rem;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 960px) {
+  .character-detail-card {
+    --detail-card-max-width: 960px;
+    max-width: var(--detail-card-max-width);
+    margin: 0 auto;
+  }
+}
