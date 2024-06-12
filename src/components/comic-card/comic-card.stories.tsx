@@ -12,8 +12,8 @@ type Story = StoryObj<typeof ComicCard>;
 
 export const Default: Story = {
   args: {
-    image: "https://i.annihil.us/u/prod/marvel/i/mg/f/03/663e5c5906239.jpg",
     title: "The Amazing Spider-Man (2022) #50",
+    image: "https://i.annihil.us/u/prod/marvel/i/mg/f/03/663e5c5906239.jpg",
     year: "2024"
   }
 };

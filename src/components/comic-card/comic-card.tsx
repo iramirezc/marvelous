@@ -2,12 +2,12 @@ import React from "react";
 import "./comic-card.css";
 
 type Props = {
-  image: string;
   title: string;
+  image: string;
   year: string;
 };
 
-const ComicCard = ({ image, title, year }: Props) => (
+const ComicCard = ({ title, image, year }: Props) => (
   <article className="comic-card">
     <img src={image} alt={title} />
     <h3>{title}</h3>
