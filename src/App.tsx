@@ -1,49 +1,42 @@
 import React, { useEffect } from "react";
 
 import { Header, Loader, SearchBar, CharactersList } from "./components";
-import { setCharacters, setLoading, setSearchCriteria } from "./store/actions";
-import { useAppState, useAppDispatch } from "./store/hooks";
+import { useCharacters, useFavorites, useLoading, useSearch } from "./hooks";
 import mockCharacters from "./components/characters-list/mocks/characters.json";
 
 const App = () => {
-  const { loading, characters, filters } = useAppState();
-  const dispatch = useAppDispatch();
+  const { loading, setLoading } = useLoading();
+  const { characters, setCharacters } = useCharacters();
+  const { searchCriteria, setSearchCriteria } = useSearch();
+  const { favorites } = useFavorites();
 
   useEffect(() => {
-    dispatch(setLoading(true));
+    setLoading(true);
 
     setTimeout(() => {
-      dispatch(setLoading(false));
-      dispatch(
-        setCharacters(
-          mockCharacters.map((character) => ({ ...character, comics: [] }))
-        )
+      setLoading(false);
+      setCharacters(
+        mockCharacters.map((character) => ({ ...character, comics: [] }))
       );
     }, 1000);
   }, []);
 
-  const handleOnSearchChange = (value: string) => {
-    dispatch(setSearchCriteria(value));
-  };
-
-  const favoritesCount = characters.list.filter(({ liked }) => liked).length;
-
   const filteredCharacters = characters.list.filter(({ name }) =>
-    name.toLowerCase().includes(filters.searchCriteria.toLowerCase())
+    name.toLowerCase().includes(searchCriteria.toLowerCase())
   );
 
   return (
     <>
       <Header
-        favoritesCount={favoritesCount}
+        favoritesCount={favorites.length}
         onLogoClick={() => console.log("Logo clicked")}
         onFavoritesClick={() => console.log("Favorites clicked")}
       />
       <Loader isLoading={loading} />
       <SearchBar
-        value={filters.searchCriteria}
+        value={searchCriteria}
         results={filteredCharacters.length}
-        onChange={handleOnSearchChange}
+        onChange={setSearchCriteria}
       />
       <CharactersList
         characters={filteredCharacters}
