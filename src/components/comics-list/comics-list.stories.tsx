@@ -13,6 +13,6 @@ type Story = StoryObj<typeof ComicsList>;
 
 export const Default: Story = {
   args: {
-    comics
+    comics: comics.splice(0, 20)
   }
 };
