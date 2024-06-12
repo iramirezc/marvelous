@@ -1,31 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import { Header, Loader, SearchBar, CharactersList } from "./components";
-import characters from "./components/characters-list/mocks/characters.json";
+import {
+  useCharacters,
+  useFavorites,
+  useFetchCharacters,
+  useFilters,
+  useLoading,
+  useSearch
+} from "./hooks";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchValue, setSearchValue] = useState("");
+  const { loading } = useLoading();
+  const { characters } = useCharacters();
+  const { searchCriteria, setSearchCriteria } = useSearch();
+  const { favorites, toggleLikeCharacter } = useFavorites();
+  const { fetchCharacters } = useFetchCharacters();
+  const { filters, filterCharacters, showOnlyFavorites } = useFilters();
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    fetchCharacters();
   }, []);
+
+  const filteredCharacters = filters.onlyFavorites
+    ? filterCharacters(favorites, searchCriteria)
+    : filterCharacters(characters.list, searchCriteria);
 
   return (
     <>
       <Header
-        favoritesCount={0}
-        onLogoClick={() => console.log("Logo clicked")}
-        onFavoritesClick={() => console.log("Favorites clicked")}
+        favoritesCount={favorites.length}
+        onLogoClick={() => showOnlyFavorites(false)}
+        onFavoritesClick={() => showOnlyFavorites(true)}
       />
-      <Loader isLoading={isLoading} />
-      <SearchBar value={searchValue} results={0} onChange={setSearchValue} />
+      <Loader isLoading={loading} />
+      <SearchBar
+        value={searchCriteria}
+        results={filteredCharacters.length}
+        onChange={setSearchCriteria}
+      />
       <CharactersList
-        characters={characters}
+        characters={filteredCharacters}
         onCharacterClick={(id) => console.log("Character", id)}
-        onCharacterLike={(id) => console.log("Character like", id)}
+        onCharacterLike={toggleLikeCharacter}
       />
     </>
   );

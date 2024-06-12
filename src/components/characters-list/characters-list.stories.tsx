@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 import CharactersList from "./characters-list";
-import characters from "./mocks/characters.json";
+import characters from "../../mocks/characters.json";
 
 const meta: Meta<typeof CharactersList> = {
   component: CharactersList,

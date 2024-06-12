@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import CharactersList from "./characters-list";
-import characters from "./mocks/characters.json";
+import characters from "../../mocks/characters.json";
 
 describe("<CharactersList />", () => {
   test("renders the characters cards", () => {
