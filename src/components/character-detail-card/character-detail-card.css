@@ -83,4 +83,13 @@
     max-width: var(--detail-card-max-width);
     margin: 0 auto;
   }
+
+  .character-detail-card img {
+    --image-width: 320px;
+    width: var(--image-width);
+  }
+
+  .character-detail-card__info-header h2 {
+    font-size: 2.5rem;
+  }
 }
