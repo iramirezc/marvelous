@@ -32,3 +32,36 @@
   line-height: 0.8rem;
   margin: 0;
 }
+
+@media (min-width: 768px) {
+  .comic-card {
+    --card-width: 170px;
+  }
+
+  .comic-card img {
+    --image-height: 253px;
+  }
+
+  .comic-card h3 {
+    font-size: 95%;
+  }
+}
+
+@media (min-width: 960px) {
+  .comic-card {
+    --card-width: 180px;
+  }
+
+  .comic-card img {
+    --image-height: 269px;
+  }
+
+  .comic-card h3 {
+    font-size: 100%;
+    line-height: 1.2rem;
+  }
+
+  .comic-card time {
+    font-size: 75%;
+  }
+}
