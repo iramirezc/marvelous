@@ -20,7 +20,6 @@ const App = () => {
 
   useEffect(() => {
     fetchCharacters();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const filteredCharacters = filters.onlyFavorites

@@ -1,4 +1,10 @@
-import { Character } from "./types";
+import { Character } from "../types";
+
+export type Action = {
+  type: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  payload: any;
+};
 
 export const setLoading = (loading: boolean) => ({
   type: "SET_LOADING",

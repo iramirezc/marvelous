@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useReducer } from "react";
 import { AppContext, AppDispatchContext } from "./context";
-import { initialState } from "./initial-state";
+import { initialState } from "./state";
 import { reducer } from "./reducer";
 
 const StoreProvider = ({ children }: PropsWithChildren) => {
