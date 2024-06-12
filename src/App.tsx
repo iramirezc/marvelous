@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import { Header, Loader, SearchBar, CharactersList } from "./components";
+import { setCharacters, setLoading, setSearchCriteria } from "./store/actions";
 import { useAppState, useAppDispatch } from "./store/hooks";
 import mockCharacters from "./components/characters-list/mocks/characters.json";
 
@@ -9,16 +10,20 @@ const App = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch({ type: "SET_LOADING", payload: true });
+    dispatch(setLoading(true));
 
     setTimeout(() => {
-      dispatch({ type: "SET_LOADING", payload: false });
-      dispatch({ type: "SET_CHARACTERS", payload: mockCharacters });
+      dispatch(setLoading(false));
+      dispatch(
+        setCharacters(
+          mockCharacters.map((character) => ({ ...character, comics: [] }))
+        )
+      );
     }, 1000);
   }, []);
 
   const handleOnSearchChange = (value: string) => {
-    dispatch({ type: "SET_SEARCH_CRITERIA", payload: value });
+    dispatch(setSearchCriteria(value));
   };
 
   const favoritesCount = characters.list.filter(({ liked }) => liked).length;

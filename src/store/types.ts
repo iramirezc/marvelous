@@ -5,7 +5,7 @@ type Comic = {
   year: string;
 };
 
-type Character = {
+export type Character = {
   id: string;
   name: string;
   image: string;
