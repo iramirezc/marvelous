@@ -8,6 +8,7 @@ import userEvent from "@testing-library/user-event";
 const defaultProps: ComponentProps<typeof SearchBar> = {
   value: "",
   results: 0,
+  isSearching: false,
   onChange: jest.fn()
 };
 
@@ -36,6 +37,19 @@ describe("<SearchBar />", () => {
     expect(screen.getByText("1 Result")).toBeInTheDocument();
   });
 
+  test("renders no results", () => {
+    renderComponent({ ...defaultProps, results: 0 });
+
+    expect(screen.getByText("0 Results")).toBeInTheDocument();
+  });
+
+  test("renders status of Searching if busy", () => {
+    renderComponent({ ...defaultProps, isSearching: true });
+
+    expect(screen.getByLabelText("Searching")).toBeInTheDocument();
+    expect(screen.queryByText("0 Results")).not.toBeInTheDocument();
+  });
+
   test("renders the number of results", () => {
     renderComponent({ ...defaultProps, results: 3 });
 
@@ -52,6 +66,7 @@ describe("<SearchBar />", () => {
         <SearchBar
           value={value}
           results={0}
+          isSearching={false}
           onChange={(value) => {
             onChange(value);
             setValue(value);
