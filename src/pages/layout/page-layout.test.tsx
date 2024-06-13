@@ -1,17 +1,11 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import PageLayout from "./page-layout";
-import { TestStoreProvider } from "../../tests/providers";
+import { screen } from "@testing-library/react";
+import { renderWithStoreProvider } from "../../tests/providers";
 import type { PreloadedState } from "../../tests/providers";
+import PageLayout from "./page-layout";
 
 const renderPage = (preloadedState?: PreloadedState) =>
-  render(<PageLayout />, {
-    wrapper: ({ children }) => (
-      <TestStoreProvider preloadedState={preloadedState}>
-        {children}
-      </TestStoreProvider>
-    )
-  });
+  renderWithStoreProvider(<PageLayout />, preloadedState);
 
 describe("<PageLayout />", () => {
   test("renders the <Header /> component", () => {
