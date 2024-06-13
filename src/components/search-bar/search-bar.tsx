@@ -9,8 +9,8 @@ type Props = {
 };
 
 const SearchBar = ({ value, results, onChange }: Props) => (
-  <div className="search-bar-container">
-    <div className="search-bar">
+  <div className="search-bar">
+    <div className="search-bar__input">
       <img src={SearchIcon} alt="Search" />
       <input
         type="search"
@@ -19,7 +19,7 @@ const SearchBar = ({ value, results, onChange }: Props) => (
         onChange={(event) => onChange(event.target.value)}
       />
     </div>
-    <div className="search-bar-results">
+    <div className="search-bar__results">
       {results} {results === 1 ? "Result" : "Results"}
     </div>
   </div>
