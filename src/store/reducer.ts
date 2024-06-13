@@ -20,8 +20,8 @@ export const reducer = (state: AppState, action: Action) => {
     case "SET_SEARCH_CRITERIA":
       return {
         ...state,
-        filters: {
-          ...state.filters,
+        search: {
+          ...state.search,
           searchCriteria: action.payload
         }
       };

@@ -6,8 +6,10 @@ export type AppState = {
     list: Character[];
   };
   filters: {
-    searchCriteria: string;
     onlyFavorites: boolean;
+  };
+  search: {
+    searchCriteria: string;
   };
 };
 
@@ -19,7 +21,9 @@ export const initialState: AppState = {
     list: []
   },
   filters: {
-    searchCriteria: "",
     onlyFavorites: false
+  },
+  search: {
+    searchCriteria: ""
   }
 };
