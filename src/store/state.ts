@@ -4,7 +4,7 @@ export type AppState = {
   loading: boolean;
   characters: {
     list: Character[];
-    favorites: Character[];
+    favorites: string[];
   };
   filters: {
     onlyFavorites: boolean;

@@ -16,7 +16,7 @@ export const setCharacters = (characters: Character[]) => ({
   payload: characters
 });
 
-export const setFavorites = (favorites: Character[]) => ({
+export const setFavorites = (favorites: string[]) => ({
   type: "SET_FAVORITES",
   payload: favorites
 });

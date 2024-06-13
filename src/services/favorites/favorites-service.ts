@@ -2,12 +2,12 @@ import storageService from "../storage/storage-service";
 
 const FAVORITES_KEY = "favorites";
 
-const save = <T>(data: T) => {
+const save = (data: string[]) => {
   storageService.save(FAVORITES_KEY, data);
 };
 
-const get = <T>() => {
-  return storageService.get<T>(FAVORITES_KEY);
+const get = () => {
+  return storageService.get<string[]>(FAVORITES_KEY);
 };
 
 const clear = () => {

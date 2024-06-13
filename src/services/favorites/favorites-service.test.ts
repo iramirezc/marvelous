@@ -8,7 +8,7 @@ describe("Favorites Service", () => {
 
   describe("favoritesService.save()", () => {
     test("saves data to storage", () => {
-      const data = [{ id: "1" }];
+      const data = ["1"];
 
       favoritesService.save(data);
 
@@ -19,7 +19,7 @@ describe("Favorites Service", () => {
 
   describe("favoritesService.get()", () => {
     test("returns saved data from storage", () => {
-      const data = [{ id: "1" }];
+      const data = ["1"];
       storageService.save("favorites", data);
 
       const savedData = favoritesService.get();
@@ -30,12 +30,12 @@ describe("Favorites Service", () => {
 
   describe("favoritesService.clear()", () => {
     test("clears saved data from storage", () => {
-      const data = [{ id: "1" }];
+      const data = ["1"];
       storageService.save("favorites", data);
 
       favoritesService.clear();
 
-      const clearedData = storageService.get("favorites");
+      const clearedData = storageService.get<string[]>("favorites");
       expect(clearedData).toBeNull();
     });
   });

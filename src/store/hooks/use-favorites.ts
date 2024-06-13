@@ -12,8 +12,8 @@ export const useFavorites = () => {
     dispatch(setFavoritesAction(...args));
   };
 
-  const isFavorite = (id: string) => {
-    return favorites.some((favorite) => favorite.id === id);
+  const isFavorite = (characterId: string) => {
+    return favorites.some((id) => id === characterId);
   };
 
   return {
