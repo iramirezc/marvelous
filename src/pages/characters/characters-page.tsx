@@ -7,25 +7,25 @@ import "./characters-page.css";
 const CharactersPage = () => {
   const { isSearching, results, searchCriteria, onChangeSearchCriteria } =
     useSearchBar();
-  const { characters: firstLoad, fetchCharacters } = useFetchCharacters();
+  const { characters, fetchCharacters } = useFetchCharacters();
 
   useEffect(() => {
     fetchCharacters();
     //  eslint-disable-next-line
   }, []);
 
-  const characters = searchCriteria ? results : firstLoad;
+  const charactersList = searchCriteria ? results : characters;
 
   return (
     <main className="characters-page">
       <SearchBar
         value={searchCriteria}
-        results={characters.length}
+        results={charactersList.length}
         isSearching={isSearching}
         onChange={onChangeSearchCriteria}
       />
       <CharactersList
-        characters={characters}
+        characters={charactersList}
         onCharacterClick={(id) => console.log("Character->click", id)}
         onCharacterLike={(id) => console.log("Character->like", id)}
       />
