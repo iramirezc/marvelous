@@ -3,18 +3,26 @@ import { CharactersList, SearchBar } from "../../components";
 import { useFetchCharacters } from "./hooks/use-fetch-characters";
 import { useSearchBar } from "./hooks/use-search-bar";
 import "./characters-page.css";
+import { useFavoriteCharacters } from "./hooks/use-favorite-characters";
 
 const CharactersPage = () => {
+  const { characters, fetchCharacters } = useFetchCharacters();
   const { isSearching, results, searchCriteria, onChangeSearchCriteria } =
     useSearchBar();
-  const { characters, fetchCharacters } = useFetchCharacters();
+  const { isFavorite, toggleLike: toggleLikeCharacter } =
+    useFavoriteCharacters();
 
   useEffect(() => {
     fetchCharacters();
     //  eslint-disable-next-line
   }, []);
 
-  const charactersList = searchCriteria ? results : characters;
+  const charactersList = (searchCriteria ? results : characters).map(
+    (character) => ({
+      ...character,
+      liked: isFavorite(character.id)
+    })
+  );
 
   return (
     <main className="characters-page">
@@ -27,7 +35,7 @@ const CharactersPage = () => {
       <CharactersList
         characters={charactersList}
         onCharacterClick={(id) => console.log("Character->click", id)}
-        onCharacterLike={(id) => console.log("Character->like", id)}
+        onCharacterLike={toggleLikeCharacter}
       />
     </main>
   );
