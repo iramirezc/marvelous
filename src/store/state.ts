@@ -10,6 +10,8 @@ export type AppState = {
   };
   search: {
     searchCriteria: string;
+    isSearching: boolean;
+    results: Character[];
   };
 };
 
@@ -24,6 +26,8 @@ export const initialState: AppState = {
     onlyFavorites: false
   },
   search: {
-    searchCriteria: ""
+    searchCriteria: "",
+    isSearching: false,
+    results: []
   }
 };

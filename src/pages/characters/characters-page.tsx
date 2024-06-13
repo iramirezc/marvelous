@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { CharactersList, SearchBar } from "../../components";
-import { useCharacters, useFetchCharacters, useSearch } from "../../hooks";
+import { useFetchCharacters } from "./hooks/use-fetch-characters";
+import { useSearchBar } from "./hooks/use-search-bar";
 import "./characters-page.css";
 
 const CharactersPage = () => {
-  const { characters: firstLoad } = useCharacters();
   const { isSearching, results, searchCriteria, onChangeSearchCriteria } =
-    useSearch();
-  const { fetchCharacters } = useFetchCharacters();
+    useSearchBar();
+  const { characters: firstLoad, fetchCharacters } = useFetchCharacters();
 
   useEffect(() => {
     fetchCharacters();
