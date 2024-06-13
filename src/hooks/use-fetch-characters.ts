@@ -1,4 +1,4 @@
-import { fetchCharacters as fetchCharactersService } from "../services/characters";
+import charactersService from "../services/characters";
 import { useCharacters } from "./use-characters";
 import { useLoading } from "./use-loading";
 
@@ -10,7 +10,7 @@ export const useFetchCharacters = () => {
     setLoading(true);
 
     try {
-      const characters = await fetchCharactersService();
+      const characters = await charactersService.fetchCharacters();
       setCharacters(characters);
     } catch (error) {
     } finally {

@@ -1,6 +1,6 @@
 import { Character } from "../../types";
-import { getCharacters } from "../api/api-service";
-import { getCharactersCache, saveCharactersCache } from "./characters-cache";
+import apiService from "../api/api-service";
+import charactersCache from "./characters-cache";
 
 interface CharacterData {
   id: number;
@@ -21,17 +21,17 @@ const transformCharacterData = (data: CharacterData): Character => ({
   comics: []
 });
 
-export const fetchCharacters = async () => {
+const fetchCharacters = async () => {
   let data: CharacterData[] = [];
 
   try {
-    const cache = getCharactersCache<CharacterData[]>();
+    const cache = charactersCache.get<CharacterData[]>();
 
     if (cache) {
       data = cache;
     } else {
-      data = await getCharacters<CharacterData>();
-      saveCharactersCache(data);
+      data = await apiService.getCharacters<CharacterData>();
+      charactersCache.save(data);
     }
   } catch (error) {
     console.error(error);
@@ -39,3 +39,7 @@ export const fetchCharacters = async () => {
 
   return data.map(transformCharacterData);
 };
+
+const charactersService = { fetchCharacters };
+
+export default charactersService;

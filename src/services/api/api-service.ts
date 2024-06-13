@@ -2,7 +2,7 @@ import { getPublicApiEndpoint, getApiParams } from "../../utils/api-utils";
 
 const CHARACTERS_LIMIT = 50;
 
-export const getCharacters = async <T>() => {
+const getCharacters = async <T>() => {
   const response = await fetch(
     `${getPublicApiEndpoint("characters")}?${new URLSearchParams(getApiParams({ limit: CHARACTERS_LIMIT }))}`
   );
@@ -11,3 +11,7 @@ export const getCharacters = async <T>() => {
 
   return data.data.results as T[];
 };
+
+const apiService = { getCharacters };
+
+export default apiService;

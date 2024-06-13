@@ -1,6 +1,6 @@
-import { getCharactersCache, saveCharactersCache } from "./characters-cache";
+import charactersCache from "./characters-cache";
+import cacheService from "../cache/cache-service";
 import { isExpired, getNow } from "../../utils/time-utils";
-import * as cacheService from "../cache/cache-service";
 
 jest.mock("../../utils/time-utils");
 
@@ -13,20 +13,20 @@ describe("Characters Cache", () => {
     cacheService.clear();
   });
 
-  describe("saveCharactersCache()", () => {
+  describe("charactersCache.save()", () => {
     test("saves data and last fetch time", () => {
       const data = { foo: "bar" };
 
-      saveCharactersCache(data);
+      charactersCache.save(data);
 
       expect(cacheService.get("characters")).toEqual(data);
       expect(cacheService.get("characters_lastFetch")).toBe(1);
     });
   });
 
-  describe("getCharactersCache()", () => {
+  describe("charactersCache.get()", () => {
     test("returns null if cache is empty", () => {
-      const cache = getCharactersCache();
+      const cache = charactersCache.get();
 
       expect(cache).toBeNull();
     });
@@ -34,9 +34,9 @@ describe("Characters Cache", () => {
     test("returns null if cache is expired", () => {
       jest.mocked(isExpired).mockReturnValueOnce(true);
 
-      saveCharactersCache({ foo: "bar" });
+      charactersCache.save({ foo: "bar" });
 
-      const cache = getCharactersCache();
+      const cache = charactersCache.get();
 
       expect(cache).toBeNull();
     });
@@ -44,9 +44,9 @@ describe("Characters Cache", () => {
     test("removes cache if expired", () => {
       jest.mocked(isExpired).mockReturnValueOnce(true);
 
-      saveCharactersCache({ foo: "bar" });
+      charactersCache.save({ foo: "bar" });
 
-      getCharactersCache();
+      charactersCache.get();
 
       expect(cacheService.get("characters")).toBeNull();
       expect(cacheService.get("characters_lastFetch")).toBeNull();
@@ -55,9 +55,9 @@ describe("Characters Cache", () => {
     test("returns cached data if cache is not expired", () => {
       const data = { foo: "bar" };
 
-      saveCharactersCache(data);
+      charactersCache.save(data);
 
-      const cache = getCharactersCache();
+      const cache = charactersCache.get();
 
       expect(cache).toEqual(data);
     });

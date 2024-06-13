@@ -1,1 +1,1 @@
-export { fetchCharacters } from "./fetch-characters";
+export { default } from "./characters-service";

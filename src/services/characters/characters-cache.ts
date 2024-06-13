@@ -1,15 +1,15 @@
 import { A_MINUTE, getNow, isExpired } from "../../utils/time-utils";
-import * as cacheService from "../cache/cache-service";
+import cacheService from "../cache/cache-service";
 
 const DATA_KEY = "characters";
 const LAST_FETCH_KEY = `${DATA_KEY}_lastFetch`;
 
-export const saveCharactersCache = <T>(data: T) => {
+const save = <T>(data: T) => {
   cacheService.save(DATA_KEY, data);
   cacheService.save(LAST_FETCH_KEY, getNow());
 };
 
-export const getCharactersCache = <T>() => {
+const get = <T>() => {
   const lastFetch = cacheService.get<number>(LAST_FETCH_KEY);
 
   if (lastFetch === null) {
@@ -25,3 +25,7 @@ export const getCharactersCache = <T>() => {
 
   return cacheService.get<T>(DATA_KEY);
 };
+
+const charactersCache = { save, get };
+
+export default charactersCache;

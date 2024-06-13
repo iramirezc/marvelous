@@ -1,5 +1,5 @@
 import fetchMock from "fetch-mock";
-import { getCharacters } from "./api-service";
+import apiService from "./api-service";
 import milesMorales from "../../mocks/miles-morales.json";
 
 jest.mock("../../utils/time-utils", () => ({
@@ -20,9 +20,12 @@ describe("API Service", () => {
     });
   });
 
-  describe("getCharacters()", () => {
+  describe("apiService.getCharacters()", () => {
     test("fetches characters successfully", async () => {
-      const response = await getCharacters<{ id: string; name: string }>();
+      const response = await apiService.getCharacters<{
+        id: string;
+        name: string;
+      }>();
 
       expect(response).toHaveLength(1);
       expect(response[0].id).toBe(1016181);

@@ -1,17 +1,26 @@
-export const save = <T>(key: string, value: T) => {
+const save = <T>(key: string, value: T) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 
-export const get = <T>(key: string) => {
+const get = <T>(key: string) => {
   const value = localStorage.getItem(key);
 
   return value ? (JSON.parse(value) as T) : null;
 };
 
-export const remove = (key: string) => {
+const remove = (key: string) => {
   localStorage.removeItem(key);
 };
 
-export const clear = () => {
+const clear = () => {
   localStorage.clear();
 };
+
+const cacheService = {
+  save,
+  get,
+  remove,
+  clear
+};
+
+export default cacheService;
