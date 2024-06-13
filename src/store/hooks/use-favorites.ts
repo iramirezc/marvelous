@@ -1,21 +1,24 @@
-import { toggleLikeCharacter as toggleLikeCharacterAction } from "../actions";
+import { setFavorites as setFavoritesAction } from "../actions";
 import { useAppDispatch } from "./use-app-dispatch";
 import { useAppState } from "./use-app-state";
 
 export const useFavorites = () => {
-  const { characters } = useAppState();
+  const {
+    characters: { favorites }
+  } = useAppState();
   const dispatch = useAppDispatch();
 
-  const favorites = characters.list.filter(({ liked }) => liked);
+  const setFavorites = (...args: Parameters<typeof setFavoritesAction>) => {
+    dispatch(setFavoritesAction(...args));
+  };
 
-  const toggleLikeCharacter = (
-    ...args: Parameters<typeof toggleLikeCharacterAction>
-  ) => {
-    dispatch(toggleLikeCharacterAction(...args));
+  const isFavorite = (id: string) => {
+    return favorites.some((favorite) => favorite.id === id);
   };
 
   return {
     favorites,
-    toggleLikeCharacter
+    isFavorite,
+    setFavorites
   };
 };

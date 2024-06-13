@@ -16,6 +16,11 @@ export const setCharacters = (characters: Character[]) => ({
   payload: characters
 });
 
+export const setFavorites = (favorites: Character[]) => ({
+  type: "SET_FAVORITES",
+  payload: favorites
+});
+
 export const setSearchCriteria = (searchCriteria: string) => ({
   type: "SET_SEARCH_CRITERIA",
   payload: searchCriteria
@@ -34,9 +39,4 @@ export const setSearchResults = (results: Character[]) => ({
 export const setOnlyFavoritesFilter = (onlyFavorites: boolean) => ({
   type: "SET_ONLY_FAVORITES_FILTER",
   payload: onlyFavorites
-});
-
-export const toggleLikeCharacter = (id: string) => ({
-  type: "TOGGLE_LIKE_CHARACTER",
-  payload: id
 });

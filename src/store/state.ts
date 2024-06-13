@@ -4,6 +4,7 @@ export type AppState = {
   loading: boolean;
   characters: {
     list: Character[];
+    favorites: Character[];
   };
   filters: {
     onlyFavorites: boolean;
@@ -20,7 +21,8 @@ export type PreloadedState = Partial<AppState>;
 export const initialState: AppState = {
   loading: false,
   characters: {
-    list: []
+    list: [],
+    favorites: []
   },
   filters: {
     onlyFavorites: false
