@@ -15,7 +15,18 @@ export const reducer = (state: AppState, action: Action) => {
       return {
         ...state,
         characters: {
+          ...state.characters,
           list: action.payload
+        }
+      };
+
+    /* Favorites */
+    case "SET_FAVORITES":
+      return {
+        ...state,
+        characters: {
+          ...state.characters,
+          favorites: action.payload
         }
       };
 
@@ -54,24 +65,6 @@ export const reducer = (state: AppState, action: Action) => {
         filters: {
           ...state.filters,
           onlyFavorites: action.payload
-        }
-      };
-
-    /* Favorites */
-    case "TOGGLE_LIKE_CHARACTER":
-      return {
-        ...state,
-        characters: {
-          list: state.characters.list.map((character) => {
-            if (character.id === action.payload) {
-              return {
-                ...character,
-                liked: !character.liked
-              };
-            }
-
-            return character;
-          })
         }
       };
 

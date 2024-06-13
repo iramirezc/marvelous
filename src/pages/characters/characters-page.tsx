@@ -1,20 +1,18 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { CharactersList, SearchBar } from "../../components";
-import { useFetchCharacters } from "./hooks/use-fetch-characters";
-import { useSearchBar } from "./hooks/use-search-bar";
+
 import "./characters-page.css";
+import { useCharactersPage } from "./hooks/use-characters-page";
 
 const CharactersPage = () => {
-  const { isSearching, results, searchCriteria, onChangeSearchCriteria } =
-    useSearchBar();
-  const { characters, fetchCharacters } = useFetchCharacters();
-
-  useEffect(() => {
-    fetchCharacters();
-    //  eslint-disable-next-line
-  }, []);
-
-  const charactersList = searchCriteria ? results : characters;
+  const {
+    isSearching,
+    searchCriteria,
+    charactersList,
+    toggleLike,
+    showCharacterDetails,
+    onChangeSearchCriteria
+  } = useCharactersPage();
 
   return (
     <main className="characters-page">
@@ -26,8 +24,8 @@ const CharactersPage = () => {
       />
       <CharactersList
         characters={charactersList}
-        onCharacterClick={(id) => console.log("Character->click", id)}
-        onCharacterLike={(id) => console.log("Character->like", id)}
+        onCharacterClick={showCharacterDetails}
+        onCharacterLike={toggleLike}
       />
     </main>
   );

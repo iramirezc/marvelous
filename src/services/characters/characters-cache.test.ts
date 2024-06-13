@@ -1,6 +1,6 @@
-import charactersCache from "./characters-cache";
-import cacheService from "../cache/cache-service";
 import { isExpired, getNow } from "../../utils/time-utils";
+import storageService from "../storage/storage-service";
+import charactersCache from "./characters-cache";
 
 jest.mock("../../utils/time-utils");
 
@@ -10,7 +10,7 @@ describe("Characters Cache", () => {
   });
 
   afterEach(() => {
-    cacheService.clear();
+    storageService.clear();
   });
 
   describe("charactersCache.save()", () => {
@@ -19,8 +19,8 @@ describe("Characters Cache", () => {
 
       charactersCache.save(data);
 
-      expect(cacheService.get("characters")).toEqual(data);
-      expect(cacheService.get("characters_lastFetch")).toBe(1);
+      expect(storageService.get("characters")).toEqual(data);
+      expect(storageService.get("characters_lastFetch")).toBe(1);
     });
   });
 
@@ -48,8 +48,26 @@ describe("Characters Cache", () => {
 
       charactersCache.get();
 
-      expect(cacheService.get("characters")).toBeNull();
-      expect(cacheService.get("characters_lastFetch")).toBeNull();
+      expect(storageService.get("characters")).toBeNull();
+      expect(storageService.get("characters_lastFetch")).toBeNull();
+    });
+
+    // * Regression test for a bug that was removing all cache
+    test("Regression: removes ONLY 'characters*' cache if expired", () => {
+      jest.mocked(isExpired).mockReturnValueOnce(true);
+
+      // store some other key different than 'characters'
+      storageService.save("other", { foo: "bar" });
+      // store regular 'characters' cache
+      charactersCache.save({ baz: "qux" });
+
+      // as 'characters' cache is expired, it should be removed
+      charactersCache.get();
+
+      // assert that 'characters*' cache was removed
+      expect(storageService.get("characters")).toBeNull();
+      // assert that 'other' cache was not removed
+      expect(storageService.get("other")).toEqual({ foo: "bar" });
     });
 
     test("returns cached data if cache is not expired", () => {
@@ -69,8 +87,8 @@ describe("Characters Cache", () => {
 
       charactersCache.clear();
 
-      expect(cacheService.get("characters")).toBeNull();
-      expect(cacheService.get("characters_lastFetch")).toBeNull();
+      expect(storageService.get("characters")).toBeNull();
+      expect(storageService.get("characters_lastFetch")).toBeNull();
     });
   });
 });

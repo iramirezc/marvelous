@@ -1,12 +1,12 @@
 import React from "react";
-import { act, screen, waitFor } from "@testing-library/react";
+import { act, screen, waitFor, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { renderWithStoreProvider } from "../../tests/providers";
 import type { PreloadedState } from "../../tests/providers";
 import charactersService from "../../services/characters";
 import mockCharacters from "../../mocks/characters.json";
 import type { Character } from "../../types";
 import CharactersPage from "./characters-page";
-import userEvent from "@testing-library/user-event";
 
 jest.mock("../../services/characters");
 
@@ -27,50 +27,110 @@ const renderPage = (preloadedState?: PreloadedState) =>
   renderWithStoreProvider(<CharactersPage />, preloadedState);
 
 describe("<CharactersPage />", () => {
-  test("renders the search bar", async () => {
-    setupInitialLoadResponse([]);
+  describe("initial load", () => {
+    test("renders the initial load of characters", async () => {
+      setupInitialLoadResponse(mockCharacters);
 
-    await act(renderPage);
+      await act(renderPage);
 
-    expect(screen.getByRole("searchbox")).toBeInTheDocument();
+      expect(
+        screen.getByText(`${mockCharacters.length} Results`)
+      ).toBeInTheDocument();
+      expect(screen.getAllByRole("article")).toHaveLength(
+        mockCharacters.length
+      );
+    });
   });
 
-  test("renders the initial load of characters", async () => {
-    setupInitialLoadResponse(mockCharacters);
+  describe("searching for characters", () => {
+    test("renders the search bar", async () => {
+      setupInitialLoadResponse([]);
 
-    await act(renderPage);
+      await act(renderPage);
 
-    expect(
-      screen.getByText(`${mockCharacters.length} Results`)
-    ).toBeInTheDocument();
-    expect(screen.getAllByRole("article")).toHaveLength(mockCharacters.length);
+      expect(screen.getByRole("searchbox")).toBeInTheDocument();
+    });
+
+    test("renders the status of 'Searching' when user starts typing", async () => {
+      setupInitialLoadResponse([]);
+
+      await act(renderPage);
+
+      await userEvent.type(screen.getByRole("searchbox"), "X");
+
+      expect(screen.getByLabelText("Searching")).toBeInTheDocument();
+    });
+
+    test("renders the search results whe user ends typing", async () => {
+      const filteredCharacters = mockCharacters.filter((character) =>
+        character.name.startsWith("Spider-Girl")
+      );
+      setupInitialLoadResponse(mockCharacters);
+      setupSearchResponse(filteredCharacters);
+
+      await act(renderPage);
+
+      await userEvent.type(screen.getByRole("searchbox"), "Spider-Girl");
+
+      await waitFor(() => screen.findByText("2 Results"));
+
+      expect(screen.getAllByRole("article")).toHaveLength(
+        filteredCharacters.length
+      );
+    });
   });
 
-  test("renders the status of 'Searching' when user starts typing", async () => {
-    setupInitialLoadResponse([]);
+  describe("favorites", () => {
+    test("no favorites on initial load", async () => {
+      setupInitialLoadResponse(mockCharacters);
 
-    await act(renderPage);
+      // eslint-disable-next-line
+      await act(() => renderPage({ characters: { list: [], favorites: [] } }));
 
-    await userEvent.type(screen.getByRole("searchbox"), "X");
+      expect(screen.queryAllByText("Liked")).toHaveLength(0);
+    });
 
-    expect(screen.getByLabelText("Searching")).toBeInTheDocument();
-  });
+    test("renders my favorites on initial load", async () => {
+      setupInitialLoadResponse(mockCharacters);
 
-  test("renders the search results whe user ends typing", async () => {
-    const filteredCharacters = mockCharacters.filter((character) =>
-      character.name.startsWith("Spider-Girl")
-    );
-    setupInitialLoadResponse(mockCharacters);
-    setupSearchResponse(filteredCharacters);
+      // eslint-disable-next-line
+      await act(() =>
+        renderPage({ characters: { list: [], favorites: ["1009610"] } })
+      );
 
-    await act(renderPage);
+      expect(screen.getAllByText("Liked")).toHaveLength(1);
+    });
 
-    await userEvent.type(screen.getByRole("searchbox"), "Spider-Girl");
+    test("adds and removes a character from my favorites", async () => {
+      setupInitialLoadResponse(mockCharacters);
 
-    await waitFor(() => screen.findByText("2 Results"));
+      await act(renderPage);
 
-    expect(screen.getAllByRole("article")).toHaveLength(
-      filteredCharacters.length
-    );
+      // select second card from results
+      const characterCard = screen.getAllByRole("article")[1];
+
+      // assert character is not liked
+      expect(within(characterCard).getByText("Not liked")).toBeInTheDocument();
+
+      // click the like button
+      await userEvent.click(
+        within(characterCard).getByRole("button", {
+          name: "Like"
+        })
+      );
+
+      // assert character is liked
+      expect(within(characterCard).getByText("Liked")).toBeInTheDocument();
+
+      // click the unlike button
+      await userEvent.click(
+        within(characterCard).getByRole("button", {
+          name: "Unlike"
+        })
+      );
+
+      // assert character is not liked anymore
+      expect(within(characterCard).getByText("Not liked")).toBeInTheDocument();
+    });
   });
 });
