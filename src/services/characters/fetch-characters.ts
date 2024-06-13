@@ -1,5 +1,6 @@
 import { Character } from "../../types";
 import { getCharacters } from "../api/api-service";
+import { getCharactersCache, saveCharactersCache } from "./characters-cache";
 
 interface CharacterData {
   id: number;
@@ -21,13 +22,20 @@ const transformCharacterData = (data: CharacterData): Character => ({
 });
 
 export const fetchCharacters = async () => {
-  try {
-    const data = await getCharacters<CharacterData>();
+  let data: CharacterData[] = [];
 
-    return data.map(transformCharacterData);
+  try {
+    const cache = getCharactersCache<CharacterData[]>();
+
+    if (cache) {
+      data = cache;
+    } else {
+      data = await getCharacters<CharacterData>();
+      saveCharactersCache(data);
+    }
   } catch (error) {
     console.error(error);
   }
 
-  return [];
+  return data.map(transformCharacterData);
 };
