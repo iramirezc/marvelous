@@ -8,26 +8,47 @@ jest.mock("../../utils/time-utils", () => ({
 
 const apiEndpoints = {
   getCharacters:
-    "https://api.example.com/v1/public/characters?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150&limit=50"
+    "https://api.example.com/v1/public/characters?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150&limit=50",
+  getCharactersByName:
+    "https://api.example.com/v1/public/characters?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150&nameStartsWith=spider&limit=50"
 };
 
+interface TestDataType {
+  id: string;
+  name: string;
+}
+
 describe("API Service", () => {
-  beforeEach(() => {
-    fetchMock.get(apiEndpoints.getCharacters, {
-      data: {
-        results: [milesMorales]
-      }
-    });
+  afterEach(() => {
+    fetchMock.restore();
   });
 
   describe("apiService.getCharacters()", () => {
     test("fetches characters successfully", async () => {
-      const response = await apiService.getCharacters<
-        {
-          id: string;
-          name: string;
-        }[]
-      >();
+      fetchMock.get(apiEndpoints.getCharacters, {
+        data: {
+          results: [milesMorales]
+        }
+      });
+
+      const response = await apiService.getCharacters<TestDataType[]>();
+
+      expect(response).toHaveLength(1);
+      expect(response[0].id).toBe(1016181);
+      expect(response[0].name).toBe("Spider-Man (Miles Morales)");
+      expect(fetchMock.done()).toBe(true);
+    });
+
+    test("fetches characters by name", async () => {
+      fetchMock.get(apiEndpoints.getCharactersByName, {
+        data: {
+          results: [milesMorales]
+        }
+      });
+
+      const response = await apiService.getCharacters<TestDataType[]>({
+        nameStartsWith: "spider"
+      });
 
       expect(response).toHaveLength(1);
       expect(response[0].id).toBe(1016181);
