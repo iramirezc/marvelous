@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { setSearchCriteria as setSearchCriteriaAction } from "../store/actions";
 import { useAppDispatch, useAppState } from "../store/hooks";
 import charactersService from "../services/characters";
-import { Character } from "../types";
+import type { Character } from "../types";
 import { useLoading } from "./use-loading";
 
 const DEBOUNCE_DELAY = 900;
