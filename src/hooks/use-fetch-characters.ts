@@ -1,20 +1,26 @@
+import charactersService from "../services/characters";
 import { useCharacters } from "./use-characters";
 import { useLoading } from "./use-loading";
-import mockCharacters from "../mocks/characters.json";
 
 export const useFetchCharacters = () => {
-  const { setLoading } = useLoading();
+  const { loading, setLoading } = useLoading();
   const { setCharacters } = useCharacters();
 
   const fetchCharacters = async () => {
+    if (loading) {
+      return;
+    }
+
     setLoading(true);
 
-    setTimeout(() => {
+    try {
+      const characters = await charactersService.fetchCharacters();
+      setCharacters(characters);
+    } catch (error) {
+      console.error(error);
+    } finally {
       setLoading(false);
-      setCharacters(
-        mockCharacters.map((character) => ({ ...character, comics: [] }))
-      );
-    }, 1000);
+    }
   };
 
   return {

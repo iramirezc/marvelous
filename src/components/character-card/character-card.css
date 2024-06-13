@@ -1,5 +1,5 @@
 .character-card {
-  --card-width: 172.5px;
+  --card-width: 136px;
   background-color: var(--black);
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 .character-card img {
-  --image-height: 190px;
+  --image-height: 149.5px;
   height: var(--image-height);
   object-fit: cover;
 }
@@ -68,4 +68,24 @@
   position: absolute;
   right: 0;
   width: 0px;
+}
+
+@media (min-width: 375px) {
+  .character-card {
+    --card-width: 162px;
+  }
+
+  .character-card img {
+    --image-height: 178px;
+  }
+}
+
+@media (min-width: 392px) {
+  .character-card {
+    --card-width: 172px;
+  }
+
+  .character-card img {
+    --image-height: 190px;
+  }
 }

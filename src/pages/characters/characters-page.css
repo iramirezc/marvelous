@@ -1,0 +1,17 @@
+.characters-page .search-bar {
+  padding: var(--small-padding);
+}
+
+.characters-page .characters-list {
+  padding: var(--small-padding);
+}
+
+@media (min-width: 768px) {
+  .characters-page .search-bar {
+    padding: var(--medium-padding);
+  }
+
+  .characters-page .characters-list {
+    padding: var(--medium-padding);
+  }
+}
