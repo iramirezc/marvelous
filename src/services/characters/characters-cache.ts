@@ -17,7 +17,7 @@ const get = <T>() => {
   }
 
   if (isExpired(lastFetch, A_MINUTE)) {
-    storageService.clear();
+    clear();
 
     return null;
   }
