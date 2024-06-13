@@ -1,5 +1,5 @@
-import { useCharacters, useLoading } from "../../../hooks";
 import charactersService from "../../../services/characters";
+import { useCharacters, useLoading } from "../../../store/hooks";
 
 export const useFetchCharacters = () => {
   const { loading, setLoading } = useLoading();

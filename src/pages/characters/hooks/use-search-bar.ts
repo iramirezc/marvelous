@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { useLoading, useSearch } from "../../../hooks";
+
 import charactersService from "../../../services/characters";
+import { useLoading, useSearch } from "../../../store/hooks";
 
 const DEBOUNCE_DELAY = 900;
 

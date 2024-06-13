@@ -2,8 +2,9 @@ import {
   setSearchCriteria as setSearchCriteriaAction,
   setIsSearching as setIsSearchingAction,
   setSearchResults as setSearchResultsAction
-} from "../store/actions";
-import { useAppDispatch, useAppState } from "../store/hooks";
+} from "../actions";
+import { useAppDispatch } from "./use-app-dispatch";
+import { useAppState } from "./use-app-state";
 
 export const useSearch = () => {
   const {

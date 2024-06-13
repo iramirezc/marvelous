@@ -1,5 +1,6 @@
-import { setLoading as setLoadingAction } from "../store/actions";
-import { useAppDispatch, useAppState } from "../store/hooks";
+import { setLoading as setLoadingAction } from "../actions";
+import { useAppDispatch } from "./use-app-dispatch";
+import { useAppState } from "./use-app-state";
 
 export const useLoading = () => {
   const { loading } = useAppState();

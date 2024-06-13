@@ -1,6 +1,7 @@
-import { setOnlyFavoritesFilter as setOnlyFavoritesFilterAction } from "../store/actions";
-import { useAppDispatch, useAppState } from "../store/hooks";
-import type { Character } from "../types";
+import type { Character } from "../../types";
+import { setOnlyFavoritesFilter as setOnlyFavoritesFilterAction } from "../actions";
+import { useAppState } from "./use-app-state";
+import { useAppDispatch } from "./use-app-dispatch";
 
 const filterCharacters = (characters: Character[], searchCriteria: string) =>
   characters.filter(({ name }) =>
