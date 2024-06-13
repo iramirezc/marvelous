@@ -11,6 +11,8 @@ export type AppState = {
   };
 };
 
+export type PreloadedState = Partial<AppState>;
+
 export const initialState: AppState = {
   loading: false,
   characters: {

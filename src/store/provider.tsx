@@ -1,10 +1,15 @@
 import React, { PropsWithChildren, useReducer } from "react";
 import { AppContext, AppDispatchContext } from "./context";
-import { initialState } from "./state";
+import { PreloadedState, initialState } from "./state";
 import { reducer } from "./reducer";
 
-const StoreProvider = ({ children }: PropsWithChildren) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+type Props = PropsWithChildren<{ preloadedState?: PreloadedState }>;
+
+const StoreProvider = ({ children, preloadedState = {} }: Props) => {
+  const [state, dispatch] = useReducer(reducer, {
+    ...initialState,
+    ...preloadedState
+  });
 
   return (
     <AppContext.Provider value={state}>
