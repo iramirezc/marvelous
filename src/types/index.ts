@@ -9,6 +9,7 @@ export type Character = {
   id: string;
   name: string;
   image: string;
+  description: string;
   liked: boolean;
   comics: Comic[];
 };

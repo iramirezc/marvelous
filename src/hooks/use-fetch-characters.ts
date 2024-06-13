@@ -1,6 +1,6 @@
+import { fetchCharacters as fetchCharactersService } from "../services/characters";
 import { useCharacters } from "./use-characters";
 import { useLoading } from "./use-loading";
-import mockCharacters from "../mocks/characters.json";
 
 export const useFetchCharacters = () => {
   const { setLoading } = useLoading();
@@ -9,12 +9,13 @@ export const useFetchCharacters = () => {
   const fetchCharacters = async () => {
     setLoading(true);
 
-    setTimeout(() => {
+    try {
+      const characters = await fetchCharactersService();
+      setCharacters(characters);
+    } catch (error) {
+    } finally {
       setLoading(false);
-      setCharacters(
-        mockCharacters.map((character) => ({ ...character, comics: [] }))
-      );
-    }, 1000);
+    }
   };
 
   return {
