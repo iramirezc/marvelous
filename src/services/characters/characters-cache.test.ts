@@ -1,6 +1,6 @@
-import charactersCache from "./characters-cache";
-import storageService from "../storage/storage-service";
 import { isExpired, getNow } from "../../utils/time-utils";
+import storageService from "../storage/storage-service";
+import charactersCache from "./characters-cache";
 
 jest.mock("../../utils/time-utils");
 
