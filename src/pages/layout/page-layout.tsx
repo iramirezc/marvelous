@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Header, Loader } from "../../components";
-import { useFavorites, useFilters, useLoading } from "../../hooks";
+import { useFavorites, useFilters, useLoading } from "../../store/hooks";
 import "./page-layout.css";
 
 const PageLayout = () => {

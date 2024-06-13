@@ -1,10 +1,9 @@
-import charactersService from "../services/characters";
-import { useCharacters } from "./use-characters";
-import { useLoading } from "./use-loading";
+import charactersService from "../../../services/characters";
+import { useCharacters, useLoading } from "../../../store/hooks";
 
 export const useFetchCharacters = () => {
   const { loading, setLoading } = useLoading();
-  const { setCharacters } = useCharacters();
+  const { characters, setCharacters } = useCharacters();
 
   const fetchCharacters = async () => {
     if (loading) {
@@ -24,6 +23,7 @@ export const useFetchCharacters = () => {
   };
 
   return {
+    characters,
     fetchCharacters
   };
 };

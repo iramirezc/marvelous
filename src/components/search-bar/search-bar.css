@@ -1,31 +1,33 @@
 .search-bar {
+  align-items: stretch;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  width: 100%;
+  /* Avoids resizing when results are hidden */
+  min-height: 92px;
   padding: 1rem;
+  width: 100%;
 }
 
 .search-bar__input {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   border-bottom: 1px solid var(--black);
+  display: flex;
+  flex-direction: row;
   padding-bottom: 12px;
 }
 
 .search-bar__input img {
-  width: 12px;
   height: 12px;
   margin-right: 5px;
+  width: 12px;
 }
 
 .search-bar__input input {
   border: none;
-  outline: none;
   flex-grow: 1;
-  text-transform: uppercase;
   font-size: var(--font-size);
+  outline: none;
+  text-transform: uppercase;
 }
 
 .search-bar__input input::placeholder {
@@ -34,8 +36,8 @@
 
 .search-bar__results {
   color: var(--black);
-  text-transform: uppercase;
   display: flex;
   font-size: 75%;
   padding-top: 12px;
+  text-transform: uppercase;
 }

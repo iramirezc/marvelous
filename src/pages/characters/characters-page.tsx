@@ -1,41 +1,33 @@
 import React, { useEffect } from "react";
 import { CharactersList, SearchBar } from "../../components";
-import {
-  useCharacters,
-  useFavorites,
-  useFetchCharacters,
-  useFilters,
-  useSearch
-} from "../../hooks";
+import { useFetchCharacters } from "./hooks/use-fetch-characters";
+import { useSearchBar } from "./hooks/use-search-bar";
 import "./characters-page.css";
 
 const CharactersPage = () => {
-  const { characters } = useCharacters();
-  const { searchCriteria, setSearchCriteria } = useSearch();
-  const { favorites, toggleLikeCharacter } = useFavorites();
-  const { filters, filterCharacters } = useFilters();
-  const { fetchCharacters } = useFetchCharacters();
+  const { isSearching, results, searchCriteria, onChangeSearchCriteria } =
+    useSearchBar();
+  const { characters, fetchCharacters } = useFetchCharacters();
 
   useEffect(() => {
     fetchCharacters();
     //  eslint-disable-next-line
   }, []);
 
-  const filteredCharacters = filters.onlyFavorites
-    ? filterCharacters(favorites, searchCriteria)
-    : filterCharacters(characters, searchCriteria);
+  const charactersList = searchCriteria ? results : characters;
 
   return (
     <main className="characters-page">
       <SearchBar
         value={searchCriteria}
-        results={filteredCharacters.length}
-        onChange={setSearchCriteria}
+        results={charactersList.length}
+        isSearching={isSearching}
+        onChange={onChangeSearchCriteria}
       />
       <CharactersList
-        characters={filteredCharacters}
-        onCharacterClick={(id) => console.log("Character", id)}
-        onCharacterLike={toggleLikeCharacter}
+        characters={charactersList}
+        onCharacterClick={(id) => console.log("Character->click", id)}
+        onCharacterLike={(id) => console.log("Character->like", id)}
       />
     </main>
   );

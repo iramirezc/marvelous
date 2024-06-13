@@ -21,6 +21,16 @@ export const setSearchCriteria = (searchCriteria: string) => ({
   payload: searchCriteria
 });
 
+export const setIsSearching = (isSearching: boolean) => ({
+  type: "SET_IS_SEARCHING",
+  payload: isSearching
+});
+
+export const setSearchResults = (results: Character[]) => ({
+  type: "SET_SEARCH_RESULTS",
+  payload: results
+});
+
 export const setOnlyFavoritesFilter = (onlyFavorites: boolean) => ({
   type: "SET_ONLY_FAVORITES_FILTER",
   payload: onlyFavorites

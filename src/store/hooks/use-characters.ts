@@ -1,5 +1,6 @@
-import { setCharacters as setCharactersAction } from "../store/actions";
-import { useAppDispatch, useAppState } from "../store/hooks";
+import { setCharacters as setCharactersAction } from "../actions";
+import { useAppDispatch } from "./use-app-dispatch";
+import { useAppState } from "./use-app-state";
 
 export const useCharacters = () => {
   const {

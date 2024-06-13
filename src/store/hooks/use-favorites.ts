@@ -1,5 +1,6 @@
-import { toggleLikeCharacter as toggleLikeCharacterAction } from "../store/actions";
-import { useAppDispatch, useAppState } from "../store/hooks";
+import { toggleLikeCharacter as toggleLikeCharacterAction } from "../actions";
+import { useAppDispatch } from "./use-app-dispatch";
+import { useAppState } from "./use-app-state";
 
 export const useFavorites = () => {
   const { characters } = useAppState();
