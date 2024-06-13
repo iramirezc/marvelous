@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useReducer } from "react";
 import { AppContext, AppDispatchContext } from "./context";
-import { PreloadedState, initialState } from "./state";
+import { initialState } from "./state";
+import type { PreloadedState } from "./state";
 import { reducer } from "./reducer";
 
 type Props = PropsWithChildren<{ preloadedState?: PreloadedState }>;

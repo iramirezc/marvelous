@@ -1,4 +1,4 @@
-import { Character } from "../types";
+import type { Character } from "../types";
 
 export type AppState = {
   loading: boolean;
