@@ -1,4 +1,4 @@
-import { Character } from "../types";
+import type { Character } from "../types";
 
 export type AppState = {
   loading: boolean;
@@ -10,6 +10,8 @@ export type AppState = {
     onlyFavorites: boolean;
   };
 };
+
+export type PreloadedState = Partial<AppState>;
 
 export const initialState: AppState = {
   loading: false,

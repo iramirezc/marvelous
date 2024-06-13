@@ -1,4 +1,4 @@
-import { Character } from "../../types";
+import type { Character } from "../../types";
 import apiService from "../api/api-service";
 import charactersCache from "./characters-cache";
 
@@ -24,18 +24,13 @@ const transformCharacterData = (data: CharacterData): Character => ({
 const fetchCharacters = async () => {
   let data: CharacterData[] = [];
 
-  try {
-    const cache = charactersCache.get<CharacterData[]>();
+  const cache = charactersCache.get<CharacterData[]>();
 
-    if (cache) {
-      data = cache;
-    } else {
-      data = await apiService.getCharacters<CharacterData[]>();
-
-      charactersCache.save(data);
-    }
-  } catch (error) {
-    throw error;
+  if (cache) {
+    data = cache;
+  } else {
+    data = await apiService.getCharacters<CharacterData[]>();
+    charactersCache.save(data);
   }
 
   return data.map(transformCharacterData);
