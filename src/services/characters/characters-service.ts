@@ -36,6 +36,14 @@ const fetchCharacters = async () => {
   return data.map(transformCharacterData);
 };
 
-const charactersService = { fetchCharacters };
+const fetchCharactersByName = async (name: string) => {
+  const data = await apiService.getCharacters<CharacterData[]>({
+    nameStartsWith: name
+  });
+
+  return data.map(transformCharacterData);
+};
+
+const charactersService = { fetchCharacters, fetchCharactersByName };
 
 export default charactersService;
