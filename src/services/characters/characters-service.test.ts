@@ -2,7 +2,7 @@ import apiService from "../api/api-service";
 import charactersService from "./characters-service";
 import charactersCache from "./characters-cache";
 import milesMoralesData from "../../mocks/miles-morales.json";
-import { Character } from "../../types";
+import type { Character } from "../../types";
 
 jest.mock("../api/api-service");
 
