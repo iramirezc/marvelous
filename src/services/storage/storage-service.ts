@@ -16,11 +16,11 @@ const clear = () => {
   localStorage.clear();
 };
 
-const cacheService = {
+const storageService = {
   save,
   get,
   remove,
   clear
 };
 
-export default cacheService;
+export default storageService;
