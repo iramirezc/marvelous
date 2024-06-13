@@ -17,8 +17,7 @@ const get = <T>() => {
   }
 
   if (isExpired(lastFetch, A_MINUTE)) {
-    cacheService.remove(DATA_KEY);
-    cacheService.remove(LAST_FETCH_KEY);
+    cacheService.clear();
 
     return null;
   }
@@ -26,6 +25,11 @@ const get = <T>() => {
   return cacheService.get<T>(DATA_KEY);
 };
 
-const charactersCache = { save, get };
+const clear = () => {
+  cacheService.remove(DATA_KEY);
+  cacheService.remove(LAST_FETCH_KEY);
+};
+
+const charactersCache = { save, get, clear };
 
 export default charactersCache;

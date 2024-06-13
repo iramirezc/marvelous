@@ -2,7 +2,7 @@ import { Character } from "../../types";
 import apiService from "../api/api-service";
 import charactersCache from "./characters-cache";
 
-interface CharacterData {
+export interface CharacterData {
   id: number;
   name: string;
   description: string;
@@ -30,11 +30,11 @@ const fetchCharacters = async () => {
     if (cache) {
       data = cache;
     } else {
-      data = await apiService.getCharacters<CharacterData>();
+      data = await apiService.getCharacters<CharacterData[]>();
       charactersCache.save(data);
     }
   } catch (error) {
-    console.error(error);
+    throw error;
   }
 
   return data.map(transformCharacterData);

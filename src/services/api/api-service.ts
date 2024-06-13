@@ -9,7 +9,7 @@ const getCharacters = async <T>() => {
 
   const data = await response.json();
 
-  return data.data.results as T[];
+  return data.data.results as T;
 };
 
 const apiService = { getCharacters };

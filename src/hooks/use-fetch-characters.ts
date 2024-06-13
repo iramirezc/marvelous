@@ -17,6 +17,7 @@ export const useFetchCharacters = () => {
       const characters = await charactersService.fetchCharacters();
       setCharacters(characters);
     } catch (error) {
+      console.error(error);
     } finally {
       setLoading(false);
     }

@@ -62,4 +62,15 @@ describe("Characters Cache", () => {
       expect(cache).toEqual(data);
     });
   });
+
+  describe("charactersCache.clear()", () => {
+    test("removes cache", () => {
+      charactersCache.save({ foo: "bar" });
+
+      charactersCache.clear();
+
+      expect(cacheService.get("characters")).toBeNull();
+      expect(cacheService.get("characters_lastFetch")).toBeNull();
+    });
+  });
 });

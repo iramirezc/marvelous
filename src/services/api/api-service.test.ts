@@ -22,10 +22,12 @@ describe("API Service", () => {
 
   describe("apiService.getCharacters()", () => {
     test("fetches characters successfully", async () => {
-      const response = await apiService.getCharacters<{
-        id: string;
-        name: string;
-      }>();
+      const response = await apiService.getCharacters<
+        {
+          id: string;
+          name: string;
+        }[]
+      >();
 
       expect(response).toHaveLength(1);
       expect(response[0].id).toBe(1016181);
