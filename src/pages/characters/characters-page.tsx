@@ -1,39 +1,32 @@
 import React, { useEffect } from "react";
-
-import { Header, Loader, SearchBar, CharactersList } from "./components";
+import { CharactersList, SearchBar } from "../../components";
 import {
   useCharacters,
   useFavorites,
   useFetchCharacters,
   useFilters,
-  useLoading,
   useSearch
-} from "./hooks";
+} from "../../hooks";
+import "./characters-page.css";
 
-const App = () => {
-  const { loading } = useLoading();
+const CharactersPage = () => {
   const { characters } = useCharacters();
   const { searchCriteria, setSearchCriteria } = useSearch();
   const { favorites, toggleLikeCharacter } = useFavorites();
+  const { filters, filterCharacters } = useFilters();
   const { fetchCharacters } = useFetchCharacters();
-  const { filters, filterCharacters, showOnlyFavorites } = useFilters();
 
   useEffect(() => {
     fetchCharacters();
+    //  eslint-disable-next-line
   }, []);
 
   const filteredCharacters = filters.onlyFavorites
     ? filterCharacters(favorites, searchCriteria)
-    : filterCharacters(characters.list, searchCriteria);
+    : filterCharacters(characters, searchCriteria);
 
   return (
-    <>
-      <Header
-        favoritesCount={favorites.length}
-        onLogoClick={() => showOnlyFavorites(false)}
-        onFavoritesClick={() => showOnlyFavorites(true)}
-      />
-      <Loader isLoading={loading} />
+    <main className="characters-page">
       <SearchBar
         value={searchCriteria}
         results={filteredCharacters.length}
@@ -44,8 +37,8 @@ const App = () => {
         onCharacterClick={(id) => console.log("Character", id)}
         onCharacterLike={toggleLikeCharacter}
       />
-    </>
+    </main>
   );
 };
 
-export default App;
+export default CharactersPage;

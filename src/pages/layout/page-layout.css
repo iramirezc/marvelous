@@ -1,0 +1,25 @@
+.page-layout {
+  --size-xs: 0.75rem;
+  --size-s: 1rem;
+  --size-m: 3rem;
+  --small-padding: var(--size-s) var(--size-s);
+  --medium-padding: var(--size-s) var(--size-m);
+}
+
+.page-layout .marvelous-header {
+  padding: var(--small-padding);
+}
+
+.page-layout .loader-container {
+  min-height: var(--size-xs);
+}
+
+@media (min-width: 768px) {
+  .page-layout .marvelous-header {
+    padding: var(--medium-padding);
+  }
+
+  .page-layout .loader-container {
+    min-height: var(--size-m);
+  }
+}
