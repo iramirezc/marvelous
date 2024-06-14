@@ -19,7 +19,8 @@ export const useCharacterDetailPage = () => {
   const decorateCharacter = (character: Character) => {
     return {
       ...character,
-      liked: isFavorite(character.id)
+      liked: isFavorite(character.id),
+      description: character.description || "No description available."
     };
   };
 
