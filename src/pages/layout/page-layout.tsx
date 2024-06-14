@@ -6,13 +6,13 @@ import "./page-layout.css";
 
 const PageLayout = () => {
   const { loading } = useLoading();
-  const { favorites } = useFavorites();
+  const { getFavoritesCount } = useFavorites();
   const { showOnlyFavorites } = useFilters();
 
   return (
     <div className="page-layout">
       <Header
-        favoritesCount={favorites.length}
+        favoritesCount={getFavoritesCount()}
         onLogoClick={() => showOnlyFavorites(false)}
         onFavoritesClick={() => showOnlyFavorites(true)}
       />
