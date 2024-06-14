@@ -1,21 +1,24 @@
 import React from "react";
 import { CharactersList, SearchBar } from "../../components";
-
+import { useCharactersPage } from "./use-characters-page";
 import "./characters-page.css";
-import { useCharactersPage } from "./hooks/use-characters-page";
 
 const CharactersPage = () => {
   const {
     isSearching,
+    showFavorites,
     searchCriteria,
-    charactersList,
-    toggleLike,
+    onCharacterLike,
+    getCharactersList,
     showCharacterDetails,
     onChangeSearchCriteria
   } = useCharactersPage();
 
+  const charactersList = getCharactersList();
+
   return (
     <main className="characters-page">
+      {showFavorites ? <h2 className="favorites-header">Favorites</h2> : null}
       <SearchBar
         value={searchCriteria}
         results={charactersList.length}
@@ -25,7 +28,7 @@ const CharactersPage = () => {
       <CharactersList
         characters={charactersList}
         onCharacterClick={showCharacterDetails}
-        onCharacterLike={toggleLike}
+        onCharacterLike={onCharacterLike}
       />
     </main>
   );
