@@ -53,13 +53,10 @@ describe("<CharactersPage />", () => {
   });
 
   describe("searching for characters", () => {
-    test("renders the search bar", async () => {
-      setupInitialLoadResponse([]);
-
-      await act(renderPage);
-
-      expect(screen.getByRole("searchbox")).toBeInTheDocument();
-    });
+    // There are two characters that start with "Spider-Girl"
+    const searchResults = mockCharacters.filter((character) =>
+      character.name.startsWith("Spider-Girl")
+    );
 
     test("renders the status of 'Searching' when user starts typing", async () => {
       setupInitialLoadResponse([]);
@@ -71,12 +68,9 @@ describe("<CharactersPage />", () => {
       expect(screen.getByLabelText("Searching")).toBeInTheDocument();
     });
 
-    test("renders the search results whe user ends typing", async () => {
-      const filteredCharacters = mockCharacters.filter((character) =>
-        character.name.startsWith("Spider-Girl")
-      );
+    test("renders search results and then goes back to initial load after searchbox is cleared", async () => {
       setupInitialLoadResponse(mockCharacters);
-      setupSearchResponse(filteredCharacters);
+      setupSearchResponse(searchResults);
 
       await act(renderPage);
 
@@ -84,35 +78,45 @@ describe("<CharactersPage />", () => {
 
       await waitFor(() => screen.findByText("2 Results"));
 
+      // assert search results are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(searchResults.length);
+
+      // clear search criteria
+      await userEvent.clear(screen.getByRole("searchbox"));
+
+      // assert first load characters are rendered
       expect(screen.getAllByRole("article")).toHaveLength(
-        filteredCharacters.length
+        mockCharacters.length
       );
     });
   });
 
-  describe("favorites", () => {
-    test("no favorites on initial load", async () => {
+  describe("liked characters", () => {
+    beforeEach(() => {
       setupInitialLoadResponse(mockCharacters);
+    });
 
-      // eslint-disable-next-line
+    test("renders all characters as not liked on initial load", async () => {
       await act(renderPage);
 
       expect(screen.queryAllByText("Liked")).toHaveLength(0);
+      expect(screen.queryAllByText("Not liked")).toHaveLength(
+        mockCharacters.length
+      );
     });
 
-    test("renders my favorites on initial load", async () => {
-      setupInitialLoadResponse(mockCharacters);
+    test("renders favorites characters as liked on initial load", async () => {
       setupFavoritesStorageService(mockFavorites);
 
-      // eslint-disable-next-line
       await act(renderPage);
 
       expect(screen.getAllByText("Liked")).toHaveLength(1);
+      expect(screen.queryAllByText("Not liked")).toHaveLength(
+        mockCharacters.length - 1
+      );
     });
 
-    test("adds and removes a character from my favorites", async () => {
-      setupInitialLoadResponse(mockCharacters);
-
+    test("toggles like state on a character", async () => {
       await act(renderPage);
 
       // select second card from results
