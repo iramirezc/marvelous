@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import type { Character } from "../../../types";
-import { useFavorites, useFilters } from "../../../store/hooks";
+import { useFavoritesState, useFiltersState } from "../../../store/hooks";
 import favoritesService from "../../../services/favorites";
 
 export const useFavoriteCharacters = () => {
   const {
     filters: { showFavorites: isFavoritesFilterActive },
     setFilter
-  } = useFilters();
+  } = useFiltersState();
   const {
     isFavorite,
     setFavorites,
     addToFavorites,
     removeFromFavorites,
     getFavoriteCharacters
-  } = useFavorites();
+  } = useFavoritesState();
 
   const toggleLike = (character: Character) => {
     if (isFavorite(character.id)) {

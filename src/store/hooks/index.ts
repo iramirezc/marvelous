@@ -1,7 +1,7 @@
 export { useAppDispatch } from "./use-app-dispatch";
+export { useAppLoadingState } from "./use-app-loading-state";
 export { useAppState } from "./use-app-state";
-export { useCharacters } from "./use-characters";
-export { useFavorites } from "./use-favorites";
-export { useFilters } from "./use-filters";
-export { useLoading } from "./use-loading";
-export { useSearch } from "./use-search";
+export { useCharactersState } from "./use-characters-state";
+export { useFavoritesState } from "./use-favorites-state";
+export { useFiltersState } from "./use-filters-state";
+export { useSearchState } from "./use-search-state";
