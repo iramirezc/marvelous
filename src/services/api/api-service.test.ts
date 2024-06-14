@@ -1,6 +1,6 @@
 import fetchMock from "fetch-mock";
 import apiService from "./api-service";
-import milesMorales from "../../mocks/miles-morales.json";
+import characterData from "../../mocks/miles-morales-data.json";
 
 jest.mock("../../utils/time-utils", () => ({
   getTimestamp: () => "1"
@@ -27,7 +27,7 @@ describe("API Service", () => {
     test("fetches characters successfully", async () => {
       fetchMock.get(apiEndpoints.getCharacters, {
         data: {
-          results: [milesMorales]
+          results: [characterData]
         }
       });
 
@@ -42,7 +42,7 @@ describe("API Service", () => {
     test("fetches characters by name", async () => {
       fetchMock.get(apiEndpoints.getCharactersByName, {
         data: {
-          results: [milesMorales]
+          results: [characterData]
         }
       });
 

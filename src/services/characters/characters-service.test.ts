@@ -1,7 +1,7 @@
 import apiService from "../api/api-service";
 import charactersService from "./characters-service";
 import charactersCache from "./characters-cache";
-import milesMoralesData from "../../mocks/miles-morales.json";
+import characterData from "../../mocks/miles-morales-data.json";
 import type { Character } from "../../types";
 
 jest.mock("../api/api-service");
@@ -38,7 +38,7 @@ describe("Characters Service", () => {
     });
 
     test("returns characters from apiService", async () => {
-      setupApiService([milesMoralesData]);
+      setupApiService([characterData]);
 
       const characters = await charactersService.fetchCharacters();
 
@@ -46,7 +46,7 @@ describe("Characters Service", () => {
     });
 
     test("does not call apiService.getCharacters() if data is cached", async () => {
-      charactersCache.save([milesMoralesData]);
+      charactersCache.save([characterData]);
 
       await charactersService.fetchCharacters();
 
@@ -54,7 +54,7 @@ describe("Characters Service", () => {
     });
 
     test("returns characters from cache", async () => {
-      charactersCache.save([milesMoralesData]);
+      charactersCache.save([characterData]);
 
       const characters = await charactersService.fetchCharacters();
 
@@ -83,7 +83,7 @@ describe("Characters Service", () => {
     });
 
     test("returns characters by name from apiService", async () => {
-      setupApiService([milesMoralesData]);
+      setupApiService([characterData]);
 
       const characters =
         await charactersService.fetchCharactersByName("spider");
