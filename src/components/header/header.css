@@ -1,12 +1,13 @@
 .marvelous-header {
-  display: flex;
-  background-color: var(--black);
-  height: 84px;
   align-items: center;
+  background-color: var(--black);
+  display: flex;
+  height: 84px;
   padding: 1rem;
 }
 
 .marvelous-logo {
+  cursor: pointer;
   flex-basis: auto;
   margin-right: auto;
   width: 130px;
