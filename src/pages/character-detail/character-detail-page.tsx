@@ -2,7 +2,6 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { CharacterDetailCard } from "../../components";
 import { useCharacterDetailPage } from "./use-character-detail-page";
-import "./character-detail-page.css";
 
 const CharacterDetailPage = () => {
   const { character, onCharacterLike } = useCharacterDetailPage();
