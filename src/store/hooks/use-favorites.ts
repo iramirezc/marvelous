@@ -13,12 +13,27 @@ export const useFavorites = () => {
   };
 
   const isFavorite = (characterId: string) => {
-    return favorites.some((id) => id === characterId);
+    return favorites.ids.some((id) => id === characterId);
+  };
+
+  const getFavoriteById = (characterId: string) => {
+    return favorites.entities[characterId] ?? null;
+  };
+
+  const getFavoritesCount = () => {
+    return favorites.ids.length;
+  };
+
+  const getFavoritesIds = () => {
+    return favorites.ids;
   };
 
   return {
     favorites,
     isFavorite,
-    setFavorites
+    setFavorites,
+    getFavoritesIds,
+    getFavoriteById,
+    getFavoritesCount
   };
 };
