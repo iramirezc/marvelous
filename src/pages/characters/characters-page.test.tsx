@@ -7,7 +7,7 @@ import mockCharacters from "../../mocks/characters.json";
 import mockFavorites from "../../mocks/favorites.json";
 import charactersService from "../../services/characters";
 import favoritesService from "../../services/favorites";
-import { renderWithStoreProvider } from "../../tests/providers";
+import { FakeHeader, renderWithStoreProvider } from "../../tests/providers";
 import CharactersPage from "./characters-page";
 
 jest.mock("../../services/characters");
@@ -32,6 +32,7 @@ const setupFavoritesStorageService = (favorites: Favorites) => {
 const renderPage = () =>
   renderWithStoreProvider(
     <MemoryRouter>
+      <FakeHeader />
       <CharactersPage />
     </MemoryRouter>
   );
@@ -144,6 +145,34 @@ describe("<CharactersPage />", () => {
 
       // assert character is not liked anymore
       expect(within(characterCard).getByText("Not liked")).toBeInTheDocument();
+    });
+  });
+
+  describe("navigation", () => {
+    test("shows favorite characters and then shows first load characters", async () => {
+      setupInitialLoadResponse(mockCharacters);
+      setupFavoritesStorageService(mockFavorites);
+
+      await act(renderPage);
+
+      // assert first load characters are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(
+        mockCharacters.length
+      );
+
+      // navigate to favorites
+      await userEvent.click(screen.getByRole("button", { name: "Favorites" }));
+
+      // assert favorite characters are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(1);
+
+      // navigate back to first load characters
+      await userEvent.click(screen.getByRole("button", { name: "Logo" }));
+
+      // assert first load characters are rendered again
+      expect(screen.getAllByRole("article")).toHaveLength(
+        mockCharacters.length
+      );
     });
   });
 });
