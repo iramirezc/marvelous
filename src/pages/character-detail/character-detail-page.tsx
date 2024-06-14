@@ -19,7 +19,7 @@ const CharacterDetailPage = () => {
       <CharacterDetailCard
         id={character.id}
         name={character.name}
-        image={character.image}
+        picture={character.picture}
         liked={character.liked}
         description={character.description}
         onLike={() => console.log("Like", character.id)}

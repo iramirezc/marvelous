@@ -13,24 +13,29 @@ interface CharacterData {
 }
 
 enum ImageVariant {
-  PORTRAIT_SMALL = "portrait_small",
-  PORTRAIT_MEDIUM = "portrait_medium",
-  PORTRAIT_XLARGE = "portrait_xlarge"
+  PORTRAIT_SMALL = "/portrait_small",
+  PORTRAIT_MEDIUM = "/portrait_medium",
+  PORTRAIT_XLARGE = "/portrait_xlarge"
 }
 
 const parseImageUrl = (params: {
   path: string;
   variant: string;
   extension: string;
-}) => new URL(`${params.path}/${params.variant}.${params.extension}`);
+}) => new URL(`${params.path}${params.variant}.${params.extension}`);
 
 const transformCharacterData = (data: CharacterData): Character => ({
   id: String(data.id),
   name: String(data.name).trim(),
   description: String(data.description).trim(),
-  image: parseImageUrl({
+  thumbnail: parseImageUrl({
     path: data.thumbnail.path,
     variant: ImageVariant.PORTRAIT_XLARGE,
+    extension: data.thumbnail.extension
+  }).toString(),
+  picture: parseImageUrl({
+    path: data.thumbnail.path,
+    variant: "",
     extension: data.thumbnail.extension
   }).toString(),
   liked: false,
