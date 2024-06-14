@@ -1,4 +1,5 @@
 import React from "react";
+import { MemoryRouter } from "react-router-dom";
 import { act, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { Character, Favorites } from "../../types";
@@ -28,7 +29,12 @@ const setupFavoritesStorageService = (favorites: Favorites) => {
   favoritesService.save(favorites);
 };
 
-const renderPage = () => renderWithStoreProvider(<CharactersPage />);
+const renderPage = () =>
+  renderWithStoreProvider(
+    <MemoryRouter>
+      <CharactersPage />
+    </MemoryRouter>
+  );
 
 describe("<CharactersPage />", () => {
   describe("initial load", () => {

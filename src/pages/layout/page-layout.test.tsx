@@ -1,11 +1,17 @@
 import React from "react";
+import { MemoryRouter } from "react-router-dom";
 import { screen } from "@testing-library/react";
+import type { PreloadedState } from "../../store/state";
 import { renderWithStoreProvider } from "../../tests/providers";
-import type { PreloadedState } from "../../tests/providers";
 import PageLayout from "./page-layout";
 
 const renderPage = (preloadedState?: PreloadedState) =>
-  renderWithStoreProvider(<PageLayout />, preloadedState);
+  renderWithStoreProvider(
+    <MemoryRouter>
+      <PageLayout />
+    </MemoryRouter>,
+    preloadedState
+  );
 
 describe("<PageLayout />", () => {
   test("renders the <Header /> component", () => {
