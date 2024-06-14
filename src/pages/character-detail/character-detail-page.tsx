@@ -7,7 +7,7 @@ const CharacterDetailPage = () => {
   const { character, onCharacterLike } = useCharacterDetailPage();
 
   if (!character) {
-    // TODO: If no character in state, fetch it from the API
+    // TODO: If there is no character, should I fetch it from the API?
     return <Navigate to="/" replace={true} />;
   }
 
