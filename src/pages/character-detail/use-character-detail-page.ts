@@ -4,7 +4,7 @@ import { useFavoriteCharacters } from "../shared/hooks";
 
 export const useCharacterDetailPage = () => {
   const location = useLocation();
-  const { toggleLike } = useFavoriteCharacters();
+  const { toggleLike, isFavorite } = useFavoriteCharacters();
 
   const character = location.state?.character as Character | undefined;
 
@@ -14,12 +14,17 @@ export const useCharacterDetailPage = () => {
     }
 
     toggleLike(character);
-    // optimistic update
-    character.liked = !character.liked;
+  };
+
+  const decorateCharacter = (character: Character) => {
+    return {
+      ...character,
+      liked: isFavorite(character.id)
+    };
   };
 
   return {
-    character,
+    character: character ? decorateCharacter(character) : undefined,
     onCharacterLike
   };
 };
