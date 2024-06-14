@@ -1,23 +1,34 @@
 import { useEffect } from "react";
-import { useFavorites } from "../../../store/hooks";
+import type { Character } from "../../../types";
+import { useFavorites, useFilters } from "../../../store/hooks";
 import favoritesService from "../../../services/favorites";
 
 export const useFavoriteCharacters = () => {
-  const { favorites, isFavorite, setFavorites } = useFavorites();
+  const {
+    filters: { showFavorites: isFavoritesFilterActive },
+    setFilter
+  } = useFilters();
+  const {
+    isFavorite,
+    setFavorites,
+    addToFavorites,
+    removeFromFavorites,
+    getFavoriteCharacters
+  } = useFavorites();
 
-  const updateFavorites = (newFavorites: string[]) => {
-    favoritesService.save(newFavorites);
-    setFavorites(newFavorites);
-  };
-
-  const toggleLike = (characterId: string) => {
-    if (isFavorite(characterId)) {
-      updateFavorites(favorites.filter((id) => id !== characterId));
+  const toggleLike = (character: Character) => {
+    if (isFavorite(character.id)) {
+      favoritesService.save(removeFromFavorites(character.id));
     } else {
-      updateFavorites([...favorites, characterId]);
+      favoritesService.save(addToFavorites(character.id, character));
     }
   };
 
+  const showFavorites = (value: boolean) => {
+    setFilter("showFavorites", value);
+  };
+
+  // Retrieve favorites from storage on first load
   useEffect(() => {
     const savedFavorites = favoritesService.get();
 
@@ -28,8 +39,10 @@ export const useFavoriteCharacters = () => {
   }, []);
 
   return {
-    favorites,
+    isFavoritesFilterActive,
     isFavorite,
-    toggleLike
+    toggleLike,
+    showFavorites,
+    getFavoriteCharacters
   };
 };

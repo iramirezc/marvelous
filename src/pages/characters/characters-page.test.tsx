@@ -1,30 +1,46 @@
 import React from "react";
+import { MemoryRouter } from "react-router-dom";
 import { act, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { renderWithStoreProvider } from "../../tests/providers";
-import type { PreloadedState } from "../../tests/providers";
-import charactersService from "../../services/characters";
+import type { Character, Favorites } from "../../types";
 import mockCharacters from "../../mocks/characters.json";
-import type { Character } from "../../types";
+import mockFavorites from "../../mocks/favorites.json";
+import charactersService from "../../services/characters";
+import favoritesService from "../../services/favorites";
+import { FakeHeader, renderWithStoreProvider } from "../../tests/providers";
 import CharactersPage from "./characters-page";
 
 jest.mock("../../services/characters");
 
-const mockFetchCharacters = jest.mocked(charactersService.fetchCharacters);
-const mockFetchCharactersByName = jest.mocked(
-  charactersService.fetchCharactersByName
+// There are two characters that start with "Spider-Girl"
+const searchResults = mockCharacters.filter((character) =>
+  character.name.startsWith("Spider-Girl")
 );
 
+const mockCharactersService = {
+  fetchCharacters: jest.mocked(charactersService.fetchCharacters),
+  fetchCharactersByName: jest.mocked(charactersService.fetchCharactersByName)
+};
+
 const setupInitialLoadResponse = (characters: Character[]) => {
-  mockFetchCharacters.mockResolvedValueOnce(characters);
+  mockCharactersService.fetchCharacters.mockResolvedValueOnce(characters);
 };
 
 const setupSearchResponse = (characters: Character[]) => {
-  mockFetchCharactersByName.mockResolvedValueOnce(characters);
+  mockCharactersService.fetchCharactersByName.mockResolvedValueOnce(characters);
 };
 
-const renderPage = (preloadedState?: PreloadedState) =>
-  renderWithStoreProvider(<CharactersPage />, preloadedState);
+const setupFavoritesStorageService = (favorites: Favorites) => {
+  favoritesService.save(favorites);
+};
+
+const renderPage = () =>
+  renderWithStoreProvider(
+    <MemoryRouter>
+      <FakeHeader />
+      <CharactersPage />
+    </MemoryRouter>
+  );
 
 describe("<CharactersPage />", () => {
   describe("initial load", () => {
@@ -43,14 +59,6 @@ describe("<CharactersPage />", () => {
   });
 
   describe("searching for characters", () => {
-    test("renders the search bar", async () => {
-      setupInitialLoadResponse([]);
-
-      await act(renderPage);
-
-      expect(screen.getByRole("searchbox")).toBeInTheDocument();
-    });
-
     test("renders the status of 'Searching' when user starts typing", async () => {
       setupInitialLoadResponse([]);
 
@@ -61,12 +69,9 @@ describe("<CharactersPage />", () => {
       expect(screen.getByLabelText("Searching")).toBeInTheDocument();
     });
 
-    test("renders the search results whe user ends typing", async () => {
-      const filteredCharacters = mockCharacters.filter((character) =>
-        character.name.startsWith("Spider-Girl")
-      );
+    test("renders search results and then goes back to initial load after searchbox is cleared", async () => {
       setupInitialLoadResponse(mockCharacters);
-      setupSearchResponse(filteredCharacters);
+      setupSearchResponse(searchResults);
 
       await act(renderPage);
 
@@ -74,36 +79,45 @@ describe("<CharactersPage />", () => {
 
       await waitFor(() => screen.findByText("2 Results"));
 
+      // assert search results are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(searchResults.length);
+
+      // clear search criteria
+      await userEvent.clear(screen.getByRole("searchbox"));
+
+      // assert first load characters are rendered
       expect(screen.getAllByRole("article")).toHaveLength(
-        filteredCharacters.length
+        mockCharacters.length
       );
     });
   });
 
-  describe("favorites", () => {
-    test("no favorites on initial load", async () => {
+  describe("liked characters", () => {
+    beforeEach(() => {
       setupInitialLoadResponse(mockCharacters);
+    });
 
-      // eslint-disable-next-line
-      await act(() => renderPage({ characters: { list: [], favorites: [] } }));
+    test("renders all characters as not liked on initial load", async () => {
+      await act(renderPage);
 
       expect(screen.queryAllByText("Liked")).toHaveLength(0);
+      expect(screen.queryAllByText("Not liked")).toHaveLength(
+        mockCharacters.length
+      );
     });
 
-    test("renders my favorites on initial load", async () => {
-      setupInitialLoadResponse(mockCharacters);
+    test("renders favorites characters as liked on initial load", async () => {
+      setupFavoritesStorageService(mockFavorites);
 
-      // eslint-disable-next-line
-      await act(() =>
-        renderPage({ characters: { list: [], favorites: ["1009610"] } })
-      );
+      await act(renderPage);
 
       expect(screen.getAllByText("Liked")).toHaveLength(1);
+      expect(screen.queryAllByText("Not liked")).toHaveLength(
+        mockCharacters.length - 1
+      );
     });
 
-    test("adds and removes a character from my favorites", async () => {
-      setupInitialLoadResponse(mockCharacters);
-
+    test("toggles like state on a character", async () => {
       await act(renderPage);
 
       // select second card from results
@@ -131,6 +145,63 @@ describe("<CharactersPage />", () => {
 
       // assert character is not liked anymore
       expect(within(characterCard).getByText("Not liked")).toBeInTheDocument();
+    });
+  });
+
+  describe("navigation", () => {
+    beforeEach(() => {
+      setupInitialLoadResponse(mockCharacters);
+      setupFavoritesStorageService(mockFavorites);
+    });
+
+    test("shows favorite characters and then shows first load characters", async () => {
+      await act(renderPage);
+
+      // assert first load characters are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(
+        mockCharacters.length
+      );
+
+      // navigate to favorites
+      await userEvent.click(screen.getByRole("button", { name: "Favorites" }));
+
+      // assert favorite characters are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(1);
+
+      // navigate back to first load characters
+      await userEvent.click(screen.getByRole("button", { name: "Logo" }));
+
+      // assert first load characters are rendered again
+      expect(screen.getAllByRole("article")).toHaveLength(
+        mockCharacters.length
+      );
+    });
+
+    test("clears navigation when searching on favorites and navigating back", async () => {
+      setupSearchResponse(searchResults);
+
+      await act(renderPage);
+
+      // navigate to favorites
+      await userEvent.click(screen.getByRole("button", { name: "Favorites" }));
+
+      // assert favorite characters are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(1);
+
+      // search for characters
+      await userEvent.type(screen.getByRole("searchbox"), "Spider-Girl");
+
+      // wait for results to render
+      await waitFor(() => screen.findByText("2 Results"));
+
+      // assert search results are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(searchResults.length);
+
+      // navigate back to favorites
+      await userEvent.click(screen.getByRole("button", { name: "Favorites" }));
+
+      // assert only favorites are rendered again
+      expect(screen.getAllByRole("article")).toHaveLength(1);
     });
   });
 });

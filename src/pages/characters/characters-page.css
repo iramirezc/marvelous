@@ -1,12 +1,30 @@
+.characters-page .favorites-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: calc(var(--size-s) * -1);
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: calc(24px - var(--loader-height) - var(--size-s));
+  padding: var(--small-padding);
+  text-transform: uppercase;
+}
+
 .characters-page .search-bar {
+  margin-top: calc(36px - var(--loader-height) - var(--size-s));
   padding: var(--small-padding);
 }
 
 .characters-page .characters-list {
+  margin-top: calc(24px - var(--size-s));
   padding: var(--small-padding);
 }
 
 @media (min-width: 768px) {
+  .characters-page .favorites-header {
+    margin-top: calc(48px - var(--loader-height) - var(--size-s));
+    padding: var(--medium-padding);
+  }
+
   .characters-page .search-bar {
     padding: var(--medium-padding);
   }

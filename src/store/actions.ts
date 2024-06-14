@@ -1,5 +1,6 @@
-import type { Character } from "../types";
+import type { Character, Favorites } from "../types";
 
+// TODO: Create action creators for better type checking
 export type Action = {
   type: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -16,7 +17,7 @@ export const setCharacters = (characters: Character[]) => ({
   payload: characters
 });
 
-export const setFavorites = (favorites: string[]) => ({
+export const setFavorites = (favorites: Favorites) => ({
   type: "SET_FAVORITES",
   payload: favorites
 });
@@ -36,7 +37,12 @@ export const setSearchResults = (results: Character[]) => ({
   payload: results
 });
 
-export const setOnlyFavoritesFilter = (onlyFavorites: boolean) => ({
-  type: "SET_ONLY_FAVORITES_FILTER",
-  payload: onlyFavorites
+export const clearSearch = () => ({
+  type: "CLEAR_SEARCH",
+  payload: null
+});
+
+export const setFilter = (filter: string, value: boolean) => ({
+  type: "SET_FILTER",
+  payload: { filter, value }
 });

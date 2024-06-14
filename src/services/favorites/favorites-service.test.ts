@@ -1,27 +1,34 @@
-import storageService from "../storage/storage-service";
+import type { Favorites } from "../../types";
+import mockFavorites from "../../mocks/favorites.json";
+import _storageService from "../storage/storage-service";
 import favoritesService from "./favorites-service";
 
 describe("Favorites Service", () => {
+  let data: Favorites;
+
+  beforeEach(() => {
+    data = mockFavorites;
+  });
+
   afterEach(() => {
-    storageService.clear();
+    _storageService.clear();
   });
 
   describe("favoritesService.save()", () => {
     test("saves data to storage", () => {
-      const data = ["1"];
-
       favoritesService.save(data);
 
-      const savedData = storageService.get("favorites");
-      expect(savedData).toEqual(data);
+      // assert is stored in the storage service
+      expect(_storageService.get("favorites")).toEqual(data);
     });
   });
 
   describe("favoritesService.get()", () => {
-    test("returns saved data from storage", () => {
-      const data = ["1"];
-      storageService.save("favorites", data);
+    beforeEach(() => {
+      favoritesService.save(data);
+    });
 
+    test("returns saved data from storage", () => {
       const savedData = favoritesService.get();
 
       expect(savedData).toEqual(data);
@@ -29,14 +36,15 @@ describe("Favorites Service", () => {
   });
 
   describe("favoritesService.clear()", () => {
-    test("clears saved data from storage", () => {
-      const data = ["1"];
-      storageService.save("favorites", data);
+    beforeEach(() => {
+      favoritesService.save(data);
+    });
 
+    test("clears saved data from storage", () => {
       favoritesService.clear();
 
-      const clearedData = storageService.get<string[]>("favorites");
-      expect(clearedData).toBeNull();
+      // assert is removed from the storage service
+      expect(_storageService.get<Favorites>("favorites")).toBeNull();
     });
   });
 });

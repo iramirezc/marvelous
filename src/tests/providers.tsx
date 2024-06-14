@@ -1,7 +1,8 @@
 import React, { PropsWithChildren } from "react";
-import StoreProvider from "../store/provider";
-import type { PreloadedState } from "../store/state";
+import { useNavigate } from "react-router-dom";
 import { render } from "@testing-library/react";
+import type { PreloadedState } from "../store/state";
+import StoreProvider from "../store/provider";
 
 type Props = PropsWithChildren<{ preloadedState?: PreloadedState }>;
 
@@ -21,4 +22,15 @@ export const renderWithStoreProvider = (
     )
   });
 
-export type { PreloadedState };
+export const FakeHeader = () => {
+  const navigate = useNavigate();
+
+  return (
+    <header>
+      <button onClick={() => navigate("/")}>Logo</button>
+      <button onClick={() => navigate("/", { state: { favorites: true } })}>
+        Favorites
+      </button>
+    </header>
+  );
+};

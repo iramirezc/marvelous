@@ -1,13 +1,13 @@
-import type { Character } from "../types";
+import type { Character, Favorites } from "../types";
 
 export type AppState = {
   loading: boolean;
   characters: {
     list: Character[];
-    favorites: string[];
+    favorites: Favorites;
   };
   filters: {
-    onlyFavorites: boolean;
+    showFavorites: boolean;
   };
   search: {
     searchCriteria: string;
@@ -22,10 +22,10 @@ export const initialState: AppState = {
   loading: false,
   characters: {
     list: [],
-    favorites: []
+    favorites: { ids: [], entities: {} }
   },
   filters: {
-    onlyFavorites: false
+    showFavorites: false
   },
   search: {
     searchCriteria: "",

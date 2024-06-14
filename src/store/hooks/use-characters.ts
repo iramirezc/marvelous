@@ -12,8 +12,13 @@ export const useCharacters = () => {
     dispatch(setCharactersAction(...args));
   };
 
+  const getCharacterById = (characterId: string) => {
+    return characters.find((character) => character.id === characterId) ?? null;
+  };
+
   return {
     characters,
-    setCharacters
+    setCharacters,
+    getCharacterById
   };
 };
