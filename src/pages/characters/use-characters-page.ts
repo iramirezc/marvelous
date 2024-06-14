@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useFavoriteCharacters } from "./hooks/use-favorite-characters";
 import { useFetchCharacters } from "./hooks/use-fetch-characters";
 import { useSearchBar } from "./hooks/use-search-bar";
@@ -7,6 +7,7 @@ import { Character } from "../../types";
 
 export const useCharactersPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { characters: initialCharacters, fetchCharacters } =
     useFetchCharacters();
   const {
@@ -24,8 +25,8 @@ export const useCharactersPage = () => {
     onChangeSearchCriteria
   } = useSearchBar();
 
-  const showCharacterDetails = (id: string) => {
-    console.log("Character->click", id);
+  const onCharacterClick = (id: string) => {
+    navigate(`/character/${id}`);
   };
 
   const selectCharactersList = () => {
@@ -81,8 +82,8 @@ export const useCharactersPage = () => {
     searchCriteria,
     isFavoritesFilterActive,
     onCharacterLike,
+    onCharacterClick,
     getCharactersList,
-    showCharacterDetails,
     onChangeSearchCriteria
   };
 };

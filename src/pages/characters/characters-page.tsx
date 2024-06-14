@@ -9,8 +9,8 @@ const CharactersPage = () => {
     searchCriteria,
     isFavoritesFilterActive,
     onCharacterLike,
+    onCharacterClick,
     getCharactersList,
-    showCharacterDetails,
     onChangeSearchCriteria
   } = useCharactersPage();
 
@@ -29,7 +29,7 @@ const CharactersPage = () => {
       />
       <CharactersList
         characters={charactersList}
-        onCharacterClick={showCharacterDetails}
+        onCharacterClick={onCharacterClick}
         onCharacterLike={onCharacterLike}
       />
     </main>
