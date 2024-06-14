@@ -37,7 +37,7 @@ export const setSearchResults = (results: Character[]) => ({
   payload: results
 });
 
-export const setOnlyFavoritesFilter = (onlyFavorites: boolean) => ({
-  type: "SET_ONLY_FAVORITES_FILTER",
-  payload: onlyFavorites
+export const setFilter = (filter: string, value: boolean) => ({
+  type: "SET_FILTER",
+  payload: { filter, value }
 });

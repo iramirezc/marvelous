@@ -59,12 +59,12 @@ export const reducer = (state: AppState, action: Action) => {
       };
 
     /* Filters */
-    case "SET_ONLY_FAVORITES_FILTER":
+    case "SET_FILTER":
       return {
         ...state,
         filters: {
           ...state.filters,
-          onlyFavorites: action.payload
+          [action.payload.filter]: action.payload.value
         }
       };
 

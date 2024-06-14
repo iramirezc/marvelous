@@ -7,7 +7,7 @@ export type AppState = {
     favorites: Favorites;
   };
   filters: {
-    onlyFavorites: boolean;
+    showFavorites: boolean;
   };
   search: {
     searchCriteria: string;
@@ -25,7 +25,7 @@ export const initialState: AppState = {
     favorites: { ids: [], entities: {} }
   },
   filters: {
-    onlyFavorites: false
+    showFavorites: false
   },
   search: {
     searchCriteria: "",
