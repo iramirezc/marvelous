@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 
 import charactersService from "../../../services/characters";
-import { useLoading, useSearch } from "../../../store/hooks";
+import { useAppLoadingState, useSearchState } from "../../../store/hooks";
 
 const DEBOUNCE_DELAY = 900;
 
 export const useSearchBar = () => {
-  const { setLoading } = useLoading();
+  const { setLoading } = useAppLoadingState();
   const {
     isSearching,
     searchCriteria,
@@ -15,7 +15,7 @@ export const useSearchBar = () => {
     setIsSearching,
     setSearchResults,
     setSearchCriteria
-  } = useSearch();
+  } = useSearchState();
 
   const onChangeSearchCriteria = (newSearchCriteria: string) => {
     setIsSearching(true);

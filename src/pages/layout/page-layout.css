@@ -4,14 +4,16 @@
   --small-padding: var(--size-s) var(--size-s);
   --medium-padding: var(--size-s) var(--size-m);
   --loader-height: 6px;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-layout .marvelous-header {
   padding: var(--small-padding);
 }
 
-.page-layout .loader-container {
-  min-height: var(--loader-height);
+.page-layout .loader + main {
+  margin-top: calc(var(--loader-height) * -1);
 }
 
 @media (min-width: 768px) {

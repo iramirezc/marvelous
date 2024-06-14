@@ -7,7 +7,7 @@ import {
 import { useAppDispatch } from "./use-app-dispatch";
 import { useAppState } from "./use-app-state";
 
-export const useSearch = () => {
+export const useSearchState = () => {
   const {
     search: { searchCriteria, isSearching, results }
   } = useAppState();

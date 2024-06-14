@@ -3,7 +3,7 @@ import { setFavorites as setFavoritesAction } from "../actions";
 import { useAppDispatch } from "./use-app-dispatch";
 import { useAppState } from "./use-app-state";
 
-export const useFavorites = () => {
+export const useFavoritesState = () => {
   const {
     characters: { favorites }
   } = useAppState();

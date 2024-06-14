@@ -1,13 +1,13 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Header, Loader } from "../../components";
-import { useFavorites, useLoading } from "../../store/hooks";
+import { useFavoritesState, useAppLoadingState } from "../../store/hooks";
 import "./page-layout.css";
 
 const PageLayout = () => {
   const navigate = useNavigate();
-  const { loading } = useLoading();
-  const { getFavoritesCount } = useFavorites();
+  const { loading } = useAppLoadingState();
+  const { getFavoritesCount } = useFavoritesState();
 
   return (
     <div className="page-layout">
@@ -16,9 +16,7 @@ const PageLayout = () => {
         onLogoClick={() => navigate("/")}
         onFavoritesClick={() => navigate("/", { state: { favorites: true } })}
       />
-      <div className="loader-container">
-        <Loader isLoading={loading} />
-      </div>
+      <Loader isLoading={loading} />
       <Outlet />
     </div>
   );

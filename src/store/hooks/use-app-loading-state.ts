@@ -2,7 +2,7 @@ import { setLoading as setLoadingAction } from "../actions";
 import { useAppDispatch } from "./use-app-dispatch";
 import { useAppState } from "./use-app-state";
 
-export const useLoading = () => {
+export const useAppLoadingState = () => {
   const { loading } = useAppState();
   const dispatch = useAppDispatch();
 

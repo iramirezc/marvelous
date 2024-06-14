@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { useFavoriteCharacters } from "./hooks/use-favorite-characters";
-import { useFetchCharacters } from "./hooks/use-fetch-characters";
-import { useSearchBar } from "./hooks/use-search-bar";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useFavoriteCharacters } from "../shared/hooks";
+import { useFetchCharacters, useSearchBar } from "./hooks";
 import { Character } from "../../types";
 
 export const useCharactersPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { characters: initialCharacters, fetchCharacters } =
     useFetchCharacters();
   const {
@@ -23,10 +23,6 @@ export const useCharactersPage = () => {
     clearSearch,
     onChangeSearchCriteria
   } = useSearchBar();
-
-  const showCharacterDetails = (id: string) => {
-    console.log("Character->click", id);
-  };
 
   const selectCharactersList = () => {
     if (searchCriteria) {
@@ -51,16 +47,31 @@ export const useCharactersPage = () => {
     return decorateCharacters(selectCharactersList());
   };
 
-  const onCharacterLike = (characterId: string) => {
-    const character = getCharactersList().find(
+  const getCharacterFromList = (characterId: string) => {
+    return getCharactersList().find(
       (character) => character.id === characterId
     );
+  };
+
+  const onCharacterLike = (characterId: string) => {
+    const character = getCharacterFromList(characterId);
 
     if (!character) {
       return;
     }
 
     toggleLike(character);
+  };
+
+  const onCharacterClick = (characterId: string) => {
+    const character = getCharacterFromList(characterId);
+
+    if (!character) {
+      // TODO: Handle this corner case by showing a 404 page?
+      return;
+    }
+
+    navigate(`/character/${character.id}`, { state: { character } });
   };
 
   // Fetch characters on first load
@@ -81,8 +92,8 @@ export const useCharactersPage = () => {
     searchCriteria,
     isFavoritesFilterActive,
     onCharacterLike,
+    onCharacterClick,
     getCharactersList,
-    showCharacterDetails,
     onChangeSearchCriteria
   };
 };

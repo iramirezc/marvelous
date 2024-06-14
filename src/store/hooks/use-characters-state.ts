@@ -2,7 +2,7 @@ import { setCharacters as setCharactersAction } from "../actions";
 import { useAppDispatch } from "./use-app-dispatch";
 import { useAppState } from "./use-app-state";
 
-export const useCharacters = () => {
+export const useCharactersState = () => {
   const {
     characters: { list: characters }
   } = useAppState();
