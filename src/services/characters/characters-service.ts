@@ -13,9 +13,13 @@ interface CharacterData {
 }
 
 enum ImageVariant {
+  NONE = "",
   PORTRAIT_SMALL = "/portrait_small",
   PORTRAIT_MEDIUM = "/portrait_medium",
-  PORTRAIT_XLARGE = "/portrait_xlarge"
+  PORTRAIT_XLARGE = "/portrait_xlarge",
+  PORTRAIT_FANTASTIC = "/portrait_fantastic",
+  PORTRAIT_UNCANNY = "/portrait_uncanny",
+  PORTRAIT_INCREDIBLE = "/portrait_incredible"
 }
 
 const parseImageUrl = (params: {
@@ -35,7 +39,7 @@ const transformCharacterData = (data: CharacterData): Character => ({
   }).toString(),
   picture: parseImageUrl({
     path: data.thumbnail.path,
-    variant: "",
+    variant: ImageVariant.PORTRAIT_UNCANNY,
     extension: data.thumbnail.extension
   }).toString(),
   liked: false,
