@@ -25,10 +25,6 @@ export const useCharactersPage = () => {
     onChangeSearchCriteria
   } = useSearchBar();
 
-  const onCharacterClick = (id: string) => {
-    navigate(`/character/${id}`);
-  };
-
   const selectCharactersList = () => {
     if (searchCriteria) {
       return results;
@@ -52,16 +48,31 @@ export const useCharactersPage = () => {
     return decorateCharacters(selectCharactersList());
   };
 
-  const onCharacterLike = (characterId: string) => {
-    const character = getCharactersList().find(
+  const getCharacterFromList = (characterId: string) => {
+    return getCharactersList().find(
       (character) => character.id === characterId
     );
+  };
+
+  const onCharacterLike = (characterId: string) => {
+    const character = getCharacterFromList(characterId);
 
     if (!character) {
       return;
     }
 
     toggleLike(character);
+  };
+
+  const onCharacterClick = (characterId: string) => {
+    const character = getCharacterFromList(characterId);
+
+    if (!character) {
+      // TODO: Handle this corner case by showing a 404 page?
+      return;
+    }
+
+    navigate(`/character/${character.id}`, { state: { character } });
   };
 
   // Fetch characters on first load
