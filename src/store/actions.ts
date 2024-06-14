@@ -37,6 +37,11 @@ export const setSearchResults = (results: Character[]) => ({
   payload: results
 });
 
+export const clearSearch = () => ({
+  type: "CLEAR_SEARCH",
+  payload: null
+});
+
 export const setFilter = (filter: string, value: boolean) => ({
   type: "SET_FILTER",
   payload: { filter, value }

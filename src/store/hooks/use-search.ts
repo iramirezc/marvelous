@@ -1,7 +1,8 @@
 import {
   setSearchCriteria as setSearchCriteriaAction,
   setIsSearching as setIsSearchingAction,
-  setSearchResults as setSearchResultsAction
+  setSearchResults as setSearchResultsAction,
+  clearSearch as clearSearchAction
 } from "../actions";
 import { useAppDispatch } from "./use-app-dispatch";
 import { useAppState } from "./use-app-state";
@@ -28,12 +29,17 @@ export const useSearch = () => {
     dispatch(setSearchResultsAction(...args));
   };
 
+  const clearSearch = () => {
+    dispatch(clearSearchAction());
+  };
+
   return {
     searchCriteria,
     isSearching,
     results,
     setSearchCriteria,
     setIsSearching,
-    setSearchResults
+    setSearchResults,
+    clearSearch
   };
 };
