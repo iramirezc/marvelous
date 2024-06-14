@@ -1,18 +1,18 @@
 import type { Favorites } from "../../types";
-import storageService from "../storage/storage-service";
+import _storageService from "../storage/storage-service";
 
 const FAVORITES_KEY = "favorites";
 
 const save = (data: Favorites) => {
-  storageService.save(FAVORITES_KEY, data);
+  _storageService.save(FAVORITES_KEY, data);
 };
 
 const get = () => {
-  return storageService.get<Favorites>(FAVORITES_KEY);
+  return _storageService.get<Favorites>(FAVORITES_KEY);
 };
 
 const clear = () => {
-  storageService.remove(FAVORITES_KEY);
+  _storageService.remove(FAVORITES_KEY);
 };
 
 const favoritesService = { save, get, clear };
