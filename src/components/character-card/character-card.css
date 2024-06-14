@@ -10,8 +10,8 @@
 }
 
 .character-card img {
-  --image-height: 149.5px;
-  height: var(--image-height);
+  --thumbnail-height: 149.5px;
+  height: var(--thumbnail-height);
   object-fit: cover;
 }
 
@@ -77,7 +77,7 @@
   }
 
   .character-card img {
-    --image-height: 178px;
+    --thumbnail-height: 178px;
   }
 }
 
@@ -87,6 +87,6 @@
   }
 
   .character-card img {
-    --image-height: 190px;
+    --thumbnail-height: 190px;
   }
 }

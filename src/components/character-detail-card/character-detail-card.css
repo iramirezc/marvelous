@@ -7,8 +7,8 @@
 }
 
 .character-detail-card img {
-  --image-height: 389px;
-  height: var(--image-height);
+  --picture-height: 389px;
+  height: var(--picture-height);
   object-fit: cover;
 }
 
@@ -66,9 +66,9 @@
   }
 
   .character-detail-card img {
-    --image-width: 278px;
+    --picture-width: 278px;
     height: auto;
-    width: var(--image-width);
+    width: var(--picture-width);
   }
 
   .character-detail-card__info {
@@ -85,8 +85,8 @@
   }
 
   .character-detail-card img {
-    --image-width: 320px;
-    width: var(--image-width);
+    --picture-width: 320px;
+    width: var(--picture-width);
   }
 
   .character-detail-card__info-header h2 {

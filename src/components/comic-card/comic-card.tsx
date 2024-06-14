@@ -3,13 +3,13 @@ import "./comic-card.css";
 
 type Props = {
   title: string;
-  image: string;
+  cover: string;
   year: string;
 };
 
-const ComicCard = ({ title, image, year }: Props) => (
+const ComicCard = ({ title, cover, year }: Props) => (
   <article className="comic-card">
-    <img src={image} alt={title} />
+    <img src={cover} alt={title} />
     <h3>{title}</h3>
     <time>{year}</time>
   </article>

@@ -7,8 +7,8 @@
 }
 
 .comic-card img {
-  --image-height: 246px;
-  height: var(--image-height);
+  --cover-height: 246px;
+  height: var(--cover-height);
   object-fit: cover;
 }
 
@@ -39,7 +39,7 @@
   }
 
   .comic-card img {
-    --image-height: 253px;
+    --cover-height: 253px;
   }
 
   .comic-card h3 {
@@ -53,7 +53,7 @@
   }
 
   .comic-card img {
-    --image-height: 269px;
+    --cover-height: 269px;
   }
 
   .comic-card h3 {

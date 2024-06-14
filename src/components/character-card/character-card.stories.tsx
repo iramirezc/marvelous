@@ -19,7 +19,7 @@ export const Default: Story = {
   args: {
     id: "1016181",
     name: "Spider-Man (Miles Morales)",
-    image: "http://i.annihil.us/u/prod/marvel/i/mg/f/50/537bcfa1eed73.jpg",
+    thumbnail: "http://i.annihil.us/u/prod/marvel/i/mg/f/50/537bcfa1eed73.jpg",
     liked: false
   }
 };
@@ -28,7 +28,7 @@ export const Liked: Story = {
   args: {
     id: "1009610",
     name: "Spider-Man (Peter Parker)",
-    image: "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg",
+    thumbnail: "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg",
     liked: true
   }
 };

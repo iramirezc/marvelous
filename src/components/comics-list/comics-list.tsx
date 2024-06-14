@@ -17,7 +17,7 @@ const ComicsList = ({ comics }: Props) => (
           <ComicCard
             key={comic.id}
             title={comic.title}
-            image={comic.image}
+            cover={comic.cover}
             year={comic.year}
           />
         </li>

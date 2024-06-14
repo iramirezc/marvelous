@@ -4,7 +4,7 @@ import ComicCard from "./comic-card";
 
 const defaultProps: React.ComponentProps<typeof ComicCard> = {
   title: "The Amazing Spider-Man (2022) #50",
-  image: "https://via.placeholder.com/164x246",
+  cover: "https://via.placeholder.com/164x246",
   year: "2024"
 };
 
@@ -20,16 +20,16 @@ describe("<ComicCard />", () => {
     expect(screen.getByText("X-Men (2021) #1")).toBeInTheDocument();
   });
 
-  test("renders the comic image", () => {
+  test("renders the comic cover", () => {
     const title = "Blood Hunt (2024) #1";
-    const image = "https://via.placeholder.com/164x246";
+    const cover = "https://via.placeholder.com/164x246";
 
-    renderComponent({ ...defaultProps, title, image });
+    renderComponent({ ...defaultProps, title, cover });
 
     expect(screen.getByAltText("Blood Hunt (2024) #1")).toBeInTheDocument();
     expect(screen.getByAltText("Blood Hunt (2024) #1")).toHaveAttribute(
       "src",
-      image
+      cover
     );
   });
 

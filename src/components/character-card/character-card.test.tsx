@@ -6,7 +6,7 @@ import CharacterCard from "./character-card";
 const defaultProps: React.ComponentProps<typeof CharacterCard> = {
   id: "1016181",
   name: "Spider-Man (Miles Morales)",
-  image: "https://via.placeholder.com/150",
+  thumbnail: "https://via.placeholder.com/150",
   liked: false,
   onClick: jest.fn(),
   onLike: jest.fn()
@@ -24,14 +24,14 @@ describe("<CharacterCard />", () => {
     expect(screen.getByText("Peter Parker")).toBeInTheDocument();
   });
 
-  test("renders the character image", () => {
+  test("renders the character thumbnail", () => {
     const name = "Spider-Man";
-    const image = "https://via.placeholder.com/150";
+    const thumbnail = "https://via.placeholder.com/150";
 
-    renderComponent({ ...defaultProps, name, image });
+    renderComponent({ ...defaultProps, name, thumbnail });
 
     expect(screen.getByAltText("Spider-Man")).toBeInTheDocument();
-    expect(screen.getByAltText("Spider-Man")).toHaveAttribute("src", image);
+    expect(screen.getByAltText("Spider-Man")).toHaveAttribute("src", thumbnail);
   });
 
   test("calls the onClick function when card is clicked", async () => {
