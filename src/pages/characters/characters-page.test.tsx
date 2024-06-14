@@ -1,30 +1,34 @@
 import React from "react";
 import { act, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { renderWithStoreProvider } from "../../tests/providers";
-import type { PreloadedState } from "../../tests/providers";
-import charactersService from "../../services/characters";
+import type { Character, Favorites } from "../../types";
 import mockCharacters from "../../mocks/characters.json";
-import type { Character } from "../../types";
+import mockFavorites from "../../mocks/favorites.json";
+import charactersService from "../../services/characters";
+import favoritesService from "../../services/favorites";
+import { renderWithStoreProvider } from "../../tests/providers";
 import CharactersPage from "./characters-page";
 
 jest.mock("../../services/characters");
 
-const mockFetchCharacters = jest.mocked(charactersService.fetchCharacters);
-const mockFetchCharactersByName = jest.mocked(
-  charactersService.fetchCharactersByName
-);
+const mockCharactersService = {
+  fetchCharacters: jest.mocked(charactersService.fetchCharacters),
+  fetchCharactersByName: jest.mocked(charactersService.fetchCharactersByName)
+};
 
 const setupInitialLoadResponse = (characters: Character[]) => {
-  mockFetchCharacters.mockResolvedValueOnce(characters);
+  mockCharactersService.fetchCharacters.mockResolvedValueOnce(characters);
 };
 
 const setupSearchResponse = (characters: Character[]) => {
-  mockFetchCharactersByName.mockResolvedValueOnce(characters);
+  mockCharactersService.fetchCharactersByName.mockResolvedValueOnce(characters);
 };
 
-const renderPage = (preloadedState?: PreloadedState) =>
-  renderWithStoreProvider(<CharactersPage />, preloadedState);
+const setupFavoritesStorageService = (favorites: Favorites) => {
+  favoritesService.save(favorites);
+};
+
+const renderPage = () => renderWithStoreProvider(<CharactersPage />);
 
 describe("<CharactersPage />", () => {
   describe("initial load", () => {
@@ -85,18 +89,17 @@ describe("<CharactersPage />", () => {
       setupInitialLoadResponse(mockCharacters);
 
       // eslint-disable-next-line
-      await act(() => renderPage({ characters: { list: [], favorites: [] } }));
+      await act(renderPage);
 
       expect(screen.queryAllByText("Liked")).toHaveLength(0);
     });
 
     test("renders my favorites on initial load", async () => {
       setupInitialLoadResponse(mockCharacters);
+      setupFavoritesStorageService(mockFavorites);
 
       // eslint-disable-next-line
-      await act(() =>
-        renderPage({ characters: { list: [], favorites: ["1009610"] } })
-      );
+      await act(renderPage);
 
       expect(screen.getAllByText("Liked")).toHaveLength(1);
     });

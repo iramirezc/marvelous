@@ -1,20 +1,28 @@
 import { useEffect } from "react";
-import { useFavorites } from "../../../store/hooks";
+import { useCharacters, useFavorites } from "../../../store/hooks";
 import favoritesService from "../../../services/favorites";
 
 export const useFavoriteCharacters = () => {
-  const { favorites, isFavorite, setFavorites } = useFavorites();
-
-  const updateFavorites = (newFavorites: string[]) => {
-    favoritesService.save(newFavorites);
-    setFavorites(newFavorites);
-  };
+  const {
+    favorites,
+    isFavorite,
+    setFavorites,
+    addToFavorites,
+    removeFromFavorites
+  } = useFavorites();
+  const { getCharacterById } = useCharacters();
 
   const toggleLike = (characterId: string) => {
+    const character = getCharacterById(characterId);
+
+    if (!character) {
+      return;
+    }
+
     if (isFavorite(characterId)) {
-      updateFavorites(favorites.filter((id) => id !== characterId));
+      favoritesService.save(removeFromFavorites(characterId));
     } else {
-      updateFavorites([...favorites, characterId]);
+      favoritesService.save(addToFavorites(characterId, character));
     }
   };
 

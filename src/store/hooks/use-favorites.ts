@@ -1,3 +1,4 @@
+import type { Character, Favorites } from "../../types";
 import { setFavorites as setFavoritesAction } from "../actions";
 import { useAppDispatch } from "./use-app-dispatch";
 import { useAppState } from "./use-app-state";
@@ -28,12 +29,50 @@ export const useFavorites = () => {
     return favorites.ids;
   };
 
+  const addToFavorites = (characterId: string, character: Character) => {
+    const newFavorites = {
+      ids: [...favorites.ids, characterId],
+      entities: {
+        ...favorites.entities,
+        [characterId]: character
+      }
+    };
+
+    setFavorites(newFavorites);
+
+    return newFavorites;
+  };
+
+  const removeFromFavorites = (characterId: string) => {
+    const newFavorites = {
+      ids: favorites.ids.filter((id) => id !== characterId),
+      entities: {
+        ...Object.keys(favorites.entities).reduce(
+          (newEntities, id) => {
+            if (id !== characterId) {
+              newEntities[id] = favorites.entities[id];
+            }
+
+            return newEntities;
+          },
+          {} as Favorites["entities"]
+        )
+      }
+    };
+
+    setFavorites(newFavorites);
+
+    return newFavorites;
+  };
+
   return {
     favorites,
     isFavorite,
     setFavorites,
+    addToFavorites,
     getFavoritesIds,
     getFavoriteById,
-    getFavoritesCount
+    getFavoritesCount,
+    removeFromFavorites
   };
 };
