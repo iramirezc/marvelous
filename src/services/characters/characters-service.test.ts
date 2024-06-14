@@ -1,8 +1,8 @@
+import characterData from "../../mocks/miles-morales-data.json";
+import milesMoralesCharacter from "../../mocks/miles-morales-character.json";
 import apiService from "../api/api-service";
 import charactersService from "./characters-service";
 import charactersCache from "./characters-cache";
-import characterData from "../../mocks/miles-morales-data.json";
-import type { Character } from "../../types";
 
 jest.mock("../api/api-service");
 
@@ -10,17 +10,6 @@ const mockGetCharacters = jest.mocked(apiService.getCharacters);
 
 const setupApiService = <T>(response: T[] = []) => {
   mockGetCharacters.mockResolvedValueOnce(response);
-};
-
-const milesMoralesCharacter: Character = {
-  id: "1016181",
-  name: "Spider-Man (Miles Morales)",
-  description:
-    "Teenager Miles Morales grew up in Brooklyn, New York. Recently, Miles took on the controversial and pressured role of Spider-Man shortly after the death of the original. Morales made his debut against The Kangaroo, much to the surprise and disapproval of many present at the confrontation.",
-  image:
-    "http://i.annihil.us/u/prod/marvel/i/mg/f/50/537bcfa1eed73/portrait_xlarge.jpg",
-  liked: false,
-  comics: []
 };
 
 describe("Characters Service", () => {

@@ -1,6 +1,6 @@
 import fetchMock from "fetch-mock";
-import apiService from "./api-service";
 import characterData from "../../mocks/miles-morales-data.json";
+import apiService from "./api-service";
 
 jest.mock("../../utils/time-utils", () => ({
   getTimestamp: () => "1"
