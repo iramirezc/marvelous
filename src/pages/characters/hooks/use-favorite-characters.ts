@@ -1,31 +1,32 @@
 import { useEffect } from "react";
-import { useCharacters, useFavorites } from "../../../store/hooks";
+import { useLocation } from "react-router-dom";
+import type { Character } from "../../../types";
+import { useFavorites, useFilters } from "../../../store/hooks";
 import favoritesService from "../../../services/favorites";
 
 export const useFavoriteCharacters = () => {
+  const location = useLocation();
   const {
-    favorites,
+    filters: { showFavorites },
+    setFilter
+  } = useFilters();
+  const {
     isFavorite,
     setFavorites,
     addToFavorites,
-    removeFromFavorites
+    removeFromFavorites,
+    getFavoriteCharacters
   } = useFavorites();
-  const { getCharacterById } = useCharacters();
 
-  const toggleLike = (characterId: string) => {
-    const character = getCharacterById(characterId);
-
-    if (!character) {
-      return;
-    }
-
-    if (isFavorite(characterId)) {
-      favoritesService.save(removeFromFavorites(characterId));
+  const toggleLike = (character: Character) => {
+    if (isFavorite(character.id)) {
+      favoritesService.save(removeFromFavorites(character.id));
     } else {
-      favoritesService.save(addToFavorites(characterId, character));
+      favoritesService.save(addToFavorites(character.id, character));
     }
   };
 
+  // Retrieve favorites from storage on first load
   useEffect(() => {
     const savedFavorites = favoritesService.get();
 
@@ -35,9 +36,16 @@ export const useFavoriteCharacters = () => {
     // eslint-disable-next-line
   }, []);
 
+  // Toggle filter to show only favorites
+  useEffect(() => {
+    setFilter("showFavorites", Boolean(location.state?.favorites));
+    // eslint-disable-next-line
+  }, [location.state]);
+
   return {
-    favorites,
+    showFavorites,
+    toggleLike,
     isFavorite,
-    toggleLike
+    getFavoriteCharacters
   };
 };
