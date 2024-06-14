@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useFavoriteCharacters } from "./hooks/use-favorite-characters";
-import { useFetchCharacters } from "./hooks/use-fetch-characters";
-import { useSearchBar } from "./hooks/use-search-bar";
+import { useFavoriteCharacters } from "../shared/hooks";
+import { useFetchCharacters, useSearchBar } from "./hooks";
 import { Character } from "../../types";
 
 export const useCharactersPage = () => {

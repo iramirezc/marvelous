@@ -1,16 +1,14 @@
 import React from "react";
-import { useLocation, useParams, Navigate } from "react-router-dom";
-import type { Character } from "../../types";
+import { Navigate } from "react-router-dom";
 import { CharacterDetailCard } from "../../components";
+import { useCharacterDetailPage } from "./use-character-detail-page";
 import "./character-detail-page.css";
 
 const CharacterDetailPage = () => {
-  const params = useParams<{ id: string }>();
-  const location = useLocation();
+  const { character, onCharacterLike } = useCharacterDetailPage();
 
-  const character = location.state?.character as Character | undefined;
-
-  if (!params.id || !character) {
+  if (!character) {
+    // TODO: If no character in state, fetch it from the API
     return <Navigate to="/" replace={true} />;
   }
 
@@ -22,7 +20,7 @@ const CharacterDetailPage = () => {
         picture={character.picture}
         liked={character.liked}
         description={character.description}
-        onLike={() => console.log("Like", character.id)}
+        onLike={onCharacterLike}
       />
     </div>
   );
