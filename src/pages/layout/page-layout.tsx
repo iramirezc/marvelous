@@ -16,9 +16,7 @@ const PageLayout = () => {
         onLogoClick={() => navigate("/")}
         onFavoritesClick={() => navigate("/", { state: { favorites: true } })}
       />
-      <div className="loader-container">
-        <Loader isLoading={loading} />
-      </div>
+      <Loader isLoading={loading} />
       <Outlet />
     </div>
   );
