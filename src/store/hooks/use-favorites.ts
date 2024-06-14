@@ -29,12 +29,19 @@ export const useFavorites = () => {
     return favorites.ids;
   };
 
+  const getFavoriteCharacters = () => {
+    return getFavoritesIds().map(getFavoriteById);
+  };
+
   const addToFavorites = (characterId: string, character: Character) => {
     const newFavorites = {
       ids: [...favorites.ids, characterId],
       entities: {
         ...favorites.entities,
-        [characterId]: character
+        [characterId]: {
+          ...character,
+          liked: true
+        }
       }
     };
 
@@ -73,6 +80,7 @@ export const useFavorites = () => {
     getFavoritesIds,
     getFavoriteById,
     getFavoritesCount,
-    removeFromFavorites
+    removeFromFavorites,
+    getFavoriteCharacters
   };
 };
