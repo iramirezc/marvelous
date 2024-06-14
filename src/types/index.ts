@@ -13,3 +13,8 @@ export type Character = {
   liked: boolean;
   comics: Comic[];
 };
+
+export type Favorites = {
+  ids: string[];
+  entities: Record<string, Character>;
+};
