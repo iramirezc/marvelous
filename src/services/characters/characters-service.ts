@@ -1,4 +1,4 @@
-import type { Character } from "../../types";
+import type { Character, Comic } from "../../types";
 import apiService from "../api/api-service";
 import charactersCache from "./characters-cache";
 
@@ -69,6 +69,55 @@ const fetchCharactersByName = async (name: string) => {
   return data.map(transformCharacterData);
 };
 
-const charactersService = { fetchCharacters, fetchCharactersByName };
+interface ComicData {
+  id: number;
+  title: string;
+  dates: Array<{ type: string; date: string }>;
+  thumbnail: {
+    path: string;
+    extension: string;
+  };
+}
+
+const getComicYear = (dates: ComicData["dates"]) => {
+  const onSaleDate = dates.find((date) => date.type === "onsaleDate");
+
+  if (!onSaleDate) {
+    return "";
+  }
+
+  const date = new Date(onSaleDate.date);
+
+  if (isNaN(date.getFullYear())) {
+    return "";
+  }
+
+  return String(date.getFullYear());
+};
+
+const transformComicData = (data: ComicData): Comic => ({
+  id: String(data.id),
+  title: String(data.title).trim(),
+  cover: parseImageUrl({
+    path: data.thumbnail.path,
+    variant: ImageVariant.PORTRAIT_SMALL,
+    extension: data.thumbnail.extension
+  }).toString(),
+  year: getComicYear(data.dates)
+});
+
+const fetchComicsByCharacterId = async (characterId: string) => {
+  const data = await apiService.getComicsByCharacterId<ComicData[]>({
+    characterId
+  });
+
+  return data.map(transformComicData);
+};
+
+const charactersService = {
+  fetchCharacters,
+  fetchCharactersByName,
+  fetchComicsByCharacterId
+};
 
 export default charactersService;
