@@ -6,8 +6,8 @@ import "./characters-page.css";
 const CharactersPage = () => {
   const {
     isSearching,
-    showFavorites,
     searchCriteria,
+    isFavoritesFilterActive,
     onCharacterLike,
     getCharactersList,
     showCharacterDetails,
@@ -18,7 +18,9 @@ const CharactersPage = () => {
 
   return (
     <main className="characters-page">
-      {showFavorites ? <h2 className="favorites-header">Favorites</h2> : null}
+      {isFavoritesFilterActive ? (
+        <h2 className="favorites-header">Favorites</h2>
+      ) : null}
       <SearchBar
         value={searchCriteria}
         results={charactersList.length}

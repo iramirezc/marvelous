@@ -1,13 +1,11 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import type { Character } from "../../../types";
 import { useFavorites, useFilters } from "../../../store/hooks";
 import favoritesService from "../../../services/favorites";
 
 export const useFavoriteCharacters = () => {
-  const location = useLocation();
   const {
-    filters: { showFavorites },
+    filters: { showFavorites: isFavoritesFilterActive },
     setFilter
   } = useFilters();
   const {
@@ -26,6 +24,10 @@ export const useFavoriteCharacters = () => {
     }
   };
 
+  const showFavorites = (value: boolean) => {
+    setFilter("showFavorites", value);
+  };
+
   // Retrieve favorites from storage on first load
   useEffect(() => {
     const savedFavorites = favoritesService.get();
@@ -36,16 +38,11 @@ export const useFavoriteCharacters = () => {
     // eslint-disable-next-line
   }, []);
 
-  // Toggle filter to show only favorites
-  useEffect(() => {
-    setFilter("showFavorites", Boolean(location.state?.favorites));
-    // eslint-disable-next-line
-  }, [location.state]);
-
   return {
-    showFavorites,
-    toggleLike,
+    isFavoritesFilterActive,
     isFavorite,
+    toggleLike,
+    showFavorites,
     getFavoriteCharacters
   };
 };

@@ -12,6 +12,11 @@ import CharactersPage from "./characters-page";
 
 jest.mock("../../services/characters");
 
+// There are two characters that start with "Spider-Girl"
+const searchResults = mockCharacters.filter((character) =>
+  character.name.startsWith("Spider-Girl")
+);
+
 const mockCharactersService = {
   fetchCharacters: jest.mocked(charactersService.fetchCharacters),
   fetchCharactersByName: jest.mocked(charactersService.fetchCharactersByName)
@@ -54,11 +59,6 @@ describe("<CharactersPage />", () => {
   });
 
   describe("searching for characters", () => {
-    // There are two characters that start with "Spider-Girl"
-    const searchResults = mockCharacters.filter((character) =>
-      character.name.startsWith("Spider-Girl")
-    );
-
     test("renders the status of 'Searching' when user starts typing", async () => {
       setupInitialLoadResponse([]);
 
@@ -149,10 +149,12 @@ describe("<CharactersPage />", () => {
   });
 
   describe("navigation", () => {
-    test("shows favorite characters and then shows first load characters", async () => {
+    beforeEach(() => {
       setupInitialLoadResponse(mockCharacters);
       setupFavoritesStorageService(mockFavorites);
+    });
 
+    test("shows favorite characters and then shows first load characters", async () => {
       await act(renderPage);
 
       // assert first load characters are rendered
@@ -173,6 +175,33 @@ describe("<CharactersPage />", () => {
       expect(screen.getAllByRole("article")).toHaveLength(
         mockCharacters.length
       );
+    });
+
+    test("clears navigation when searching on favorites and navigating back", async () => {
+      setupSearchResponse(searchResults);
+
+      await act(renderPage);
+
+      // navigate to favorites
+      await userEvent.click(screen.getByRole("button", { name: "Favorites" }));
+
+      // assert favorite characters are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(1);
+
+      // search for characters
+      await userEvent.type(screen.getByRole("searchbox"), "Spider-Girl");
+
+      // wait for results to render
+      await waitFor(() => screen.findByText("2 Results"));
+
+      // assert search results are rendered
+      expect(screen.getAllByRole("article")).toHaveLength(searchResults.length);
+
+      // navigate back to favorites
+      await userEvent.click(screen.getByRole("button", { name: "Favorites" }));
+
+      // assert only favorites are rendered again
+      expect(screen.getAllByRole("article")).toHaveLength(1);
     });
   });
 });

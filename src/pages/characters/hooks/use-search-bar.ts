@@ -11,9 +11,10 @@ export const useSearchBar = () => {
     isSearching,
     searchCriteria,
     results,
+    clearSearch,
     setIsSearching,
-    setSearchCriteria,
-    setSearchResults
+    setSearchResults,
+    setSearchCriteria
   } = useSearch();
 
   const onChangeSearchCriteria = (newSearchCriteria: string) => {
@@ -56,6 +57,7 @@ export const useSearchBar = () => {
     results,
     isSearching,
     searchCriteria,
+    clearSearch,
     onChangeSearchCriteria
   };
 };

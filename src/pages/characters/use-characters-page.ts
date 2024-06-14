@@ -1,16 +1,28 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useFavoriteCharacters } from "./hooks/use-favorite-characters";
 import { useFetchCharacters } from "./hooks/use-fetch-characters";
 import { useSearchBar } from "./hooks/use-search-bar";
 import { Character } from "../../types";
 
 export const useCharactersPage = () => {
+  const location = useLocation();
   const { characters: initialCharacters, fetchCharacters } =
     useFetchCharacters();
-  const { showFavorites, getFavoriteCharacters, isFavorite, toggleLike } =
-    useFavoriteCharacters();
-  const { isSearching, results, searchCriteria, onChangeSearchCriteria } =
-    useSearchBar();
+  const {
+    isFavoritesFilterActive,
+    isFavorite,
+    toggleLike,
+    showFavorites,
+    getFavoriteCharacters
+  } = useFavoriteCharacters();
+  const {
+    results,
+    isSearching,
+    searchCriteria,
+    clearSearch,
+    onChangeSearchCriteria
+  } = useSearchBar();
 
   const showCharacterDetails = (id: string) => {
     console.log("Character->click", id);
@@ -21,7 +33,7 @@ export const useCharactersPage = () => {
       return results;
     }
 
-    if (showFavorites) {
+    if (isFavoritesFilterActive) {
       return getFavoriteCharacters();
     }
 
@@ -57,10 +69,17 @@ export const useCharactersPage = () => {
     //  eslint-disable-next-line
   }, []);
 
+  // Clear search and navigate to favorites
+  useEffect(() => {
+    clearSearch();
+    showFavorites(Boolean(location.state?.favorites));
+    // eslint-disable-next-line
+  }, [location.state]);
+
   return {
     isSearching,
-    showFavorites,
     searchCriteria,
+    isFavoritesFilterActive,
     onCharacterLike,
     getCharactersList,
     showCharacterDetails,
