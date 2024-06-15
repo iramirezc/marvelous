@@ -100,7 +100,7 @@ const transformComicData = (data: ComicData): Comic => ({
   title: String(data.title).trim(),
   cover: parseImageUrl({
     path: data.thumbnail.path,
-    variant: ImageVariant.PORTRAIT_SMALL,
+    variant: ImageVariant.PORTRAIT_XLARGE,
     extension: data.thumbnail.extension
   }).toString(),
   year: getComicYear(data.dates)

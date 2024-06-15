@@ -114,7 +114,7 @@ describe("Characters Service", () => {
         id: "109637",
         title: "The Amazing Spider-Man (2022) #50",
         cover:
-          "http://i.annihil.us/u/prod/marvel/i/mg/f/03/663e5c5906239/portrait_small.jpg",
+          "http://i.annihil.us/u/prod/marvel/i/mg/f/03/663e5c5906239/portrait_xlarge.jpg",
         year: "2024"
       });
     });
