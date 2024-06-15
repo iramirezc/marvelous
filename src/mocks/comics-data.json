@@ -1,0 +1,3232 @@
+[
+  {
+    "id": 109637,
+    "digitalId": 66584,
+    "title": "The Amazing Spider-Man (2022) #50",
+    "issueNumber": 50,
+    "variantDescription": "",
+    "description": "GUESS WHO'S BACK?! THE GREEN GOBLIN RETURNS in this landmark and massive issue of ASM that boasts not only a double-sized main story but some instant Spider-Man classics by legends and legends to be! The Sins of Norman Osborn have found their way home and Norman shows his true color - green. But is it truly that simple? Spidey and Gobby's brutal fight is one for the ages and you don't want to miss this ending. PLUS! MARV WOLFMAN RETURNS TO SPIDER-MAN! NIKESH SHUKLA tells a story that will stay with you for a long time. And more!",
+    "modified": "2024-03-20T10:07:21-0400",
+    "isbn": "",
+    "upc": "75960620200305011",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 80,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/109637",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/109637/the_amazing_spider-man_2022_50?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/The-Amazing-Spider-Man-50/digital-comic/66584?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66584&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/32866",
+      "name": "The Amazing Spider-Man (2022 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/114624",
+        "name": "The Amazing Spider-Man (2022) #50 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/114625",
+        "name": "The Amazing Spider-Man (2022) #50 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115512",
+        "name": "The Amazing Spider-Man (2022) #50 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115686",
+        "name": "The Amazing Spider-Man (2022) #50 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116439",
+        "name": "The Amazing Spider-Man (2022) #50 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116440",
+        "name": "The Amazing Spider-Man (2022) #50 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/118906",
+        "name": "The Amazing Spider-Man (2022) #50 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-05-22T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-04-22T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-05-09T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-05-09T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 9.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/03/663e5c5906239",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/03/663e5c5906239",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 18,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109637/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13162",
+          "name": "Erick Arciniega",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11465",
+          "name": "Andrew Dalhouse",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/277",
+          "name": "Terry Dodson",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13558",
+          "name": "Juan Ferreyra",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12991",
+          "name": "Rachelle Rosenberg",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14674",
+          "name": "Lee Gatlin",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13834",
+          "name": "Chris Cross",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/592",
+          "name": "Rachel Dodson",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/440",
+          "name": "Mark Farmer",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/935",
+          "name": "Todd Nauck",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/2428",
+          "name": "Joe Kelly",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14456",
+          "name": "Nikesh Shukla",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10409",
+          "name": "Zeb Wells",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/271",
+          "name": "Marv Wolfman",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/649",
+          "name": "Ed Mcguinness",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13058",
+          "name": "Marcio Menyz",
+          "role": "colorist (cover)"
+        }
+      ],
+      "returned": 18
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109637/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011435",
+          "name": "Green Goblin (Norman Osborn)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109637/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240399",
+          "name": "cover from The Amazing Spider-Man (2022) #50",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240400",
+          "name": "story from The Amazing Spider-Man (2022) #50",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109637/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 21171,
+    "digitalId": 0,
+    "title": "Amazing Spider-Man (1999) #558 (Turner Variant)",
+    "issueNumber": 558,
+    "variantDescription": "Turner Variant",
+    "description": "",
+    "modified": "-0001-11-30T00:00:00-0500",
+    "isbn": "",
+    "upc": "5960604716-55821",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 0,
+    "textObjects": [
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "The frighteningly funky and fearsome Freak returns, more powerful than ever! And this action-packed issue features the \r<br>gorgeous art of Barry Kitson - fresh from Marvel's THE ORDER!  Plus: Menace! Curt Connors!  Aunt May!  Lots of innocent bystanders!  Gale wrote it, Wacker edited it, and Marvel actually thought it was a good idea to publish it!\r<br>Rated A ...$2.99 \r<br>"
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/21171",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/21171/amazing_spider-man_1999_558_turner_variant/turner_variant?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/454",
+      "name": "Amazing Spider-Man (1999 - 2013)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/21172",
+        "name": "Amazing Spider-Man (1999) #558"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2029-12-31T00:00:00-0500"
+      },
+      {
+        "type": "focDate",
+        "date": "-0001-11-30T00:00:00-0500"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 2.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "images": [],
+    "creators": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/21171/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4953",
+          "name": "Bob Gale",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/481",
+          "name": "Barry Kitson",
+          "role": "artist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/856",
+          "name": "Michael Turner",
+          "role": "penciller (cover)"
+        }
+      ],
+      "returned": 3
+    },
+    "characters": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/21171/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 1
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/21171/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/46768",
+          "name": "1 of 1",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/46769",
+          "name": "1 of 1",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/21171/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 1308,
+    "digitalId": 0,
+    "title": "Marvel Age Spider-Man Vol. 2: Everyday Hero (Digest)",
+    "issueNumber": 0,
+    "variantDescription": "",
+    "description": "",
+    "modified": "2018-01-22T15:42:11-0500",
+    "isbn": "0-7851-1451-3",
+    "upc": "5960611451-00111",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Digest",
+    "pageCount": 96,
+    "textObjects": [
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "\"The Marvel Age of Comics continues! This time around, Spidey meets his match against such classic villains as Electro and the Lizard, and faces the return of one of his first foes: the Vulture! Plus: Spider-Man vs. the Living Brain, Peter Parker's fight with Flash Thompson, and the wall-crawler tackles the high-flying Human Torch!\""
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/1308",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/collection/1308/marvel_age_spider-man_vol_2_everyday_hero_digest?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/1242",
+      "name": "Marvel Age Spider-Man Vol. 2: Everyday Hero (2004)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/546",
+        "name": "Marvel Age Spider-Man (2004) #8"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/610",
+        "name": "Marvel Age Spider-Man (2004) #7"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/728",
+        "name": "Marvel Age Spider-Man (2004) #6"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/681",
+        "name": "Marvel Age Spider-Man (2004) #5"
+      }
+    ],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2029-12-31T00:00:00-0500"
+      },
+      {
+        "type": "focDate",
+        "date": "-0001-11-30T00:00:00-0500"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 5.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/20/4bc665483c3aa",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/90/5a664c954a55b",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/80/5a6648f8aaccc",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/c0/5a6648efbc46c",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/4/00/5a6648c368f52",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/40/4bc689a4ce796",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/c0/4bc684889f8ed",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/50/4bc6809bdc81b",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/20/4bc665483c3aa",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/1308/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/694",
+          "name": "Mark Brooks",
+          "role": "penciller (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/434",
+          "name": "Michael Ryan",
+          "role": "penciller (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/424",
+          "name": "Udon Comics",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/692",
+          "name": "Pat Davidson",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/689",
+          "name": "Derek Fridolfs",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/6743",
+          "name": "Rich Perrotta",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/682",
+          "name": "Todd Dezago",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/326",
+          "name": "Daniel Quantz",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/691",
+          "name": "Jonboy Meyers",
+          "role": "penciller"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/688",
+          "name": "Michael OHare",
+          "role": "penciller"
+        }
+      ],
+      "returned": 10
+    },
+    "characters": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/1308/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 1
+    },
+    "stories": {
+      "available": 9,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/1308/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/2759",
+          "name": "Cover #2759",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/2760",
+          "name": "Interior #2760",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/2763",
+          "name": "Cover #2763",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/2764",
+          "name": "Interior #2764",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/2769",
+          "name": "Cover #2769",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/2770",
+          "name": "Interior #2770",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/2771",
+          "name": "Cover #2771",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/2772",
+          "name": "Interior #2772",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/65682",
+          "name": "MARVEL AGE SPIDER-MAN VOL. 2: EVERYDAY HERO 0 cover",
+          "type": "cover"
+        }
+      ],
+      "returned": 9
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/1308/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 110553,
+    "digitalId": 0,
+    "title": "The Spectacular Spider-Men (2024) #5",
+    "issueNumber": 5,
+    "variantDescription": "",
+    "description": "PETER PARKER vs. MILES MORALES!  No holds barred, each trying to take the other OUT! What could have pitted them against each other so viciously?  Who has the skills to pull that off? What effect wiLL the collateral damage have?!",
+    "modified": "2024-06-07T15:39:14-0400",
+    "isbn": "",
+    "upc": "75960620746600511",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/110553",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/110553/the_spectacular_spider-men_2024_5?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/37824",
+      "name": "The Spectacular Spider-Men (2024 - Present)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-07-17T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-06-17T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/66212c2dc8e09",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/66212c2dc8e09",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110553/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/430",
+          "name": "Edgar Delgado",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/447",
+          "name": "Victor Olazaba",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/72",
+          "name": "Humberto Ramos",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10174",
+          "name": "Greg Weisman",
+          "role": "writer"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110553/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1016181",
+          "name": "Spider-Man (Miles Morales)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110553/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/242235",
+          "name": "cover from Spider-Man & Spider-Man (2029) #5",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/242236",
+          "name": "story from Spider-Man & Spider-Man (2029) #5",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110553/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 114241,
+    "digitalId": 0,
+    "title": "Amazing Spider-Man: Blood Hunt (2024) #3",
+    "issueNumber": 3,
+    "variantDescription": "",
+    "description": "Morbius is the one man close enough to a cure for vampirism. The vampires of the world cannot allow that cure to be reached. Spider-Man has Misty Knight, Colleen Wing and the Lizard on his side.  But it won't be enough.",
+    "modified": "2024-04-12T09:23:13-0400",
+    "isbn": "",
+    "upc": "75960620869200311",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/114241",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/114241/amazing_spider-man_blood_hunt_2024_3?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/39161",
+      "name": "Amazing Spider-Man: Blood Hunt (2024 - Present)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-07-17T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-06-17T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/03/66212b9e94183",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/03/66212b9e94183",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114241/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13604",
+          "name": "Marcelo Ferreira",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14263",
+          "name": "Justina Ireland",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12980",
+          "name": "Vc Cory Petit",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12978",
+          "name": "Roberto Poggi",
+          "role": "inker (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12991",
+          "name": "Rachelle Rosenberg",
+          "role": "colorist (cover)"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114241/characters",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114241/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/249702",
+          "name": "cover from Spider-Man: Blood Hunt (2024) #3",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/249703",
+          "name": "story from Spider-Man: Blood Hunt (2024) #3",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114241/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 118645,
+    "digitalId": 0,
+    "title": "AMAZING SPIDER-MAN ANNUAL #1 [IW] (2024) #1",
+    "issueNumber": 1,
+    "variantDescription": "",
+    "description": "\"INFINITY WATCH\" PART TWO! The TIME STONE BEARER, a.k.a. OVERTIME, takes on SPIDER-MAN! Time travel vs. Spider-Sense! The Infinity Watch grows and the universe is in deep deep trouble… PLUS- THE DEATH STONE BEARER HAS ARRIVED! Derek Landy and Sara Pichelli's Annual-Linking story marches on with more surprises than you can handle!",
+    "modified": "2024-04-12T09:22:28-0400",
+    "isbn": "",
+    "upc": "75960620971200111",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/118645",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/118645/amazing_spider-man_annual_1_iw_2024_1?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/41609",
+      "name": "AMAZING SPIDER-MAN ANNUAL #1 [IW] (2024 - Present)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-07-03T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-06-03T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/c0/66212b910c26c",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/c0/66212b910c26c",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 8,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/118645/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12993",
+          "name": "Vc Travis Lanham",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/430",
+          "name": "Edgar Delgado",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12861",
+          "name": "Derek Landy",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+          "name": "Salvador Larroca",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/658",
+          "name": "Ron Lim",
+          "role": "penciler"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14640",
+          "name": "Kaeden Mcgahey",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/9408",
+          "name": "Sara Pichelli",
+          "role": "inker"
+        }
+      ],
+      "returned": 8
+    },
+    "characters": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/118645/characters",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/118645/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/258514",
+          "name": "cover from Infinity Watch: TBD a (2024) #1",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/258515",
+          "name": "story from Infinity Watch: TBD a (2024) #1",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/118645/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 110552,
+    "digitalId": 0,
+    "title": "The Spectacular Spider-Men (2024) #4",
+    "issueNumber": 4,
+    "variantDescription": "",
+    "description": "The world comes crashing down around Peter and Miles. Someone has just ticked off the wrong Spider-Men. The gloves have come off, and people are going to get hurt.",
+    "modified": "2024-04-30T11:48:46-0400",
+    "isbn": "",
+    "upc": "75960620746600411",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/110552",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/110552/the_spectacular_spider-men_2024_4?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/37824",
+      "name": "The Spectacular Spider-Men (2024 - Present)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-06-26T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-05-27T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/90/65f9af19e1a4b",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/90/65f9af19e1a4b",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110552/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/430",
+          "name": "Edgar Delgado",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/447",
+          "name": "Victor Olazaba",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/72",
+          "name": "Humberto Ramos",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10174",
+          "name": "Greg Weisman",
+          "role": "writer"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110552/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1016181",
+          "name": "Spider-Man (Miles Morales)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110552/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/242233",
+          "name": "cover from Spider-Man & Spider-Man (2029) #4",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/242234",
+          "name": "story from Spider-Man & Spider-Man (2029) #4",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110552/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 109639,
+    "digitalId": 0,
+    "title": "The Amazing Spider-Man (2022) #52",
+    "issueNumber": 52,
+    "variantDescription": "",
+    "description": "Nothing is okay. This issue is so shocking and troubling we can't even show you the cover!.",
+    "modified": "2024-04-30T09:52:11-0400",
+    "isbn": "",
+    "upc": "75960620200305211",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/109639",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/109639/the_amazing_spider-man_2022_52?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/32866",
+      "name": "The Amazing Spider-Man (2022 - Present)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-06-19T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-05-20T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/c0/65f9afd9e10af",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/c0/65f9afd9e10af",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109639/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/440",
+          "name": "Mark Farmer",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/649",
+          "name": "Ed Mcguinness",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13058",
+          "name": "Marcio Menyz",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10409",
+          "name": "Zeb Wells",
+          "role": "writer"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109639/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 1
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109639/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240403",
+          "name": "cover from The Amazing Spider-Man (2022) #52",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240404",
+          "name": "story from The Amazing Spider-Man (2022) #52",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109639/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 113179,
+    "digitalId": 67032,
+    "title": "Spider-Man: Shadow of the Green Goblin (2024) #3",
+    "issueNumber": 3,
+    "variantDescription": "",
+    "description": "WHO STALKS THE OSBORNS?! The biggest mistake of NORMAN OSBORN's life is back to haunt him…and it ain't who you think! Is PETER PARKER ready for a rematch with Proto-Goblin?  Ready or not: IT'S ROUND TWO!",
+    "modified": "2024-04-30T11:51:54-0400",
+    "isbn": "",
+    "upc": "75960620832600311",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/113179",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/113179/spider-man_shadow_of_the_green_goblin_2024_3?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Spider-Man-Shadow-of-the-Green-Goblin-3/digital-comic/67032?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=67032&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/38858",
+      "name": "Spider-Man: Shadow of the Green Goblin (2024 - Present)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-06-12T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-05-13T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-05-29T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-05-29T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/30/665741241940a",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/30/665741241940a",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 7,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113179/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13183",
+          "name": "J.M. DeMatteis",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13646",
+          "name": "Daniel Khazem",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14412",
+          "name": "Michael Sta. Maria",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12991",
+          "name": "Rachelle Rosenberg",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/7413",
+          "name": "Paulo Siqueira",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13449",
+          "name": "Chris Sotomayor",
+          "role": "colorist"
+        }
+      ],
+      "returned": 7
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113179/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009325",
+          "name": "Norman Osborn"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113179/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/247571",
+          "name": "cover from Green Goblin (2024) #3",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/247572",
+          "name": "story from Green Goblin (2024) #3",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113179/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 114240,
+    "digitalId": 66997,
+    "title": "Amazing Spider-Man: Blood Hunt (2024) #2",
+    "issueNumber": 2,
+    "variantDescription": "",
+    "description": "Spider-Man and the Lizard need to save Morbius the Living Vampire if the heroes of the Marvel Universe stand a chance at stopping the vampire virulence! But does Dr. Michael Morbius WANT to be saved?!",
+    "modified": "2024-04-30T09:54:36-0400",
+    "isbn": "",
+    "upc": "75960620869200211",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/114240",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/114240/amazing_spider-man_blood_hunt_2024_2?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Amazing-Spider-Man-Blood-Hunt-2/digital-comic/66997?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66997&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/39161",
+      "name": "Amazing Spider-Man: Blood Hunt (2024 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116411",
+        "name": "Amazing Spider-Man: Blood Hunt (2024) #2 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-06-12T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-05-13T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-05-29T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-05-29T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/4/20/66634df25f566",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/4/20/66634df25f566",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114240/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13604",
+          "name": "Marcelo Ferreira",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14263",
+          "name": "Justina Ireland",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12980",
+          "name": "Vc Cory Petit",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12978",
+          "name": "Roberto Poggi",
+          "role": "inker (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12991",
+          "name": "Rachelle Rosenberg",
+          "role": "colorist (cover)"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 4,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114240/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009404",
+          "name": "Lizard"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010682",
+          "name": "Misty Knight"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009454",
+          "name": "Morbius"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 4
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114240/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/249700",
+          "name": "cover from Spider-Man: Blood Hunt (2024) #2",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/249701",
+          "name": "story from Spider-Man: Blood Hunt (2024) #2",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114240/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 109638,
+    "digitalId": 66995,
+    "title": "The Amazing Spider-Man (2022) #51",
+    "issueNumber": 51,
+    "variantDescription": "",
+    "description": "THE SINISTER SIX IS BACK! As if the Green Goblin weren't enough, the Sinister Six has returned too!!! When it rains, it pours - and this rain is going to put Spider-Man into a world of hurt!",
+    "modified": "2024-05-21T16:28:58-0400",
+    "isbn": "",
+    "upc": "75960620200305111",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/109638",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/109638/the_amazing_spider-man_2022_51?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/The-Amazing-Spider-Man-51/digital-comic/66995?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66995&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/32866",
+      "name": "The Amazing Spider-Man (2022 - Present)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-06-05T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-05-06T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-05-21T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-05-21T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/b0/66634dbf5c832",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/b0/66634dbf5c832",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109638/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/440",
+          "name": "Mark Farmer",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/649",
+          "name": "Ed Mcguinness",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13058",
+          "name": "Marcio Menyz",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10409",
+          "name": "Zeb Wells",
+          "role": "writer"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 4,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109638/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011346",
+          "name": "Ben Reilly"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011435",
+          "name": "Green Goblin (Norman Osborn)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011265",
+          "name": "Sinister Six"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 4
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109638/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240401",
+          "name": "cover from The Amazing Spider-Man (2022) #51",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240402",
+          "name": "story from The Amazing Spider-Man (2022) #51",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109638/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 112236,
+    "digitalId": 66632,
+    "title": "Spider-Boy (2023) #7",
+    "issueNumber": 7,
+    "variantDescription": "",
+    "description": "It's the slam-bam conclusion to Spider-Boy's first big multi-part adventure! And all of his amazing friends are showing up to help! Guest-starring: CAPTAIN AMERICA, THOR, SQUIRREL GIRL, THE TOY SOLDIER, MILES MORALES: SPIDER-MAN, and PETER PARKER: SPIDER-MAN! And featuring a major turning point in the life of Bailey Briggs! His life (and this comic) will never be the same again! You do NOT want to miss this one, Spidey-B fans!",
+    "modified": "2024-03-20T11:55:35-0400",
+    "isbn": "",
+    "upc": "75960620785500711",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/112236",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/112236/spider-boy_2023_7?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Spider-Boy-7/digital-comic/66632?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66632&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/38659",
+      "name": "Spider-Boy (2023 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115661",
+        "name": "Spider-Boy (2023) #7 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115730",
+        "name": "Spider-Boy (2023) #7 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116488",
+        "name": "Spider-Boy (2023) #7 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-05-29T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-04-29T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-05-09T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-05-20T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/664b9dcc4a503",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/664b9dcc4a503",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 8,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/112236/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13162",
+          "name": "Erick Arciniega",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/430",
+          "name": "Edgar Delgado",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/208",
+          "name": "Paco Medina",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/918",
+          "name": "Ty Templeton",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11701",
+          "name": "Elizabeth Pyle",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/72",
+          "name": "Humberto Ramos",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12983",
+          "name": "Dan Slott",
+          "role": "writer"
+        }
+      ],
+      "returned": 8
+    },
+    "characters": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/112236/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+          "name": "Captain America"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1016181",
+          "name": "Spider-Man (Miles Morales)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010860",
+          "name": "Squirrel Girl"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009664",
+          "name": "Thor"
+        }
+      ],
+      "returned": 5
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/112236/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/245645",
+          "name": "cover from Spider-Boy (2023) #7",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/245646",
+          "name": "story from Spider-Boy (2023) #7",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/112236/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 110551,
+    "digitalId": 66647,
+    "title": "The Spectacular Spider-Men (2024) #3",
+    "issueNumber": 3,
+    "variantDescription": "",
+    "description": "Love is in the air at the Empire State University Coffee Bean as Miles Morales and Kamala Khan get their first date alongside Peter Parker and - GWEN STACY?! You aren't going to believe this issue of the best new book of 2024.",
+    "modified": "2024-03-20T12:11:03-0400",
+    "isbn": "",
+    "upc": "75960620746600311",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/110551",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/110551/the_spectacular_spider-men_2024_3?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/The-Spectacular-Spider-Men-3/digital-comic/66647?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66647&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/37824",
+      "name": "The Spectacular Spider-Men (2024 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115898",
+        "name": "The Spectacular Spider-Men (2024) #3 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116507",
+        "name": "The Spectacular Spider-Men (2024) #3 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116508",
+        "name": "The Spectacular Spider-Men (2024) #3 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-05-22T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-04-22T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-05-09T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-05-09T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/663e5c31c53fa",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/663e5c31c53fa",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110551/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/430",
+          "name": "Edgar Delgado",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/447",
+          "name": "Victor Olazaba",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/72",
+          "name": "Humberto Ramos",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10174",
+          "name": "Greg Weisman",
+          "role": "writer"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110551/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017577",
+          "name": "Ms. Marvel (Kamala Khan)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1016181",
+          "name": "Spider-Man (Miles Morales)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 3
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110551/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/242231",
+          "name": "cover from Spider-Man & Spider-Man (2029) #3",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/242232",
+          "name": "story from Spider-Man & Spider-Man (2029) #3",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/110551/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 114239,
+    "digitalId": 66585,
+    "title": "Amazing Spider-Man: Blood Hunt (2024) #1",
+    "issueNumber": 1,
+    "variantDescription": "",
+    "description": "Spinning directly out of AMAZING SPIDER-MAN #49, Spidey's role in BLOOD HUNT becomes clear and it involves, of course, MORBIUS! That's right, the Web-Slinger's main vampiric villain Michael Morbius is involved in the big vampire play and Peter has to figure out if he needs to take out his fanged foe or SAVE HIM?!",
+    "modified": "2024-03-20T10:08:54-0400",
+    "isbn": "",
+    "upc": "75960620869200111",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 40,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/114239",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/114239/amazing_spider-man_blood_hunt_2024_1?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Amazing-Spider-Man-Blood-Hunt-1/digital-comic/66585?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66585&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/39161",
+      "name": "Amazing Spider-Man: Blood Hunt (2024 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116409",
+        "name": "Amazing Spider-Man: Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116410",
+        "name": "Amazing Spider-Man: Blood Hunt (2024) #1 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-05-15T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-04-15T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-05-01T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-05-01T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/7/40/663e5c9e6187c",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/7/40/663e5c9e6187c",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 8,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114239/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14571",
+          "name": "Christopher Campana",
+          "role": "penciler"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13604",
+          "name": "Marcelo Ferreira",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14263",
+          "name": "Justina Ireland",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12980",
+          "name": "Vc Cory Petit",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12978",
+          "name": "Roberto Poggi",
+          "role": "inker (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12991",
+          "name": "Rachelle Rosenberg",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/469",
+          "name": "Craig Yeung",
+          "role": "inker"
+        }
+      ],
+      "returned": 8
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114239/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009454",
+          "name": "Morbius"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114239/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/249698",
+          "name": "cover from Spider-Man: Blood Hunt (2024) #1",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/249699",
+          "name": "story from Spider-Man: Blood Hunt (2024) #1",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/114239/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 109636,
+    "digitalId": 66583,
+    "title": "The Amazing Spider-Man (2022) #49",
+    "issueNumber": 49,
+    "variantDescription": "",
+    "description": "A BLOOD HUNT TIE-IN! Vampires are running rampant through New York City and while the Avengers are caught in the middle, someone has to take care of the citizens of the Big Apple. That person? Yep, Spider-Man. But if only it were that simple. Things never are and this issue leads directly into Spider-Man's larger role in BLOOD HUNT!",
+    "modified": "2024-04-23T09:13:27-0400",
+    "isbn": "",
+    "upc": "75960620200304911",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/109636",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/109636/the_amazing_spider-man_2022_49?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/The-Amazing-Spider-Man-49/digital-comic/66583?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66583&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/32866",
+      "name": "The Amazing Spider-Man (2022 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/114108",
+        "name": "The Amazing Spider-Man (2022) #49 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/114109",
+        "name": "The Amazing Spider-Man (2022) #49 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116437",
+        "name": "The Amazing Spider-Man (2022) #49 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116438",
+        "name": "The Amazing Spider-Man (2022) #49 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-05-08T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-04-08T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-04-24T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-04-24T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/03/6630068109cf2",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/03/6630068109cf2",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109636/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/362",
+          "name": "Scott Hanna",
+          "role": "inker (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13058",
+          "name": "Marcio Menyz",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13196",
+          "name": "John Romita Jr.",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10409",
+          "name": "Zeb Wells",
+          "role": "writer"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109636/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 1
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109636/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240397",
+          "name": "cover from The Amazing Spider-Man (2022) #49",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240398",
+          "name": "story from The Amazing Spider-Man (2022) #49",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109636/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 113178,
+    "digitalId": 66634,
+    "title": "Spider-Man: Shadow of the Green Goblin (2024) #2",
+    "issueNumber": 2,
+    "variantDescription": "",
+    "description": "ENTER SANDMAN!  While NORMAN OSBORN deals with the fallout of an attempt on his son Harry's life…  PETER PARKER struggles to keep himself together.  What better way to work out your problems than putting on the mask to take down FLINT MARKO: THE SANDMAN!",
+    "modified": "2024-03-20T11:57:01-0400",
+    "isbn": "",
+    "upc": "75960620832600211",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/113178",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/113178/spider-man_shadow_of_the_green_goblin_2024_2?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Spider-Man-Shadow-of-the-Green-Goblin-2/digital-comic/66634?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66634&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/38858",
+      "name": "Spider-Man: Shadow of the Green Goblin (2024 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115041",
+        "name": "Spider-Man: Shadow of the Green Goblin (2024) #2 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115706",
+        "name": "Spider-Man: Shadow of the Green Goblin (2024) #2 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-05-08T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-04-08T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-04-24T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-04-24T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/00/6630063ca3d9c",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/00/6630063ca3d9c",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 7,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113178/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13183",
+          "name": "J.M. DeMatteis",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13646",
+          "name": "Daniel Khazem",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14412",
+          "name": "Michael Sta. Maria",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12991",
+          "name": "Rachelle Rosenberg",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/7413",
+          "name": "Paulo Siqueira",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13449",
+          "name": "Chris Sotomayor",
+          "role": "colorist"
+        }
+      ],
+      "returned": 7
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113178/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009558",
+          "name": "Sandman"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113178/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/247569",
+          "name": "cover from Green Goblin (2024) #2",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/247570",
+          "name": "story from Green Goblin (2024) #2",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113178/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 113011,
+    "digitalId": 66149,
+    "title": "Blood Hunt (2024) #1",
+    "issueNumber": 1,
+    "variantDescription": "",
+    "description": "THE BLOODIEST MARVEL EVENT EVER! The skies have gone dark, the sun hiding its face from the carnage to come. The children of the night, the vampires, have risen from the dark and hidden places of the world as one to drown the Marvel Universe in blood. Earth's final night has fallen - can even the heroes of this doomed world stem the tide of blood that is to come? Join the AVENGERS, BLADE, BLOODLINE, SPIDER-MAN, HUNTER'S MOON, TIGRA, DOCTOR STRANGE and CLEA as the dance of death begins in BLOOD HUNT #1!",
+    "modified": "2024-03-20T09:47:17-0400",
+    "isbn": "",
+    "upc": "759606208051000111",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 40,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/113011",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/113011/blood_hunt_2024_1?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Blood-Hunt-1/digital-comic/66149?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66149&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/38820",
+      "name": "Blood Hunt (2024 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/114524",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/114883",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115000",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115001",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116321",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116360",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116361",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116362",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116363",
+        "name": "Blood Hunt (2024) #1 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-05-01T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-03-18T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-03-20T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-04-17T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 5.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/d0/65d73a5d4c9b7",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/d0/65d73a5d4c9b7",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113011/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/2133",
+          "name": "Tom Brevoort",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/872",
+          "name": "Marte Gracia",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10144",
+          "name": "Pepe Larraz",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13471",
+          "name": "Jed Mackay",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12980",
+          "name": "Vc Cory Petit",
+          "role": "letterer"
+        }
+      ],
+      "returned": 5
+    },
+    "characters": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113011/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009165",
+          "name": "Avengers"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009191",
+          "name": "Blade"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009239",
+          "name": "Clea"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009282",
+          "name": "Doctor Strange"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009670",
+          "name": "Tigra (Greer Nelson)"
+        }
+      ],
+      "returned": 6
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113011/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/247223",
+          "name": "cover from Vampires (2024) #1",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/247224",
+          "name": "story from Vampires (2024) #1",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113011/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 109635,
+    "digitalId": 66112,
+    "title": "The Amazing Spider-Man (2022) #48",
+    "issueNumber": 48,
+    "variantDescription": "",
+    "description": "Peter Parker vs. Ben Reilly! Spider-Man finally gets a rematch! Meanwhile, what is going on with Norman Osborn?!  Only two issues left until AMAZING SPIDER-MAN #50!",
+    "modified": "2024-04-09T12:31:36-0400",
+    "isbn": "",
+    "upc": "75960620200304811",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/109635",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/109635/the_amazing_spider-man_2022_48?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/The-Amazing-Spider-Man-48/digital-comic/66112?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66112&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/32866",
+      "name": "The Amazing Spider-Man (2022 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115865",
+        "name": "The Amazing Spider-Man (2022) #48 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115963",
+        "name": "The Amazing Spider-Man (2022) #48 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115964",
+        "name": "The Amazing Spider-Man (2022) #48 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/115965",
+        "name": "The Amazing Spider-Man (2022) #48 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116318",
+        "name": "The Amazing Spider-Man (2022) #48 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-04-24T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-03-25T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-04-12T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-04-12T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/d0/6615411b0248d",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/d0/6615411b0248d",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 9,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109635/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/362",
+          "name": "Scott Hanna",
+          "role": "inker (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/774",
+          "name": "Morry Hollowell",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13058",
+          "name": "Marcio Menyz",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1374",
+          "name": "Sonia Oback",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/935",
+          "name": "Todd Nauck",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13196",
+          "name": "John Romita Jr.",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10409",
+          "name": "Zeb Wells",
+          "role": "writer"
+        }
+      ],
+      "returned": 9
+    },
+    "characters": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109635/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011346",
+          "name": "Ben Reilly"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010325",
+          "name": "Betty Brant"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 3
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109635/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240395",
+          "name": "cover from The Amazing Spider-Man (2022) #48",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/240396",
+          "name": "story from The Amazing Spider-Man (2022) #48",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/109635/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 113204,
+    "digitalId": 66134,
+    "title": "Superior Spider-Man (2023) #6",
+    "issueNumber": 6,
+    "variantDescription": "",
+    "description": "A final showdown will determine once and for all who is truly the Superior Spider-Man!",
+    "modified": "2024-02-28T13:30:34-0500",
+    "isbn": "",
+    "upc": "75960620747300611",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/113204",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/113204/superior_spider-man_2023_6?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Superior-Spider-Man-6/digital-comic/66134?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=66134&utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/37835",
+      "name": "Superior Spider-Man (2023 - Present)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116052",
+        "name": "Superior Spider-Man (2023) #6 (Variant)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/116053",
+        "name": "Superior Spider-Man (2023) #6 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-04-24T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-03-25T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2024-04-12T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2024-04-12T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/e0/661540e0c5c43",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/e0/661540e0c5c43",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 9,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113204/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/87",
+          "name": "Mark Bagley",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+          "name": "Vc Joe Caramagna",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/430",
+          "name": "Edgar Delgado",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/359",
+          "name": "John Dell",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/548",
+          "name": "Andrew Hennessy",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11765",
+          "name": "Christos Gage",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12983",
+          "name": "Dan Slott",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11701",
+          "name": "Elizabeth Pyle",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14265",
+          "name": "Alex Sinclair",
+          "role": "colorist"
+        }
+      ],
+      "returned": 9
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113204/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009479",
+          "name": "Otto Octavius"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113204/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/247621",
+          "name": "cover from Superior Spider-Man (2023) #6",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/247622",
+          "name": "story from Superior Spider-Man (2023) #6",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/113204/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 112609,
+    "digitalId": 0,
+    "title": "Amazing Spider-Man Facsimile Edition (2024) #255",
+    "issueNumber": 255,
+    "variantDescription": "",
+    "description": "Continuing a Facsimile celebration of the early days of Spider-Man's black costume - before he knew it was an alien symbiote intending to bond with him forever! Master thief the Black Fox is looking for one last big score to fund his retirement - but when he comes under attack by a group of Super-Apes, it can only mean one thing: The Red Ghost needs one key component to complete a device that will increase his abilities a thousandfold, and he wants the Black Fox to steal it! With the super-powered simians as his support crew, the Fox takes on the challenge - but in his way stands Spider-Man, more powerful than ever in his black suit! It's one of the all-time great Marvel comic books, boldly re-presented in its original form, ads and all! Reprinting AMAZING SPIDER-MAN (1963) #255.",
+    "modified": "2024-03-28T18:07:32-0400",
+    "isbn": "",
+    "upc": "75960620817325511",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/112609",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/112609/amazing_spider-man_facsimile_edition_2024_255?utm_campaign=apiRef&utm_source=15e4f394f9b7a008ea97841ace0b6479"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/38722",
+      "name": "Amazing Spider-Man Facsimile Edition (2024 - Present)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2024-04-17T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2024-03-18T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 4.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/b0/6615415b58528",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/b0/6615415b58528",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/112609/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/9565",
+          "name": "Tom Defalco",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5764",
+          "name": "Ron Frenz",
+          "role": "penciler"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1872",
+          "name": "Glynis Oliver",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1759",
+          "name": "Joe Rosen",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13592",
+          "name": "Joe Rubinstein",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+          "name": "Jeff Youngquist",
+          "role": "editor"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/112609/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man (Peter Parker)"
+        }
+      ],
+      "returned": 1
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/112609/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/246411",
+          "name": "cover from Amazing Spider-Man 255 Facsimile Edition (2024) #255",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/246412",
+          "name": "story from Amazing Spider-Man 255 Facsimile Edition (2024) #255",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/112609/events",
+      "items": [],
+      "returned": 0
+    }
+  }
+]

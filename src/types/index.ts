@@ -1,4 +1,4 @@
-type Comic = {
+export type Comic = {
   id: string;
   title: string;
   cover: string;

@@ -1,3 +1,4 @@
+import comicsData from "../../mocks/comics-data.json";
 import characterData from "../../mocks/miles-morales-data.json";
 import milesMoralesCharacter from "../../mocks/miles-morales-character.json";
 import apiService from "../api/api-service";
@@ -6,10 +7,17 @@ import charactersCache from "./characters-cache";
 
 jest.mock("../api/api-service");
 
-const mockGetCharacters = jest.mocked(apiService.getCharacters);
+const mockApiService = {
+  getCharacters: jest.mocked(apiService.getCharacters),
+  getComicsByCharacterId: jest.mocked(apiService.getComicsByCharacterId)
+};
 
-const setupApiService = <T>(response: T[] = []) => {
-  mockGetCharacters.mockResolvedValueOnce(response);
+const setupCharactersApiService = <T>(response: T[] = []) => {
+  mockApiService.getCharacters.mockResolvedValueOnce(response);
+};
+
+const setupComicsApiService = <T>(response: T[] = []) => {
+  mockApiService.getComicsByCharacterId.mockResolvedValueOnce(response);
 };
 
 describe("Characters Service", () => {
@@ -17,9 +25,9 @@ describe("Characters Service", () => {
     charactersCache.clear();
   });
 
-  describe("charactersService.fetchCharacters()", () => {
+  describe("fetchCharacters()", () => {
     test("calls apiService.getCharacters()", async () => {
-      setupApiService([]);
+      setupCharactersApiService([]);
 
       await charactersService.fetchCharacters();
 
@@ -27,7 +35,7 @@ describe("Characters Service", () => {
     });
 
     test("returns characters from apiService", async () => {
-      setupApiService([characterData]);
+      setupCharactersApiService([characterData]);
 
       const characters = await charactersService.fetchCharacters();
 
@@ -51,7 +59,9 @@ describe("Characters Service", () => {
     });
 
     test("throws error if apiService throws error", async () => {
-      mockGetCharacters.mockRejectedValueOnce(new Error("Test Api Error"));
+      mockApiService.getCharacters.mockRejectedValueOnce(
+        new Error("Test Api Error")
+      );
 
       await expect(charactersService.fetchCharacters()).rejects.toThrow(
         "Test Api Error"
@@ -59,9 +69,9 @@ describe("Characters Service", () => {
     });
   });
 
-  describe("charactersService.fetchCharactersByName()", () => {
+  describe("fetchCharactersByName()", () => {
     test("calls apiService.getCharacters() with nameStartsWith", async () => {
-      setupApiService([]);
+      setupCharactersApiService([]);
 
       await charactersService.fetchCharactersByName("spider");
 
@@ -72,12 +82,41 @@ describe("Characters Service", () => {
     });
 
     test("returns characters by name from apiService", async () => {
-      setupApiService([characterData]);
+      setupCharactersApiService([characterData]);
 
       const characters =
         await charactersService.fetchCharactersByName("spider");
 
       expect(characters).toEqual([milesMoralesCharacter]);
+    });
+  });
+
+  describe("fetchComicsByCharacterId()", () => {
+    test("calls apiService.getComicsByCharacterId()", async () => {
+      setupComicsApiService([]);
+
+      await charactersService.fetchComicsByCharacterId("1009610");
+
+      expect(apiService.getComicsByCharacterId).toHaveBeenCalledTimes(1);
+      expect(apiService.getComicsByCharacterId).toHaveBeenCalledWith({
+        characterId: "1009610"
+      });
+    });
+
+    test("returns comics from apiService", async () => {
+      setupComicsApiService(comicsData);
+
+      const comics =
+        await charactersService.fetchComicsByCharacterId("1009610");
+
+      expect(comics).toHaveLength(20);
+      expect(comics[0]).toEqual({
+        id: "109637",
+        title: "The Amazing Spider-Man (2022) #50",
+        cover:
+          "http://i.annihil.us/u/prod/marvel/i/mg/f/03/663e5c5906239/portrait_xlarge.jpg",
+        year: "2024"
+      });
     });
   });
 });

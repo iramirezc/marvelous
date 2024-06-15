@@ -1,11 +1,26 @@
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
-import { screen } from "@testing-library/react";
+import { act, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import type { Comic } from "../../types";
 import character from "../../mocks/miles-morales-character.json";
-import { renderWithStoreProvider } from "../../tests/providers";
+import comics from "../../mocks/comics.json";
+import charactersService from "../../services/characters";
 import favoritesService from "../../services/favorites";
+import { renderWithStoreProvider } from "../../tests/providers";
 import CharacterDetailPage from "./character-detail-page";
+
+jest.mock("../../services/characters");
+
+const mockCharactersService = {
+  fetchComicsByCharacterId: jest.mocked(
+    charactersService.fetchComicsByCharacterId
+  )
+};
+
+const setupComicsResponse = (comics: Comic[]) => {
+  mockCharactersService.fetchComicsByCharacterId.mockResolvedValueOnce(comics);
+};
 
 const renderPage = () =>
   renderWithStoreProvider(
@@ -20,7 +35,9 @@ describe("<CharacterDetailPage />", () => {
   });
 
   test("renders the character details from router state", async () => {
-    renderPage();
+    setupComicsResponse([]);
+
+    await act(renderPage);
 
     expect(screen.getByText("Spider-Man (Miles Morales)")).toBeInTheDocument();
     expect(screen.getByText(character.description)).toBeInTheDocument();
@@ -32,7 +49,9 @@ describe("<CharacterDetailPage />", () => {
   });
 
   test("toggles the like state when the like button is clicked", async () => {
-    renderPage();
+    setupComicsResponse([]);
+
+    await act(renderPage);
 
     expect(screen.getByText("Not liked")).toBeInTheDocument();
 
@@ -46,12 +65,22 @@ describe("<CharacterDetailPage />", () => {
   });
 
   test("stores the character in the favorites storage", async () => {
-    renderPage();
+    setupComicsResponse([]);
+
+    await act(renderPage);
 
     expect(favoritesService.get()).toBeNull();
 
     await userEvent.click(screen.getByRole("button", { name: "Like" }));
 
     expect(favoritesService.get()).toBeTruthy();
+  });
+
+  test("renders the comics list", async () => {
+    setupComicsResponse(comics);
+
+    await act(renderPage);
+
+    expect(screen.queryAllByRole("listitem")).toHaveLength(20);
   });
 });
