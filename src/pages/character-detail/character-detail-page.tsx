@@ -1,7 +1,8 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { CharacterDetailCard } from "../../components";
+import { CharacterDetailCard, ComicsList } from "../../components";
 import { useCharacterDetailPage } from "./use-character-detail-page";
+import "./character-detail-page.css";
 
 const CharacterDetailPage = () => {
   const { character, onCharacterLike } = useCharacterDetailPage();
@@ -12,7 +13,7 @@ const CharacterDetailPage = () => {
   }
 
   return (
-    <div className="character-detail-page">
+    <main className="character-detail-page">
       <CharacterDetailCard
         id={character.id}
         name={character.name}
@@ -21,7 +22,8 @@ const CharacterDetailPage = () => {
         description={character.description}
         onLike={onCharacterLike}
       />
-    </div>
+      <ComicsList comics={character.comics} />
+    </main>
   );
 };
 
