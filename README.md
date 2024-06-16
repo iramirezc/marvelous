@@ -1,6 +1,20 @@
 # Marveloux
 
-A simple React app that fetches and displays Marvel characters using the Marvel API.
+A simple React application that fetches and displays Marvel characters using the Marvel API. With this app, you can search for your favorite characters and add them to your favorites list.
+
+**Key Features:**
+
+- Search for Marvel characters by name.
+- View detailed information about each character.
+- Add characters to your favorites list.
+- Persist favorites across different sessions.
+
+**Technologies Used:**
+
+- React.js
+- TypeScript
+- HTML
+- CSS
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
