@@ -18,6 +18,10 @@ A simple React application that fetches and displays Marvel characters using the
 - HTML
 - CSS
 
+## Storybook
+
+Explore the components library at [marveloux-storybook.netlify.app](https://marveloux-storybook.netlify.app/).
+
 ## Installation
 
 **Prerequisites:**
