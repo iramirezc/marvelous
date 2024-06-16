@@ -102,3 +102,21 @@ In the project directory, you can run:
 - `npm run build-storybook`
 
   Builds the Storybook static site.
+
+## Project Structure
+
+```graphql
+src
+├── components  # All components used in Storybook
+├── lib         # Library facades (MD5 TypeScript)
+├── mocks       # JSON examples of app data structures and API responses
+├── pages       # Main app pages (characters, characters-detail) and layout
+├── routes      # Definitions of routes for each page using React Router DOM
+├── services    # Services for API requests and utilities for local storage
+├── store       # Application state management (reducers, actions, Context API)
+├── tests       # Utilities for app testing (test providers)
+├── types       # Models and TypeScript types
+└── utils       # App utilities and services utilities (api, time, hashing)
+index.ts        # Entry point of the app
+
+```
