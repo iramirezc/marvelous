@@ -10,9 +10,9 @@ type Props = {
 };
 
 const Header = ({ favoritesCount, onLogoClick, onFavoritesClick }: Props) => (
-  <header className="marvelous-header">
+  <header className="marveloux-header">
     <img
-      className="marvelous-logo"
+      className="marveloux-logo"
       src={Logo}
       alt="Marvel logo"
       onClick={onLogoClick}

@@ -1,3 +1,9 @@
+/* This alleviates the jumping effect when loader is shown  */
+.loader + .characters-page {
+  --loader-height: 6px;
+  margin-top: calc(var(--loader-height) * -1);
+}
+
 .characters-page .favorites-header {
   font-size: 1.5rem;
   font-weight: 700;

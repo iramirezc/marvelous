@@ -7,7 +7,7 @@ import { useFetchComics } from "./hooks";
 export const useCharacterDetailPage = () => {
   const location = useLocation();
   const { toggleLike, isFavorite } = useFavoriteCharacters();
-  const { comics, fetchComics } = useFetchComics();
+  const { comics, loading, fetchComics } = useFetchComics();
 
   const character = location.state?.character as Character | undefined;
 
@@ -36,6 +36,7 @@ export const useCharacterDetailPage = () => {
   }, []);
 
   return {
+    loading,
     character: character ? decorateCharacter(character) : undefined,
     onCharacterLike
   };
