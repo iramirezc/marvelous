@@ -25,3 +25,10 @@ yarn-error.log*
 # env
 .env
 *storybook.log
+
+# Storybook
+storybook-static
+
+
+# Local Netlify folder
+.netlify
