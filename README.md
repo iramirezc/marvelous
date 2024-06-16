@@ -1,5 +1,7 @@
 # Marveloux
 
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 A simple React application that fetches and displays Marvel characters using the Marvel API. With this app, you can search for your favorite characters and add them to your favorites list.
 
 **Key Features:**
@@ -16,13 +18,39 @@ A simple React application that fetches and displays Marvel characters using the
 - HTML
 - CSS
 
-> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Installation
 
-> Recommended Node.js version >= 18.18.0
+**Prerequisites:**
 
-Run `npm install`.
+- Node >= 18.18.0
+
+**Instructions:**
+
+1. Install the Dependencies
+
+   After cloning the project, open your terminal and run the following command to install the necessary dependencies:
+
+   ```sh
+   npm install
+   ```
+
+2. Set Up Environment Variables
+
+   Create a `.env` file in the root directory of your project. You need to provide your [Marvel's API private and public keys](https://developer.marvel.com/documentation/getting_started) as well as the API URL. You can use the `.env.example` file as a reference. Your `.env` file should look something like this:
+
+   ```txt
+   REACT_APP_API_URL=https://gateway.marvel.com
+   REACT_APP_API_PUBLIC_KEY=your_public_key
+   REACT_APP_API_PRIVATE_KEY=your_private key
+   ```
+
+3. Start the Application:
+
+   Run the following command to start the application on port `3000`:
+
+   ```sh
+   npm run start
+   ```
 
 ## Available Scripts
 
