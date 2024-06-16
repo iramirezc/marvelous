@@ -23,6 +23,7 @@ export const useFetchCharacters = () => {
   };
 
   return {
+    loading,
     characters,
     fetchCharacters
   };

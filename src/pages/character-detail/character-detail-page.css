@@ -1,3 +1,7 @@
+.character-detail-page .loader {
+  background-color: var(--black);
+}
+
 .character-detail-page .comics-list {
   margin-left: var(--size-s);
   margin-top: 3rem;
