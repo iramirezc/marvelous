@@ -1,0 +1,14 @@
+.marveloux-header {
+  align-items: center;
+  background-color: var(--black);
+  display: flex;
+  height: 84px;
+  padding: 1rem;
+}
+
+.marveloux-logo {
+  cursor: pointer;
+  flex-basis: auto;
+  margin-right: auto;
+  width: 130px;
+}

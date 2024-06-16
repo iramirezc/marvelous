@@ -1,0 +1,36 @@
+.comics-list {
+  padding: 1rem;
+}
+
+.comics-list h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+}
+
+.comics-list ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0 0 1.5rem 0;
+  /* Standard way to style a scrollbar */
+  /* scrollbar-color: var(--red) #d9d9d9; */
+  /* scrollbar-width: thin; */
+}
+
+.comics-list ul::-webkit-scrollbar {
+  background-color: #d9d9d9;
+  height: 4px;
+  width: 10%;
+}
+
+.comics-list ul::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+}
+
+.comics-list ul li {
+  list-style: none;
+}

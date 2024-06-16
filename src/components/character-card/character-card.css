@@ -1,0 +1,92 @@
+.character-card {
+  --card-width: 136px;
+  background-color: var(--black);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--card-width);
+  min-width: var(--card-width);
+  position: relative;
+}
+
+.character-card img {
+  --thumbnail-height: 149.5px;
+  height: var(--thumbnail-height);
+  object-fit: cover;
+}
+
+.character-card__info {
+  --info-height: 56px;
+  align-items: center;
+  /* TODO: Fix "element's background color could not be determined due to a background gradient" */
+  /* NOTE: Even not using a gradient, the color white on red is reporting bad contrast ratio */
+  /* More info here: https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI */
+  background: linear-gradient(var(--red) 0 0) top/100% 0% no-repeat transparent;
+  border-top: 0.33rem solid var(--red);
+  display: flex;
+  max-height: var(--info-height);
+  min-height: var(--info-height);
+  overflow: hidden;
+  padding: 1rem;
+  transition: background-size 0.25s linear;
+}
+
+.character-card__info:hover {
+  background-size: 100% 100%;
+}
+
+.character-card__info svg path {
+  transition: fill 0.25s linear;
+}
+
+.character-card__info:hover svg path {
+  fill: var(--white);
+}
+
+.character-card__info h2 {
+  color: var(--white);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  flex-basis: auto;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0 auto 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.character-card__info .like-button {
+  margin-left: 1rem;
+}
+
+.character-card__corner {
+  border-color: transparent transparent var(--white) transparent;
+  border-style: solid;
+  border-width: 0 0px 12.5px 12.5px;
+  bottom: 0;
+  height: 0px;
+  position: absolute;
+  right: 0;
+  width: 0px;
+}
+
+@media (min-width: 375px) {
+  .character-card {
+    --card-width: 162px;
+  }
+
+  .character-card img {
+    --thumbnail-height: 178px;
+  }
+}
+
+@media (min-width: 392px) {
+  .character-card {
+    --card-width: 172px;
+  }
+
+  .character-card img {
+    --thumbnail-height: 190px;
+  }
+}

@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# env
+.env
+*storybook.log
+
+# Storybook
+storybook-static
+
+
+# Local Netlify folder
+.netlify

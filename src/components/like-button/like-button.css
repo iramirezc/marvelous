@@ -1,0 +1,9 @@
+.like-button__btn {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+}

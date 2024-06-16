@@ -1,0 +1,18 @@
+.page-layout {
+  --size-s: 1rem;
+  --size-m: 3rem;
+  --small-padding: var(--size-s) var(--size-s);
+  --medium-padding: var(--size-s) var(--size-m);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-layout .marveloux-header {
+  padding: var(--small-padding);
+}
+
+@media (min-width: 768px) {
+  .page-layout .marveloux-header {
+    padding: var(--medium-padding);
+  }
+}

@@ -1,0 +1,24 @@
+.character-detail-page .loader {
+  background-color: var(--black);
+}
+
+.character-detail-page .comics-list {
+  margin-left: var(--size-s);
+  margin-top: 3rem;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .character-detail-page .comics-list {
+    margin-left: var(--size-m);
+  }
+}
+
+@media (min-width: 1024px) {
+  .character-detail-page .comics-list {
+    /* See character-detail-card.css for max-width */
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
