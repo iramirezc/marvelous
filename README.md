@@ -146,3 +146,7 @@ The project's UI design adheres to guidelines provided in the following links:
 - [Figma Prototype](https://www.figma.com/proto/HkJ6yO2kSh0WdL7wlHdDF1/Labs-%2F-Zara-Web-Challenge?node-id=232-6395&source=email_invite&starting-point-node-id=232%3A6632&show-proto-sidebar=1&t=eh7O51J2iT7eLW2N-1)
   - [Mobile Version](https://www.figma.com/proto/HkJ6yO2kSh0WdL7wlHdDF1/Labs-%2F-Zara-Web-Challenge?node-id=217-3484&source=email_invite&starting-point-node-id=228%3A5703&show-proto-sidebar=1&t=eh7O51J2iT7eLW2N-1)
 - [Figma Design](https://www.figma.com/design/HkJ6yO2kSh0WdL7wlHdDF1/Labs-%2F-Zara-Web-Challenge?node-id=0-1&t=qisMrTrpHFNlrtie-1)
+
+### Testing and Quality
+
+The project adopts a rigorous testing approach with > 95% coverage, including unit tests for components and utilities using Jest and React Testing Library. It employs integration tests for services with mocked API responses using fetch mock, ensuring seamless data flow. Functional tests at the page level simulate user interactions with the user event library, validating end-to-end scenarios. ESLint and Prettier enforce code formatting and best practices, maintaining high-quality and reliable code throughout the development process.
