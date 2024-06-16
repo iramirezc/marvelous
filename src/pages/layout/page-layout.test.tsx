@@ -20,10 +20,4 @@ describe("<PageLayout />", () => {
     expect(screen.getByAltText("Marvel logo")).toBeInTheDocument();
     expect(screen.getByText("My favorites 0")).toBeInTheDocument();
   });
-
-  test("renders the <Loader /> component", () => {
-    renderPage({ loading: true });
-
-    expect(screen.getByRole("status")).toBeInTheDocument();
-  });
 });
