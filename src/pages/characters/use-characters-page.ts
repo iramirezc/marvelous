@@ -7,8 +7,11 @@ import { Character } from "../../types";
 export const useCharactersPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { characters: initialCharacters, fetchCharacters } =
-    useFetchCharacters();
+  const {
+    loading,
+    characters: initialCharacters,
+    fetchCharacters
+  } = useFetchCharacters();
   const {
     isFavoritesFilterActive,
     isFavorite,
@@ -88,6 +91,7 @@ export const useCharactersPage = () => {
   }, [location.state]);
 
   return {
+    loading,
     isSearching,
     searchCriteria,
     isFavoritesFilterActive,
