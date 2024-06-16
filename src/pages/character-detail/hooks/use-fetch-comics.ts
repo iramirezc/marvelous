@@ -27,6 +27,7 @@ export const useFetchComics = () => {
 
   return {
     comics,
+    loading,
     fetchComics
   };
 };
