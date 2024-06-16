@@ -1,4 +1,4 @@
-.marvelous-header {
+.marveloux-header {
   align-items: center;
   background-color: var(--black);
   display: flex;
@@ -6,7 +6,7 @@
   padding: 1rem;
 }
 
-.marvelous-logo {
+.marveloux-logo {
   cursor: pointer;
   flex-basis: auto;
   margin-right: auto;
