@@ -7,12 +7,12 @@
   flex-direction: column;
 }
 
-.page-layout .marvelous-header {
+.page-layout .marveloux-header {
   padding: var(--small-padding);
 }
 
 @media (min-width: 768px) {
-  .page-layout .marvelous-header {
+  .page-layout .marveloux-header {
     padding: var(--medium-padding);
   }
 }

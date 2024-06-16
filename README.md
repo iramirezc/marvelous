@@ -1,4 +1,4 @@
-# Marvelous
+# Marveloux
 
 A simple React app that fetches and displays Marvel characters using the Marvel API.
 
